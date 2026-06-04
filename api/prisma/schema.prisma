@@ -81,6 +81,7 @@ model Match {
   status          String         @default("SCHEDULED")
   homePlaceholder     String?
   awayPlaceholder     String?
+  preMatchNotified    Boolean              @default(false) // 1時間前通知送信済み
   createdAt           DateTime             @default(now())
   updatedAt           DateTime             @updatedAt
   entries             CountryMatch[]
