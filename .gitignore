@@ -1,8 +1,8 @@
-  node_modules/
-  api/prisma/dev.db
-  api/prisma/dev.db-journal
-  api/.env
-  mobile/.env
-  worldcup2026.json
-  PDR.json
-  EOF
+node_modules/
+api/prisma/dev.db
+api/prisma/dev.db-journal
+api/.env
+mobile/.env
+worldcup2026.json
+PDR.json
+.claude/
