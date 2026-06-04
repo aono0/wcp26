@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcode-select -p)",
+      "Bash(python3 *)",
+      "Bash(npx tsx -e ' *)",
+      "Bash(curl -s \"http://localhost:3000/countries/JPN\")",
+      "Bash(npx tsx *)",
+      "Bash(npm run *)",
+      "Bash(curl -s \"https://www.youtube.com/feeds/videos.xml?channel_id=UCbkIpRMMXHw9WC_APVRZ_0w\")",
+      "Bash(curl -sA \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\)\" \"https://www.youtube.com/feeds/videos.xml?channel_id=UCbkIpRMMXHw9WC_APVRZ_0w\")",
+      "Bash(curl -sL \"https://www.youtube.com/feeds/videos.xml?channel_id=UCD2uiFEdq1heBvUg_XcWFIQ\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X DELETE http://localhost:3000/videos/all)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X DELETE http://localhost:3000/videos/all -H \"X-Admin-Secret: wcp26-admin-local-change-in-production\")",
+      "Bash(kill %1)",
+      "Bash(npm list *)",
+      "Bash(curl *)"
+    ]
+  }
+}

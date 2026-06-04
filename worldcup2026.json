@@ -1,0 +1,6347 @@
+[
+  {
+    "countryCode": "ALG",
+    "players": [
+      {
+        "name": "ルカ・ジダン",
+        "position": "GK",
+        "clubTeam": "グラナダ（スペイン）"
+      },
+      {
+        "name": "メルヴィン・マスティル",
+        "position": "GK",
+        "clubTeam": "スタッド・ニヨン（スイス）"
+      },
+      {
+        "name": "ウサマ・ベンボット",
+        "position": "GK",
+        "clubTeam": "USMアルジェ"
+      },
+      {
+        "name": "アシュレフ・アバダ",
+        "position": "DF",
+        "clubTeam": "USMアルジェ"
+      },
+      {
+        "name": "ジネディーヌ・ベライド",
+        "position": "DF",
+        "clubTeam": "JSカビリー"
+      },
+      {
+        "name": "モハメド・アミン・トゥガイ",
+        "position": "DF",
+        "clubTeam": "エスペランス（チュニジア）"
+      },
+      {
+        "name": "ジャウエン・ハジャム",
+        "position": "DF",
+        "clubTeam": "ヤング・ボーイズ（スイス）"
+      },
+      {
+        "name": "サミル・シェルギ",
+        "position": "DF",
+        "clubTeam": "パリFC（フランス）"
+      },
+      {
+        "name": "アイサ・マンディ",
+        "position": "DF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "ラフィク・ベルガリ",
+        "position": "DF",
+        "clubTeam": "エラス・ヴェローナ（イタリア）"
+      },
+      {
+        "name": "ラミ・ベンセバイニ",
+        "position": "DF",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "ラヤン・アイト・ヌーリ",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "フセム・アワール",
+        "position": "MF",
+        "clubTeam": "アル・イテハド（サウジアラビア）"
+      },
+      {
+        "name": "ヤシン・ティトラウィ",
+        "position": "MF",
+        "clubTeam": "シャルルロワ（ベルギー）"
+      },
+      {
+        "name": "ラミズ・ゼルキ",
+        "position": "MF",
+        "clubTeam": "トゥウェンテ（オランダ）"
+      },
+      {
+        "name": "ヒシャム・ブダウィ",
+        "position": "MF",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "ナビル・ベンタレブ",
+        "position": "MF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "イブラヒム・マザ",
+        "position": "MF",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "ファレス・シャイビ",
+        "position": "MF",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "リヤド・マフレズ",
+        "position": "FW",
+        "clubTeam": "アル・アハリ（サウジアラビア）"
+      },
+      {
+        "name": "アディル・ブルビナ",
+        "position": "FW",
+        "clubTeam": "アル・ドゥハイル（カタール）"
+      },
+      {
+        "name": "モハメド・アル・アミン・アムラ",
+        "position": "FW",
+        "clubTeam": "ボルフスブルク（ドイツ）"
+      },
+      {
+        "name": "ファレス・ゲジェミス",
+        "position": "FW",
+        "clubTeam": "Fares GHEDJEMIS)"
+      },
+      {
+        "name": "アミン・グイリ",
+        "position": "FW",
+        "clubTeam": "オリンピック・マルセイユ（フランス）"
+      },
+      {
+        "name": "アニス・ハジ・ムサ",
+        "position": "FW",
+        "clubTeam": "フェイエノールト（オランダ）"
+      },
+      {
+        "name": "アーメド・ベンブアリ",
+        "position": "FW",
+        "clubTeam": "ジェールETO（ハンガリー）"
+      }
+    ]
+  },
+  {
+    "countryCode": "ARG",
+    "players": [
+      {
+        "name": "エミリアーノ・マルティネス",
+        "position": "GK",
+        "clubTeam": "アストン・ビラ（イングランド）"
+      },
+      {
+        "name": "フアン・ムッソ",
+        "position": "GK",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ヘロニモ・ルジ",
+        "position": "GK",
+        "clubTeam": "オリンピック・マルセイユ（フランス）"
+      },
+      {
+        "name": "ゴンサロ・モンティエル",
+        "position": "DF",
+        "clubTeam": "リバープレート"
+      },
+      {
+        "name": "ニコラス・オタメンディ",
+        "position": "DF",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "ファクンド・メディーナ",
+        "position": "DF",
+        "clubTeam": "オリンピック・マルセイユ（フランス）"
+      },
+      {
+        "name": "レオナルド・バレルディ",
+        "position": "DF",
+        "clubTeam": "オリンピック・マルセイユ（フランス）"
+      },
+      {
+        "name": "ニコラス・タグリアフィコ",
+        "position": "DF",
+        "clubTeam": "オリンピック・リヨン（フランス）"
+      },
+      {
+        "name": "クリスティアン・ロメロ",
+        "position": "DF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "リサンドロ・マルティネス",
+        "position": "DF",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ナウエル・モリーナ",
+        "position": "DF",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "レアンドロ・パレデス",
+        "position": "MF",
+        "clubTeam": "ボカ・ジュニアーズ"
+      },
+      {
+        "name": "ロドリゴ・デ・パウル",
+        "position": "MF",
+        "clubTeam": "インテル・マイアミ（アメリカ）"
+      },
+      {
+        "name": "バレンティン・バルコ",
+        "position": "MF",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "エセキエル・パラシオス",
+        "position": "MF",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "ジオバニ・ロ・チェルソ",
+        "position": "MF",
+        "clubTeam": "ベティス（スペイン）"
+      },
+      {
+        "name": "エンソ・フェルナンデス",
+        "position": "MF",
+        "clubTeam": "チェルシー（イングランド）"
+      },
+      {
+        "name": "アレクシス・マク・アリステル",
+        "position": "MF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "リオネル・メッシ",
+        "position": "FW",
+        "clubTeam": "インテル・マイアミ（アメリカ）"
+      },
+      {
+        "name": "フリアン・アルバレス",
+        "position": "FW",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ニコラス・ゴンサレス",
+        "position": "FW",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ジュリアーノ・シメオネ",
+        "position": "FW",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ティアゴ・アルマーダ",
+        "position": "FW",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ラウタロ・マルティネス",
+        "position": "FW",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "ニコラス・パス",
+        "position": "FW",
+        "clubTeam": "コモ（イタリア）"
+      },
+      {
+        "name": "ホセ・マヌエル・ロペス",
+        "position": "FW",
+        "clubTeam": "パルメイラス（ブラジル）"
+      }
+    ]
+  },
+  {
+    "countryCode": "AUS",
+    "players": [
+      {
+        "name": "マシュー・”マット”・ライアン",
+        "position": "GK",
+        "clubTeam": "レバンテ（スペイン）"
+      },
+      {
+        "name": "ポール・イッツォ",
+        "position": "GK",
+        "clubTeam": "ラナース（デンマーク）"
+      },
+      {
+        "name": "パトリック・ビーチ",
+        "position": "GK",
+        "clubTeam": "メルボルン・シティ"
+      },
+      {
+        "name": "アジズ・ベヒッチ",
+        "position": "DF",
+        "clubTeam": "メルボルン・シティ"
+      },
+      {
+        "name": "ジェイソン・ゲリア",
+        "position": "DF",
+        "clubTeam": "アルビレックス新潟（日本）"
+      },
+      {
+        "name": "ルーカス・ヘリントン",
+        "position": "DF",
+        "clubTeam": "コロラド・ラピッズ（アメリカ）"
+      },
+      {
+        "name": "カイ・トレウィン",
+        "position": "DF",
+        "clubTeam": "ニューヨーク・シティFC（アメリカ）"
+      },
+      {
+        "name": "ミロシュ・デゲネク",
+        "position": "DF",
+        "clubTeam": "APOELニコシア（キプロス）"
+      },
+      {
+        "name": "ジェイコブ・イタリアーノ",
+        "position": "DF",
+        "clubTeam": "グラーツァーAK（オーストリア）"
+      },
+      {
+        "name": "ジョーダン・ボス",
+        "position": "DF",
+        "clubTeam": "フェイエノールト（オランダ）"
+      },
+      {
+        "name": "キャメロン・バージェス",
+        "position": "DF",
+        "clubTeam": "スウォンジー・シティ（ウェールズ）"
+      },
+      {
+        "name": "ハリー・ソウター",
+        "position": "DF",
+        "clubTeam": "レスター・シティ（イングランド）"
+      },
+      {
+        "name": "アレッサンドロ・チルカティ",
+        "position": "DF",
+        "clubTeam": "パルマ（イタリア）"
+      },
+      {
+        "name": "ポール・オコン・エングストラー",
+        "position": "MF",
+        "clubTeam": "シドニーFC"
+      },
+      {
+        "name": "エイデン・オニール",
+        "position": "MF",
+        "clubTeam": "ニューヨーク・シティFC（アメリカ）"
+      },
+      {
+        "name": "アイディン・フルスティッチ",
+        "position": "MF",
+        "clubTeam": "ヘラクレス・アルメロ（オランダ）"
+      },
+      {
+        "name": "キャメロン・デヴリン",
+        "position": "MF",
+        "clubTeam": "ハーツ（スコットランド）"
+      },
+      {
+        "name": "コナー・メットカーフ",
+        "position": "MF",
+        "clubTeam": "ザンクト・パウリ（ドイツ）"
+      },
+      {
+        "name": "ジャクソン・アーヴァイン",
+        "position": "MF",
+        "clubTeam": "ザンクト・パウリ（ドイツ）"
+      },
+      {
+        "name": "ネストリ・イランクンダ",
+        "position": "FW",
+        "clubTeam": "ワトフォード（イングランド）"
+      },
+      {
+        "name": "モハメド・トゥーレ",
+        "position": "FW",
+        "clubTeam": "ノリッジ・シティ（イングランド）"
+      },
+      {
+        "name": "アワー・マビル",
+        "position": "FW",
+        "clubTeam": "カステリョン（スペイン）"
+      },
+      {
+        "name": "クリスチャン・ヴォルパート",
+        "position": "FW",
+        "clubTeam": "サッスオーロ（イタリア）"
+      },
+      {
+        "name": "テテ・イェンギ",
+        "position": "FW",
+        "clubTeam": "町田ゼルビア（日本）"
+      },
+      {
+        "name": "ニシャン・ヴェルピレイ",
+        "position": "FW",
+        "clubTeam": "メルボルン・ビクトリー"
+      },
+      {
+        "name": "マシュー・レッキー",
+        "position": "FW",
+        "clubTeam": "メルボルン・シティ"
+      }
+    ]
+  },
+  {
+    "countryCode": "AUT",
+    "players": [
+      {
+        "name": "パトリック・ペンツ",
+        "position": "GK",
+        "clubTeam": "ブレンビー（デンマーク）"
+      },
+      {
+        "name": "フロリアン・ヴィーゲレ",
+        "position": "GK",
+        "clubTeam": "ヴィクトリア・プルゼニ（チェコ）"
+      },
+      {
+        "name": "アレクサンダー・シュラガー",
+        "position": "GK",
+        "clubTeam": "レッドブル・ザルツブルク"
+      },
+      {
+        "name": "マルコ・フリードル",
+        "position": "DF",
+        "clubTeam": "ベルダー・ブレーメン（ドイツ）"
+      },
+      {
+        "name": "フィリップ・ムウェネ",
+        "position": "DF",
+        "clubTeam": "マインツ05（ドイツ）"
+      },
+      {
+        "name": "シュテファン・ポッシュ",
+        "position": "DF",
+        "clubTeam": "マインツ05（ドイツ）"
+      },
+      {
+        "name": "アレクサンダー・プラス",
+        "position": "DF",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "フィリップ・ラインハルト",
+        "position": "DF",
+        "clubTeam": "フライブルク（ドイツ）"
+      },
+      {
+        "name": "ミヒャエル・スヴォボダ",
+        "position": "DF",
+        "clubTeam": "ヴェネツィア（イタリア）"
+      },
+      {
+        "name": "ケヴィン・ダンソ",
+        "position": "DF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "ダヴィド・アッフェングルーバー",
+        "position": "DF",
+        "clubTeam": "エルチェ（スペイン）"
+      },
+      {
+        "name": "ダヴィド・アラバ",
+        "position": "DF",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "アレッサンドロ・シェプフ",
+        "position": "MF",
+        "clubTeam": "RZペレッツWAC"
+      },
+      {
+        "name": "パウル・ヴァナー",
+        "position": "MF",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "フロリアン・グリリッチュ",
+        "position": "MF",
+        "clubTeam": "ブラガ（ポルトガル）"
+      },
+      {
+        "name": "ロマーノ・シュミット",
+        "position": "MF",
+        "clubTeam": "ベルダー・ブレーメン（ドイツ）"
+      },
+      {
+        "name": "パトリック・ヴィマー",
+        "position": "MF",
+        "clubTeam": "ボルフスブルク（ドイツ）"
+      },
+      {
+        "name": "クリストフ・バウムガルトナー",
+        "position": "MF",
+        "clubTeam": "ライプツィヒ（ドイツ）"
+      },
+      {
+        "name": "ザヴェル・シュラガー",
+        "position": "MF",
+        "clubTeam": "ライプツィヒ（ドイツ）"
+      },
+      {
+        "name": "ニコラス・サイヴァルト",
+        "position": "MF",
+        "clubTeam": "ライプツィヒ（ドイツ）"
+      },
+      {
+        "name": "カーニー・チュクエメカ",
+        "position": "MF",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "マルセル・ザビッツァー",
+        "position": "MF",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "コンラッド・ライマー",
+        "position": "MF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "マルコ・アルナウトビッチ",
+        "position": "FW",
+        "clubTeam": "レッドスター・ベオグラード（セルビア）"
+      },
+      {
+        "name": "ミヒャエル・グレゴリッチュ",
+        "position": "FW",
+        "clubTeam": "アウクスブルク（ドイツ）"
+      },
+      {
+        "name": "サーシャ・カライジッチ",
+        "position": "FW",
+        "clubTeam": "LASKリンツ"
+      }
+    ]
+  },
+  {
+    "countryCode": "BEL",
+    "players": [
+      {
+        "name": "ティボー・クルトワ",
+        "position": "GK",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "センネ・ラメンス",
+        "position": "GK",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "マイク・ペンダース",
+        "position": "GK",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "ホアキン・セイス",
+        "position": "DF",
+        "clubTeam": "クラブ・ブルージュ"
+      },
+      {
+        "name": "ブランドン・メシェレ",
+        "position": "DF",
+        "clubTeam": "クラブ・ブルージュ"
+      },
+      {
+        "name": "ゼノ・デバスト",
+        "position": "DF",
+        "clubTeam": "スポルティングCP（ポルトガル）"
+      },
+      {
+        "name": "ナタン・ンゴイ",
+        "position": "DF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "トーマス・ムニエ",
+        "position": "DF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "コニ・デ・ヴィンター",
+        "position": "DF",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "アルトゥール・テアテ",
+        "position": "DF",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "ティモシー・カスターニュ",
+        "position": "DF",
+        "clubTeam": "フラム（イングランド）"
+      },
+      {
+        "name": "マキシム・デ・カイパー",
+        "position": "DF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "ハンス・ヴァナケン",
+        "position": "MF",
+        "clubTeam": "クラブ・ブルージュ"
+      },
+      {
+        "name": "ニコラス・ラスキン",
+        "position": "MF",
+        "clubTeam": "レンジャーズ（スコットランド）"
+      },
+      {
+        "name": "ユーリ・ティーレマンス",
+        "position": "MF",
+        "clubTeam": "アストン・ビラ（イングランド）"
+      },
+      {
+        "name": "アマドゥ・オナナ",
+        "position": "MF",
+        "clubTeam": "アストン・ビラ（イングランド）"
+      },
+      {
+        "name": "アクセル・ヴィツェル",
+        "position": "MF",
+        "clubTeam": "ジローナ（スペイン）"
+      },
+      {
+        "name": "ケビン・デ・ブライネ",
+        "position": "MF",
+        "clubTeam": "ナポリ（イタリア）"
+      },
+      {
+        "name": "ロメル・ルカク",
+        "position": "FW",
+        "clubTeam": "ナポリ（イタリア）"
+      },
+      {
+        "name": "アレクシス・サーレマーケルス",
+        "position": "FW",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "シャルル・デ・ケテラエル",
+        "position": "FW",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "レアンドロ・トロサール",
+        "position": "FW",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ジェレミー・ドク",
+        "position": "FW",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ドディ・ルケバキオ",
+        "position": "FW",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "ディエゴ・モレイラ",
+        "position": "FW",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "マティアス・フェルナンデス・パルド",
+        "position": "FW",
+        "clubTeam": "リール（フランス）"
+      }
+    ]
+  },
+  {
+    "countryCode": "BIH",
+    "players": [
+      {
+        "name": "二コラ・ヴァシリ",
+        "position": "GK",
+        "clubTeam": "ザンクト・パウリ（ドイツ）"
+      },
+      {
+        "name": "マルティン・ズロミスリッチ",
+        "position": "GK",
+        "clubTeam": "HNKリエカ（クロアチア）"
+      },
+      {
+        "name": "ムラデン・ユルカス",
+        "position": "GK",
+        "clubTeam": "FKボラツ"
+      },
+      {
+        "name": "スティエパン・ラデリッチ",
+        "position": "DF",
+        "clubTeam": "HNKリエカ（クロアチア）"
+      },
+      {
+        "name": "ニハド・ムヤキッチ",
+        "position": "DF",
+        "clubTeam": "ガズィアンテプ（トルコ）"
+      },
+      {
+        "name": "ニダル・チェリク",
+        "position": "DF",
+        "clubTeam": "ランス（フランス）"
+      },
+      {
+        "name": "アマル・デディッチ",
+        "position": "DF",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "二コラ・カティッチ",
+        "position": "DF",
+        "clubTeam": "シャルケ04（ドイツ）"
+      },
+      {
+        "name": "デニス・ハジカドゥニッチ",
+        "position": "DF",
+        "clubTeam": "サンプドリア（イタリア）"
+      },
+      {
+        "name": "タリク・ムハレモヴィッチ",
+        "position": "DF",
+        "clubTeam": "サッスオーロ（イタリア）"
+      },
+      {
+        "name": "セアド・コラシナツ",
+        "position": "DF",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "イヴァン・バシッチ",
+        "position": "MF",
+        "clubTeam": "FCアスタナ（カザフスタン）"
+      },
+      {
+        "name": "イヴァン・シュニッチ",
+        "position": "MF",
+        "clubTeam": "パフォスFC（キプロス）"
+      },
+      {
+        "name": "エルミン・マフミッチ",
+        "position": "MF",
+        "clubTeam": "スロヴァン・リベレツ（チェコ）"
+      },
+      {
+        "name": "アマル・メミッチ",
+        "position": "MF",
+        "clubTeam": "ヴィクトリア・プルゼニ（チェコ）"
+      },
+      {
+        "name": "ケリム・アライベゴヴィッチ",
+        "position": "MF",
+        "clubTeam": "レッドブル・ザルツブルク（オーストリア）"
+      },
+      {
+        "name": "アルミン・ギゴヴィッチ",
+        "position": "MF",
+        "clubTeam": "ヤング・ボーイズ（スイス）"
+      },
+      {
+        "name": "ベンヤミン・タヒロヴィッチ",
+        "position": "MF",
+        "clubTeam": "ブレンビー（デンマーク）"
+      },
+      {
+        "name": "エスミル・バイラクタレヴィッチ",
+        "position": "MF",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "ジェニス・ブルニッチ",
+        "position": "MF",
+        "clubTeam": "カールスルーエ（ドイツ）"
+      },
+      {
+        "name": "アミル・ハジアフメトヴィッチ",
+        "position": "MF",
+        "clubTeam": "ハル・シティ（イングランド）"
+      },
+      {
+        "name": "エディン・ジェコ",
+        "position": "FW",
+        "clubTeam": "シャルケ04（ドイツ）"
+      },
+      {
+        "name": "エルメディン・デミロヴィッチ",
+        "position": "FW",
+        "clubTeam": "シュツットガルト（ドイツ）"
+      },
+      {
+        "name": "ハリス・タバコヴィッチ",
+        "position": "FW",
+        "clubTeam": "ボスニア・メンヒェングラートバッハ（ドイツ）"
+      },
+      {
+        "name": "サメド・バジュダル",
+        "position": "FW",
+        "clubTeam": "ヤギエロニア・ビャウィストク（ポーランド）"
+      },
+      {
+        "name": "ヨヴォ・ルキッチ",
+        "position": "FW",
+        "clubTeam": "ウニベルシタテア・クルージュ（ルーマニア）"
+      }
+    ]
+  },
+  {
+    "countryCode": "BRA",
+    "players": [
+      {
+        "name": "アリソン・ベッケル",
+        "position": "GK",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "エデルソン・モラエス",
+        "position": "GK",
+        "clubTeam": "フェネルバフチェ（トルコ）"
+      },
+      {
+        "name": "ウェヴェルトン",
+        "position": "GK",
+        "clubTeam": "グレミオ"
+      },
+      {
+        "name": "レオ・ペレイラ",
+        "position": "DF",
+        "clubTeam": "フラメンゴ"
+      },
+      {
+        "name": "アレックス・サンドロ",
+        "position": "DF",
+        "clubTeam": "フラメンゴ"
+      },
+      {
+        "name": "ダニーロ・ルイス",
+        "position": "DF",
+        "clubTeam": "フラメンゴ"
+      },
+      {
+        "name": "ロジェール・イバニェス",
+        "position": "DF",
+        "clubTeam": "アル・アハリ（サウジアラビア）"
+      },
+      {
+        "name": "ドウグラス・サントス",
+        "position": "DF",
+        "clubTeam": "ゼニト・サンクトペテルブルク（ロシア）"
+      },
+      {
+        "name": "ブレーメル",
+        "position": "DF",
+        "clubTeam": "ユベントス（イタリア）"
+      },
+      {
+        "name": "ウェズレイ",
+        "position": "DF",
+        "clubTeam": "ASローマ（イタリア）"
+      },
+      {
+        "name": "マルキーニョス",
+        "position": "DF",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "ガブリエウ・マガリャンイス",
+        "position": "DF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ルーカス・パケタ",
+        "position": "MF",
+        "clubTeam": "フラメンゴ"
+      },
+      {
+        "name": "ダニーロ・サントス",
+        "position": "MF",
+        "clubTeam": "ボタフォゴ"
+      },
+      {
+        "name": "ファビーニョ",
+        "position": "MF",
+        "clubTeam": "アル・イテハド（サウジアラビア）"
+      },
+      {
+        "name": "ブルーノ・ギマランイス",
+        "position": "MF",
+        "clubTeam": "ニューカッスル・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "カゼミーロ",
+        "position": "MF",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ネイマール",
+        "position": "FW",
+        "clubTeam": "サントス"
+      },
+      {
+        "name": "ヴィニシウス",
+        "position": "FW",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "ラフィーニャ",
+        "position": "FW",
+        "clubTeam": "バルセロナ（スペイン）"
+      },
+      {
+        "name": "ガブリエウ・マルティネッリ",
+        "position": "FW",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "マテウス・クーニャ",
+        "position": "FW",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "イゴール・チアゴ",
+        "position": "FW",
+        "clubTeam": "ブレントフォード（イングランド）"
+      },
+      {
+        "name": "ラヤン",
+        "position": "FW",
+        "clubTeam": "ボーンマス（イングランド）"
+      },
+      {
+        "name": "エンドリッキ",
+        "position": "FW",
+        "clubTeam": "オリンピック・リヨン（フランス）"
+      },
+      {
+        "name": "ルイス・エンヒキ",
+        "position": "FW",
+        "clubTeam": "ゼニト・サンクトペテルブルク（ロシア）"
+      }
+    ]
+  },
+  {
+    "countryCode": "CAN",
+    "players": [
+      {
+        "name": "マクシム・クレポー",
+        "position": "GK",
+        "clubTeam": "オーランド・シティ（アメリカ）"
+      },
+      {
+        "name": "デイン・セント・クレア",
+        "position": "GK",
+        "clubTeam": "インテル・マイアミ（アメリカ）"
+      },
+      {
+        "name": "オーウェン・グッドマン",
+        "position": "GK",
+        "clubTeam": "バーンズリー（イングランド）"
+      },
+      {
+        "name": "リッチー・ラリア",
+        "position": "DF",
+        "clubTeam": "トロントFC"
+      },
+      {
+        "name": "ジョエル・ウォーターマン",
+        "position": "DF",
+        "clubTeam": "シカゴ・ファイアー（アメリカ）"
+      },
+      {
+        "name": "ニコ・シグル",
+        "position": "DF",
+        "clubTeam": "ハイドゥク・スプリト（クロアチア）"
+      },
+      {
+        "name": "リュック・ド・フジュロル",
+        "position": "DF",
+        "clubTeam": "デンデル（ベルギー）"
+      },
+      {
+        "name": "デレク・コーネリアス",
+        "position": "DF",
+        "clubTeam": "レンジャーズ（スコットランド）"
+      },
+      {
+        "name": "アリスター・ジョンストン",
+        "position": "DF",
+        "clubTeam": "セルティック（スコットランド）"
+      },
+      {
+        "name": "アルフィー・ジョーンズ",
+        "position": "DF",
+        "clubTeam": "ミドルスブラ（イングランド）"
+      },
+      {
+        "name": "モイーズ・ボンビト",
+        "position": "DF",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "アルフォンソ・デイヴィス",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "ジョナサン・オソリオ",
+        "position": "MF",
+        "clubTeam": "トロントFC"
+      },
+      {
+        "name": "ジェイコブ・シャッフェルバーグ",
+        "position": "MF",
+        "clubTeam": "ロサンゼルスFC（アメリカ）"
+      },
+      {
+        "name": "マシュー・ショワニエール",
+        "position": "MF",
+        "clubTeam": "ロサンゼルスFC（アメリカ）"
+      },
+      {
+        "name": "スティーヴン・エウスタキオ",
+        "position": "MF",
+        "clubTeam": "ロサンゼルスFC（アメリカ）"
+      },
+      {
+        "name": "マルセロ・フローレス",
+        "position": "MF",
+        "clubTeam": "UANLティグレス（メキシコ）"
+      },
+      {
+        "name": "ネイサン・サリバ",
+        "position": "MF",
+        "clubTeam": "アンデルレヒト（ベルギー）"
+      },
+      {
+        "name": "アリ・アーメド",
+        "position": "MF",
+        "clubTeam": "ノリッジ・シティ（イングランド）"
+      },
+      {
+        "name": "リアム・ミラー",
+        "position": "MF",
+        "clubTeam": "ハル・シティ（イングランド）"
+      },
+      {
+        "name": "イスマエル・コネ",
+        "position": "MF",
+        "clubTeam": "サッスオーロ（イタリア）"
+      },
+      {
+        "name": "タジョン・ブキャナン",
+        "position": "MF",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "ジョナサン・デイヴィッド",
+        "position": "FW",
+        "clubTeam": "ユベントス（イタリア）"
+      },
+      {
+        "name": "タニ・オルワセイ",
+        "position": "FW",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "サイル・ラリン",
+        "position": "FW",
+        "clubTeam": "サウサンプトン（イングランド）"
+      },
+      {
+        "name": "プロミス・デイヴィッド",
+        "position": "FW",
+        "clubTeam": "ユニオン・サン・ジロワーズ（ベルギー）"
+      }
+    ]
+  },
+  {
+    "countryCode": "CIV",
+    "players": [
+      {
+        "name": "ヤヒア・フォファナ",
+        "position": "GK",
+        "clubTeam": "チャイクル・リゼスポル（トルコ）"
+      },
+      {
+        "name": "アルバン・ラフォン",
+        "position": "GK",
+        "clubTeam": "パナシナイコス（ギリシャ）"
+      },
+      {
+        "name": "モハメド・コネ",
+        "position": "GK",
+        "clubTeam": "シャルルロア（ベルギー）"
+      },
+      {
+        "name": "クリストフェル・オペリ",
+        "position": "DF",
+        "clubTeam": "イスタンブール・バシャクシェヒル（トルコ）"
+      },
+      {
+        "name": "エマニュエル・アグバドゥ",
+        "position": "DF",
+        "clubTeam": "ベジクタシュ（トルコ）"
+      },
+      {
+        "name": "ウィルフリード・シンゴ",
+        "position": "DF",
+        "clubTeam": "ガラタサライ（トルコ）"
+      },
+      {
+        "name": "ジスラン・コナン",
+        "position": "DF",
+        "clubTeam": "ジル・ビセンテ（ポルトガル）"
+      },
+      {
+        "name": "ウスマン・ディオマンデ",
+        "position": "DF",
+        "clubTeam": "スポルティングCP（ポルトガル）"
+      },
+      {
+        "name": "ゲラ・ドゥエ",
+        "position": "DF",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "オディロン・コスヌ",
+        "position": "DF",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "エヴァン・エンディカ",
+        "position": "DF",
+        "clubTeam": "ASローマ（イタリア）"
+      },
+      {
+        "name": "フランク・ケシエ",
+        "position": "MF",
+        "clubTeam": "アル・アハリ（サウジアラビア）"
+      },
+      {
+        "name": "ジャン・ミシェル・セリ",
+        "position": "MF",
+        "clubTeam": "NKマリボル（スロベニア）"
+      },
+      {
+        "name": "パフェ・ギアゴン",
+        "position": "MF",
+        "clubTeam": "シャルルロア（ベルギー）"
+      },
+      {
+        "name": "クリスト・イナオ・ウライ",
+        "position": "MF",
+        "clubTeam": "トラブゾンスポル（トルコ）"
+      },
+      {
+        "name": "セコ・フォファナ",
+        "position": "MF",
+        "clubTeam": "FCポルト（ポルトガル）"
+      },
+      {
+        "name": "イブラヒム・サンガレ",
+        "position": "MF",
+        "clubTeam": "ノッティンガム・フォレスト（イングランド）"
+      },
+      {
+        "name": "二コラ・ペペ",
+        "position": "FW",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "アマド・ディアロ",
+        "position": "FW",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "エヴァン・ゲサン",
+        "position": "FW",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "アンジェ・ヨアン・ボニー",
+        "position": "FW",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "ヤン・ディオマンデ",
+        "position": "FW",
+        "clubTeam": "ライプツィヒ（ドイツ）"
+      },
+      {
+        "name": "バズマナ・トゥーレ",
+        "position": "FW",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "シモン・アディングラ",
+        "position": "FW",
+        "clubTeam": "ASモナコ（フランス）"
+      },
+      {
+        "name": "エリー・ワヒ",
+        "position": "FW",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "ウマル・ディアキテ",
+        "position": "FW",
+        "clubTeam": "クラブ・ブルージュ（ベルギー）"
+      }
+    ]
+  },
+  {
+    "countryCode": "COD",
+    "players": [
+      {
+        "name": "リオネル・ムパシ",
+        "position": "GK",
+        "clubTeam": "ル・アーヴル（フランス）"
+      },
+      {
+        "name": "マチュー・エポロ",
+        "position": "GK",
+        "clubTeam": "スタンダール・リエージュ（ベルギー）"
+      },
+      {
+        "name": "ティモシー・ファユル",
+        "position": "GK",
+        "clubTeam": "FCノア（アルメニア）"
+      },
+      {
+        "name": "スティーヴ・カプアディ",
+        "position": "DF",
+        "clubTeam": "ヴィジェフ・ウッチ（ポーランド）"
+      },
+      {
+        "name": "ゲデオン・カルル",
+        "position": "DF",
+        "clubTeam": "アリス・リマソル（キプロス）"
+      },
+      {
+        "name": "ディラン・バトゥビンシカ",
+        "position": "DF",
+        "clubTeam": "AEL（ギリシャ）"
+      },
+      {
+        "name": "ヨリス・カイェンベ",
+        "position": "DF",
+        "clubTeam": "ヘンク（ベルギー）"
+      },
+      {
+        "name": "アルトゥール・マスアク",
+        "position": "DF",
+        "clubTeam": "ランス（フランス）"
+      },
+      {
+        "name": "シャンセル・ムベンバ",
+        "position": "DF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "アクセル・トゥアンゼベ",
+        "position": "DF",
+        "clubTeam": "バーンリー（イングランド）"
+      },
+      {
+        "name": "アーロン・ワン・ビサカ",
+        "position": "DF",
+        "clubTeam": "ウェストハム・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "テオ・ボンゴンダ",
+        "position": "MF",
+        "clubTeam": "スパルタク・モスクワ（ロシア）"
+      },
+      {
+        "name": "サミュエル・ムトゥサミ",
+        "position": "MF",
+        "clubTeam": "アトロミトス（ギリシャ）"
+      },
+      {
+        "name": "ガエル・カクタ",
+        "position": "MF",
+        "clubTeam": "AEL（ギリシャ）"
+      },
+      {
+        "name": "アーロン・ツィボラ",
+        "position": "MF",
+        "clubTeam": "キルマーノック（スコットランド）"
+      },
+      {
+        "name": "ナタナエル・ムブク",
+        "position": "MF",
+        "clubTeam": "モンペリエ（フランス）"
+      },
+      {
+        "name": "ンガラエル・ムカウ",
+        "position": "MF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "ブライアン・チペンガ",
+        "position": "MF",
+        "clubTeam": "カステリョン（スペイン）"
+      },
+      {
+        "name": "シャルル・ピッケル",
+        "position": "MF",
+        "clubTeam": "エスパニョール（スペイン）"
+      },
+      {
+        "name": "ノア・サディキ",
+        "position": "MF",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "エド・カイェンベ",
+        "position": "MF",
+        "clubTeam": "ワトフォード（イングランド）"
+      },
+      {
+        "name": "セドリック・バカンブ",
+        "position": "FW",
+        "clubTeam": "ベティス（スペイン）"
+      },
+      {
+        "name": "ヨアヌ・ウィサ",
+        "position": "FW",
+        "clubTeam": "ニューカッスル・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "メシャック・エリア",
+        "position": "FW",
+        "clubTeam": "アランヤスポル（トルコ）"
+      },
+      {
+        "name": "シモン・バンザ",
+        "position": "FW",
+        "clubTeam": "アル・ジャジーラ（UAE）"
+      },
+      {
+        "name": "フィストン・マイェレ",
+        "position": "FW",
+        "clubTeam": "ピラミッズ（エジプト）"
+      }
+    ]
+  },
+  {
+    "countryCode": "COL",
+    "players": [
+      {
+        "name": "ダビド・オスピナ",
+        "position": "GK",
+        "clubTeam": "アトレチコ・ナシオナル"
+      },
+      {
+        "name": "カミーロ・バルガス",
+        "position": "GK",
+        "clubTeam": "アトラス（メキシコ）"
+      },
+      {
+        "name": "アルバロ・モンテーロ",
+        "position": "GK",
+        "clubTeam": "ベレス・サルスフィエルド（アルゼンチン）"
+      },
+      {
+        "name": "サンティアゴ・アリアス",
+        "position": "DF",
+        "clubTeam": "インディペンディエンテ（アルゼンチン）"
+      },
+      {
+        "name": "ウィラー・ディッタ",
+        "position": "DF",
+        "clubTeam": "クルス・アスル（メキシコ）"
+      },
+      {
+        "name": "ダビンソン・サンチェス",
+        "position": "DF",
+        "clubTeam": "ガラタサライ（トルコ）"
+      },
+      {
+        "name": "デイベル・マチャド",
+        "position": "DF",
+        "clubTeam": "ナント（フランス）"
+      },
+      {
+        "name": "ホアン・モヒカ",
+        "position": "DF",
+        "clubTeam": "マジョルカ（スペイン）"
+      },
+      {
+        "name": "ダニエル・ムニョス",
+        "position": "DF",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "ジョン・ルクミ",
+        "position": "DF",
+        "clubTeam": "ボローニャ（イタリア）"
+      },
+      {
+        "name": "ジェリー・ミナ",
+        "position": "DF",
+        "clubTeam": "カリアリ（イタリア）"
+      },
+      {
+        "name": "ファン・ポルティージャ",
+        "position": "MF",
+        "clubTeam": "アトレチコ・パラナエンセ（ブラジル）"
+      },
+      {
+        "name": "ホルヘ・カラスカル",
+        "position": "MF",
+        "clubTeam": "フラメンゴ（ブラジル）"
+      },
+      {
+        "name": "ジョン・アリアス",
+        "position": "MF",
+        "clubTeam": "パルメイラス（ブラジル）"
+      },
+      {
+        "name": "ハミントン・カンパス",
+        "position": "MF",
+        "clubTeam": "ロサリオ・セントラル（アルゼンチン）"
+      },
+      {
+        "name": "ケビン・カスターニョ",
+        "position": "MF",
+        "clubTeam": "リバー・プレート（アルゼンチン）"
+      },
+      {
+        "name": "ファン・キンテーロ",
+        "position": "MF",
+        "clubTeam": "リバープレート（アルゼンチン）"
+      },
+      {
+        "name": "リカルド・リオス",
+        "position": "MF",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "グスタボ・プエルタ",
+        "position": "MF",
+        "clubTeam": "ラシン・サンタンデール（スペイン）"
+      },
+      {
+        "name": "ジェフェルソン・レルマ",
+        "position": "MF",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "ハメス・ロドリゲス",
+        "position": "MF",
+        "clubTeam": "ミネソタ・ユナイテッド（アメリカ）"
+      },
+      {
+        "name": "ルイス・ディアス",
+        "position": "FW",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "クチョ・エルナンデス",
+        "position": "FW",
+        "clubTeam": "レアル・ベティス（スペイン）"
+      },
+      {
+        "name": "ルイス・スアレス",
+        "position": "FW",
+        "clubTeam": "スポルティングCP（ポルトガル）"
+      },
+      {
+        "name": "ジョン・コルドバ",
+        "position": "FW",
+        "clubTeam": "FCクラスノダール（ロシア）"
+      },
+      {
+        "name": "アンドレス・ゴメス",
+        "position": "FW",
+        "clubTeam": "バスコ・ダ・ガマ（ブラジル）"
+      }
+    ]
+  },
+  {
+    "countryCode": "CPV",
+    "players": [
+      {
+        "name": "ヴォジーニャ",
+        "position": "GK",
+        "clubTeam": "チャヴェス（ポルトガル）"
+      },
+      {
+        "name": "マルシオ・ロサ",
+        "position": "GK",
+        "clubTeam": "FCモンタナ（ブルガリア）"
+      },
+      {
+        "name": "CJ・ドス・サントス",
+        "position": "GK",
+        "clubTeam": "サンディエゴFC（アメリカ）"
+      },
+      {
+        "name": "ディニー",
+        "position": "DF",
+        "clubTeam": "アル・バタエ（UAE）"
+      },
+      {
+        "name": "スティーヴン・モレイラ",
+        "position": "DF",
+        "clubTeam": "コロンバス・クルー（アメリカ）"
+      },
+      {
+        "name": "ケルビン・ピレス",
+        "position": "DF",
+        "clubTeam": "SJK（フィンランド）"
+      },
+      {
+        "name": "ジョアン・パウロ",
+        "position": "DF",
+        "clubTeam": "FCSB（ルーマニア）"
+      },
+      {
+        "name": "ワグナー・ピナ",
+        "position": "DF",
+        "clubTeam": "トラブゾンスポル（トルコ）"
+      },
+      {
+        "name": "ピコ",
+        "position": "DF",
+        "clubTeam": "シャムロック・ローヴァーズ（アイルランド）"
+      },
+      {
+        "name": "シドニー・ロペス・カブラル",
+        "position": "DF",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "ストピラ",
+        "position": "DF",
+        "clubTeam": "トレエンセ（ポルトガル）"
+      },
+      {
+        "name": "ローガン・コスタ",
+        "position": "DF",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "ケビン・ピナ",
+        "position": "MF",
+        "clubTeam": "FCクラスノダール（ロシア）"
+      },
+      {
+        "name": "デロイ・ドゥアルテ",
+        "position": "MF",
+        "clubTeam": "ルドゴレツ・ラズグラド（ブルガリア）"
+      },
+      {
+        "name": "ラロス・ドゥアルテ",
+        "position": "MF",
+        "clubTeam": "プスカシュ・アカデーミア（ハンガリー）"
+      },
+      {
+        "name": "ジャミロ・モンテイロ",
+        "position": "MF",
+        "clubTeam": "PECズウォレ（オランダ）"
+      },
+      {
+        "name": "ヤニック・セメド",
+        "position": "MF",
+        "clubTeam": "ファレンセ（ポルトガル）"
+      },
+      {
+        "name": "テルモ・アルカンジョ",
+        "position": "MF",
+        "clubTeam": "ヴィトーリア（ポルトガル）"
+      },
+      {
+        "name": "ダイロン・リブラメント",
+        "position": "FW",
+        "clubTeam": "カーサ・ピア（ポルトガル）"
+      },
+      {
+        "name": "ジョバネ・カブラル",
+        "position": "FW",
+        "clubTeam": "エストレラ・アマドーラ（ポルトガル）"
+      },
+      {
+        "name": "ライアン・メンデス",
+        "position": "FW",
+        "clubTeam": "ウードゥル（トルコ）"
+      },
+      {
+        "name": "ヌーノ・ダ・コスタ",
+        "position": "FW",
+        "clubTeam": "イスタンブール・バシャクシェヒル（トルコ）"
+      },
+      {
+        "name": "ガリー・ロドリゲス",
+        "position": "FW",
+        "clubTeam": "アポロン・リマソル（キプロス）"
+      },
+      {
+        "name": "ウィリー・セメド",
+        "position": "FW",
+        "clubTeam": "オモニア（キプロス）"
+      },
+      {
+        "name": "エリオ・バレラ",
+        "position": "FW",
+        "clubTeam": "マッカビ・テルアビブ（イスラエル）"
+      },
+      {
+        "name": "ベンシモル",
+        "position": "FW",
+        "clubTeam": "アクロン・トリヤッチ（ロシア）"
+      }
+    ]
+  },
+  {
+    "countryCode": "CRO",
+    "players": [
+      {
+        "name": "ドミニク・リヴァコビッチ",
+        "position": "GK",
+        "clubTeam": "ディナモ・ザグレブ"
+      },
+      {
+        "name": "ドミニク・コタルスキ",
+        "position": "GK",
+        "clubTeam": "FCコペンハーゲン（デンマーク）"
+      },
+      {
+        "name": "イヴォル・パンドゥル",
+        "position": "GK",
+        "clubTeam": "ハル・シティ（イングランド）"
+      },
+      {
+        "name": "マルティン・エルリッチ",
+        "position": "DF",
+        "clubTeam": "ミッティラン（デンマーク）"
+      },
+      {
+        "name": "ヨシプ・シュタロ",
+        "position": "DF",
+        "clubTeam": "アヤックス（オランダ）"
+      },
+      {
+        "name": "ルカ・ヴシュコビッチ",
+        "position": "DF",
+        "clubTeam": "ハンブルガーSV（ドイツ）"
+      },
+      {
+        "name": "ヨシプ・スタニシッチ",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "マリン・ポングラチッチ",
+        "position": "DF",
+        "clubTeam": "フィオレンティーナ（イタリア）"
+      },
+      {
+        "name": "ドゥイェ・チャレタ・ツァル",
+        "position": "DF",
+        "clubTeam": "レアル・ソシエダ（スペイン）"
+      },
+      {
+        "name": "ヨシュコ・グヴァルディオル",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "トニ・フルク",
+        "position": "MF",
+        "clubTeam": "リエカ"
+      },
+      {
+        "name": "クリスティヤン・ヤキッチ",
+        "position": "MF",
+        "clubTeam": "アウクスブルク（ドイツ）"
+      },
+      {
+        "name": "ルカ・スチッチ",
+        "position": "MF",
+        "clubTeam": "レアル・ソシエダ（スペイン）"
+      },
+      {
+        "name": "マテオ・コヴァチッチ",
+        "position": "MF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "マルティン・バトゥリナ",
+        "position": "MF",
+        "clubTeam": "コモ（イタリア）"
+      },
+      {
+        "name": "二コラ・モロ",
+        "position": "MF",
+        "clubTeam": "ボローニャ（イタリア）"
+      },
+      {
+        "name": "ペタル・スチッチ",
+        "position": "MF",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "ニコラ・ヴラシッチ",
+        "position": "MF",
+        "clubTeam": "トリノ（イタリア）"
+      },
+      {
+        "name": "マリオ・パシャリッチ",
+        "position": "MF",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "ルカ・モドリッチ",
+        "position": "MF",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "アンドレイ・クラマリッチ",
+        "position": "FW",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "イゴール・マタノビッチ",
+        "position": "FW",
+        "clubTeam": "フライブルク（ドイツ）"
+      },
+      {
+        "name": "アンテ・ブディミル",
+        "position": "FW",
+        "clubTeam": "オサスナ（スペイン）"
+      },
+      {
+        "name": "イヴァン・ペリシッチ",
+        "position": "FW",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "マルコ・パシャリッチ",
+        "position": "FW",
+        "clubTeam": "オーランド・シティ（アメリカ）"
+      },
+      {
+        "name": "ペタル・ムサ",
+        "position": "FW",
+        "clubTeam": "FCダラス（アメリカ）"
+      }
+    ]
+  },
+  {
+    "countryCode": "CUW",
+    "players": [
+      {
+        "name": "エロイ・ローム",
+        "position": "GK",
+        "clubTeam": "マイアミFC（アメリカ）"
+      },
+      {
+        "name": "トレヴァー・ドーンブッシュ",
+        "position": "GK",
+        "clubTeam": "VVVフェンロ（オランダ）"
+      },
+      {
+        "name": "タイリック・ボダック",
+        "position": "GK",
+        "clubTeam": "テルスター（オランダ）"
+      },
+      {
+        "name": "ユリエン・ガーリ",
+        "position": "DF",
+        "clubTeam": "アブハー（サウジアラビア）"
+      },
+      {
+        "name": "リーシェドリー・バズール",
+        "position": "DF",
+        "clubTeam": "コンヤスポル（トルコ）"
+      },
+      {
+        "name": "ジョシュア・ブレネト",
+        "position": "DF",
+        "clubTeam": "カイセリスポル（トルコ）"
+      },
+      {
+        "name": "ロション・ファン・エイマ",
+        "position": "DF",
+        "clubTeam": "RKCワールウェイク（オランダ）"
+      },
+      {
+        "name": "シュランディ・サンボ",
+        "position": "DF",
+        "clubTeam": "スパルタ・ロッテルダム（オランダ）"
+      },
+      {
+        "name": "シェレル・フロラヌス",
+        "position": "DF",
+        "clubTeam": "PECズウォレ（オランダ）"
+      },
+      {
+        "name": "デヴェロン・フォンヴィル",
+        "position": "DF",
+        "clubTeam": "NECナイメヘン（オランダ）"
+      },
+      {
+        "name": "アルマンド・オビスポ",
+        "position": "DF",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "リヴァノ・コメネンシア",
+        "position": "MF",
+        "clubTeam": "FCチューリッヒ（スイス）"
+      },
+      {
+        "name": "レアンドロ・バクーナ",
+        "position": "MF",
+        "clubTeam": "ウードゥル（トルコ）"
+      },
+      {
+        "name": "ジュニーニョ・バクーナ",
+        "position": "MF",
+        "clubTeam": "フォーレンダム（オランダ）"
+      },
+      {
+        "name": "ケヴィン・フェリダ",
+        "position": "MF",
+        "clubTeam": "デン・ボッシュ（オランダ）"
+      },
+      {
+        "name": "タイリース・ノスリン",
+        "position": "MF",
+        "clubTeam": "テルスター（オランダ）"
+      },
+      {
+        "name": "ゴドフリート・ルメラトゥ",
+        "position": "MF",
+        "clubTeam": "RKCワールウェイク（オランダ）"
+      },
+      {
+        "name": "アルジャニ・マルタ",
+        "position": "MF",
+        "clubTeam": "ロザラム・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ソンチェ・ハンセン",
+        "position": "FW",
+        "clubTeam": "ミドルスブラ（イングランド）"
+      },
+      {
+        "name": "タヒス・チョン",
+        "position": "FW",
+        "clubTeam": "シェフィールド・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ヤール・マルガリータ",
+        "position": "FW",
+        "clubTeam": "ベフェレン（ベルギー）"
+      },
+      {
+        "name": "ブランドリー・クワス",
+        "position": "FW",
+        "clubTeam": "フォーレンダム（オランダ）"
+      },
+      {
+        "name": "ジェレミー・アントニッセ",
+        "position": "FW",
+        "clubTeam": "キフィシア（ギリシャ）"
+      },
+      {
+        "name": "ケンジ・ゴレ",
+        "position": "FW",
+        "clubTeam": "マッカビ・ハイファ（イスラエル）"
+      },
+      {
+        "name": "ユルゲン・ロカディア",
+        "position": "FW",
+        "clubTeam": "マイアミFC（アメリカ）"
+      },
+      {
+        "name": "ヘルファネ・カスタネール",
+        "position": "FW",
+        "clubTeam": "トレンガヌ（マレーシア）"
+      }
+    ]
+  },
+  {
+    "countryCode": "CZE",
+    "players": [
+      {
+        "name": "マチェイ・コヴァーシュ",
+        "position": "GK",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "ルカーシュ・ホルニーチェク",
+        "position": "GK",
+        "clubTeam": "ブラガ（ポルトガル）"
+      },
+      {
+        "name": "インジフ・スタニェク",
+        "position": "GK",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ヤロスラフ・ゼレニー",
+        "position": "DF",
+        "clubTeam": "スパルタ・プラハ"
+      },
+      {
+        "name": "シュテパン・チャロウペク",
+        "position": "DF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ダヴィド・ドウデラ",
+        "position": "DF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "トマーシュ・ホレシュ",
+        "position": "DF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ダヴィド・ユラーセク",
+        "position": "DF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ダヴィド・ジマ",
+        "position": "DF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ヴラディミール・ツォウファル",
+        "position": "DF",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "ロビン・フラナーチ",
+        "position": "DF",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "ラディスラフ・クレイチー",
+        "position": "DF",
+        "clubTeam": "ウォルヴァーハンプトン・ワンダラーズ（イングランド）"
+      },
+      {
+        "name": "ヒューゴ・ソフフルェク",
+        "position": "MF",
+        "clubTeam": "スパルタ・プラハ"
+      },
+      {
+        "name": "アレクサンドル・ソイカ",
+        "position": "MF",
+        "clubTeam": "ヴィクトリア・プルゼニ"
+      },
+      {
+        "name": "デニス・ヴィシンスキー",
+        "position": "MF",
+        "clubTeam": "ヴィクトリア・プルゼニ"
+      },
+      {
+        "name": "ルカーシュ・チェルフ",
+        "position": "MF",
+        "clubTeam": "ヴィクトリア・プルゼニ"
+      },
+      {
+        "name": "ルカーシュ・プロヴォド",
+        "position": "MF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ミハル・サディーレク",
+        "position": "MF",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ヴラディミール・ダリダ",
+        "position": "MF",
+        "clubTeam": "フラデツ・クラーロヴェー"
+      },
+      {
+        "name": "パヴェル・シュルツ",
+        "position": "MF",
+        "clubTeam": "オリンピック・リヨン（フランス）"
+      },
+      {
+        "name": "トマーシュ・ソウチェク",
+        "position": "MF",
+        "clubTeam": "ウェストハム・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "パトリク・シック",
+        "position": "FW",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "アダム・ハロジェク",
+        "position": "FW",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "トマーシュ・ホリー",
+        "position": "FW",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "モイミール・ヒティル",
+        "position": "FW",
+        "clubTeam": "スラヴィア・プラハ"
+      },
+      {
+        "name": "ヤン・クフタ",
+        "position": "FW",
+        "clubTeam": "スパルタ・プラハ"
+      }
+    ]
+  },
+  {
+    "countryCode": "ECU",
+    "players": [
+      {
+        "name": "エルナン・ガリンデス",
+        "position": "GK",
+        "clubTeam": "ウラカン（アルゼンチン）"
+      },
+      {
+        "name": "モイセス・ラミレス",
+        "position": "GK",
+        "clubTeam": "AEキフィシア（ギリシャ）"
+      },
+      {
+        "name": "ゴンサロ・バジェ",
+        "position": "GK",
+        "clubTeam": "LDUキト"
+      },
+      {
+        "name": "フェリックス・トーレス",
+        "position": "DF",
+        "clubTeam": "インテルナシオナル（ブラジル）"
+      },
+      {
+        "name": "アンジェロ・プレシアード",
+        "position": "DF",
+        "clubTeam": "アトレチコ・ミネイロ（ブラジル）"
+      },
+      {
+        "name": "ジャクソン・ポロソ",
+        "position": "DF",
+        "clubTeam": "ティフアナ（メキシコ）"
+      },
+      {
+        "name": "ジョエル・オルドニェス",
+        "position": "DF",
+        "clubTeam": "クラブ・ブルージュ（ベルギー）"
+      },
+      {
+        "name": "ウィリアン・パチョ",
+        "position": "DF",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "ペルビス・エストゥピニャン",
+        "position": "DF",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "ピエロ・インカピエ",
+        "position": "DF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ジョルディ・アルシバル",
+        "position": "MF",
+        "clubTeam": "インディペンディエンテ・デル・バジェ"
+      },
+      {
+        "name": "ゴンサロ・プラタ",
+        "position": "MF",
+        "clubTeam": "フラメンゴ（ブラジル）"
+      },
+      {
+        "name": "アラン・フランコ",
+        "position": "MF",
+        "clubTeam": "アトレチコ・ミネイロ（ブラジル）"
+      },
+      {
+        "name": "アラン・ミンダ",
+        "position": "MF",
+        "clubTeam": "アトレチコ・ミネイロ（ブラジル）"
+      },
+      {
+        "name": "ケンドリー・パエス",
+        "position": "MF",
+        "clubTeam": "リバープレート（アルゼンチン）"
+      },
+      {
+        "name": "ペドロ・ビテ",
+        "position": "MF",
+        "clubTeam": "UNAMプマス（メキシコ）"
+      },
+      {
+        "name": "デニル・カスティージョ",
+        "position": "MF",
+        "clubTeam": "ミッティラン（デンマーク）"
+      },
+      {
+        "name": "ヤイマール・メディーナ",
+        "position": "MF",
+        "clubTeam": "ヘンク（ベルギー）"
+      },
+      {
+        "name": "アンソニー・バレンシア",
+        "position": "MF",
+        "clubTeam": "ロイヤル・アントワープ（ベルギー）"
+      },
+      {
+        "name": "ニルソン・アングロ",
+        "position": "MF",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "モイセス・カイセド",
+        "position": "MF",
+        "clubTeam": "チェルシー（イングランド）"
+      },
+      {
+        "name": "エネル・バレンシア",
+        "position": "FW",
+        "clubTeam": "パチューカ（メキシコ）"
+      },
+      {
+        "name": "ジョン・イェボアー",
+        "position": "FW",
+        "clubTeam": "ヴェネツィア（イタリア）"
+      },
+      {
+        "name": "ジェレミー・アレバロ",
+        "position": "FW",
+        "clubTeam": "シュツットガルト（ドイツ）"
+      },
+      {
+        "name": "ケビン・ロドリゲス",
+        "position": "FW",
+        "clubTeam": "ユニオン・サン・ジロワーズ（ベルギー）"
+      },
+      {
+        "name": "ジョルディ・カイセド",
+        "position": "FW",
+        "clubTeam": "ウラカン（アルゼンチン）"
+      }
+    ]
+  },
+  {
+    "countryCode": "EGY",
+    "players": [
+      {
+        "name": "モハメド・エル・シェナウィ",
+        "position": "GK",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "モスタファ・ショベイル",
+        "position": "GK",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "エル・マフディ・ソリマン",
+        "position": "GK",
+        "clubTeam": "ザマレク"
+      },
+      {
+        "name": "モハメド・アラー",
+        "position": "GK",
+        "clubTeam": "エル・グウナ"
+      },
+      {
+        "name": "カリム・ハフェズ",
+        "position": "DF",
+        "clubTeam": "ピラミッズ"
+      },
+      {
+        "name": "タレク・アラー",
+        "position": "DF",
+        "clubTeam": "ZED"
+      },
+      {
+        "name": "ホッサム・アブデルマギド",
+        "position": "DF",
+        "clubTeam": "ザマレク"
+      },
+      {
+        "name": "アーメド・ファトゥー",
+        "position": "DF",
+        "clubTeam": "ザマレク"
+      },
+      {
+        "name": "ヤセル・イブラヒム",
+        "position": "DF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "モハメド・ハニー",
+        "position": "DF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "ラミー・ラビア",
+        "position": "DF",
+        "clubTeam": "アル・アイン（UAE）"
+      },
+      {
+        "name": "ハムディ・ファティ",
+        "position": "DF",
+        "clubTeam": "アル・ワクラ（カタール）"
+      },
+      {
+        "name": "モハメド・アブデルモネイム",
+        "position": "DF",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "マハムード・サベル",
+        "position": "MF",
+        "clubTeam": "ZED"
+      },
+      {
+        "name": "モスタファ・ジコ",
+        "position": "MF",
+        "clubTeam": "ピラミッズ"
+      },
+      {
+        "name": "モハナド・ラシーン",
+        "position": "MF",
+        "clubTeam": "ピラミッズ"
+      },
+      {
+        "name": "アーメド・サイード・\"ジゾ\"",
+        "position": "MF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "マルワン・アッティア",
+        "position": "MF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "エマム・アシュール",
+        "position": "MF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "マハムード・\"トレゼゲ\"",
+        "position": "MF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "ナビル・エマド・\"ドンガ\"",
+        "position": "MF",
+        "clubTeam": "アル・ナジマ（サウジアラビア）"
+      },
+      {
+        "name": "イブラヒム・アデル",
+        "position": "MF",
+        "clubTeam": "ノアシェラン（デンマーク）"
+      },
+      {
+        "name": "ハイセム・ハッサン",
+        "position": "MF",
+        "clubTeam": "オビエド（スペイン）"
+      },
+      {
+        "name": "モハメド・サラー",
+        "position": "MF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "オマル・マルムシュ",
+        "position": "FW",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ハムザ・アブデルカリム",
+        "position": "FW",
+        "clubTeam": "バルセロナB（スペイン）"
+      }
+    ]
+  },
+  {
+    "countryCode": "ENG",
+    "players": [
+      {
+        "name": "ジョーダン・ピックフォード",
+        "position": "GK",
+        "clubTeam": "エバートン"
+      },
+      {
+        "name": "ディーン・ヘンダーソン",
+        "position": "GK",
+        "clubTeam": "クリスタル・パレス"
+      },
+      {
+        "name": "ジェームズ・トラッフォード",
+        "position": "GK",
+        "clubTeam": "マンチェスター・シティ"
+      },
+      {
+        "name": "ジェド・スペンス",
+        "position": "DF",
+        "clubTeam": "トッテナム・ホットスパー"
+      },
+      {
+        "name": "ティノ・リヴラメント",
+        "position": "DF",
+        "clubTeam": "ニューカッスル・ユナイテッド"
+      },
+      {
+        "name": "ダン・バーン",
+        "position": "DF",
+        "clubTeam": "ニューカッスル・ユナイテッド"
+      },
+      {
+        "name": "エズリ・コンサ",
+        "position": "DF",
+        "clubTeam": "アストン・ビラ"
+      },
+      {
+        "name": "リース・ジェームズ",
+        "position": "DF",
+        "clubTeam": "チェルシー"
+      },
+      {
+        "name": "ジョン・ストーンズ",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ"
+      },
+      {
+        "name": "マーク・グエイ",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ"
+      },
+      {
+        "name": "ニコ・オライリー",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ"
+      },
+      {
+        "name": "ジャレル・クアンサー",
+        "position": "DF",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "コビー・メイヌー",
+        "position": "MF",
+        "clubTeam": "マンチェスター・ユナイテッド"
+      },
+      {
+        "name": "エリオット・アンダーソン",
+        "position": "MF",
+        "clubTeam": "ノッティンガム・フォレスト"
+      },
+      {
+        "name": "モーガン・ロジャーズ",
+        "position": "MF",
+        "clubTeam": "アストン・ビラ"
+      },
+      {
+        "name": "デクラン・ライス",
+        "position": "MF",
+        "clubTeam": "アーセナル"
+      },
+      {
+        "name": "エベレチ・エゼ",
+        "position": "MF",
+        "clubTeam": "アーセナル"
+      },
+      {
+        "name": "ジョーダン・ヘンダーソン",
+        "position": "MF",
+        "clubTeam": "ブレントフォード"
+      },
+      {
+        "name": "ジュード・ベリンガム",
+        "position": "MF",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "ハリー・ケイン",
+        "position": "FW",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "マーカス・ラッシュフォード",
+        "position": "FW",
+        "clubTeam": "バルセロナ（スペイン）"
+      },
+      {
+        "name": "イヴァン・トニー",
+        "position": "FW",
+        "clubTeam": "アル・アハリ（サウジアラビア）"
+      },
+      {
+        "name": "ブカヨ・サカ",
+        "position": "FW",
+        "clubTeam": "アーセナル"
+      },
+      {
+        "name": "ノニ・マドゥエケ",
+        "position": "FW",
+        "clubTeam": "アーセナル"
+      },
+      {
+        "name": "アンソニー・ゴードン",
+        "position": "FW",
+        "clubTeam": "ニューカッスル・ユナイテッド"
+      },
+      {
+        "name": "オリー・ワトキンス",
+        "position": "FW",
+        "clubTeam": "アストン・ビラ"
+      }
+    ]
+  },
+  {
+    "countryCode": "ESP",
+    "players": [
+      {
+        "name": "ウナイ・シモン",
+        "position": "GK",
+        "clubTeam": "アスレチック・ビルバオ"
+      },
+      {
+        "name": "ジョアン・ガルシア",
+        "position": "GK",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "ダビド・ラヤ",
+        "position": "GK",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "マルク・プビル",
+        "position": "DF",
+        "clubTeam": "アトレチコ・マドリード"
+      },
+      {
+        "name": "マルコス・ジョレンテ",
+        "position": "DF",
+        "clubTeam": "アトレチコ・マドリード"
+      },
+      {
+        "name": "エメリク・ラポルト",
+        "position": "DF",
+        "clubTeam": "アスレチック・ビルバオ"
+      },
+      {
+        "name": "エリック・ガルシア",
+        "position": "DF",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "パウ・クバルシ",
+        "position": "DF",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "アレハンドロ・グリマルド",
+        "position": "DF",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "ペドロ・ポロ",
+        "position": "DF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "マルク・ククレジャ",
+        "position": "DF",
+        "clubTeam": "チェルシー（イングランド）"
+      },
+      {
+        "name": "アレックス・バエナ",
+        "position": "MF",
+        "clubTeam": "アトレチコ・マドリード"
+      },
+      {
+        "name": "ガビ",
+        "position": "MF",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "ペドリ",
+        "position": "MF",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "ファビアン・ルイス",
+        "position": "MF",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "マルティン・スビメンディ",
+        "position": "MF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ミケル・メリーノ",
+        "position": "MF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ロドリ",
+        "position": "MF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ジェレミ・ピノ",
+        "position": "FW",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "ラミン・ヤマル",
+        "position": "FW",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "ダニエル・”ダニ”・オルモ",
+        "position": "FW",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "フェラン・トーレス",
+        "position": "FW",
+        "clubTeam": "バルセロナ"
+      },
+      {
+        "name": "ミケル・オヤルサバル",
+        "position": "FW",
+        "clubTeam": "レアル・ソシエダ"
+      },
+      {
+        "name": "ニコ・ウィリアムズ",
+        "position": "FW",
+        "clubTeam": "アスレチック・ビルバオ"
+      },
+      {
+        "name": "ボルハ・イグレシアス",
+        "position": "FW",
+        "clubTeam": "セルタ・デ・ビゴ"
+      },
+      {
+        "name": "ビクトル・ムニョス",
+        "position": "FW",
+        "clubTeam": "オサスナ"
+      }
+    ]
+  },
+  {
+    "countryCode": "FRA",
+    "players": [
+      {
+        "name": "マイク・メニャン",
+        "position": "GK",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "ブライス・サンバ",
+        "position": "GK",
+        "clubTeam": "スタッド・レンヌ"
+      },
+      {
+        "name": "ロビン・リッサー",
+        "position": "GK",
+        "clubTeam": "RCランス"
+      },
+      {
+        "name": "リュカ・エルナンデス",
+        "position": "DF",
+        "clubTeam": "パリ・サンジェルマン"
+      },
+      {
+        "name": "テオ・エルナンデス",
+        "position": "DF",
+        "clubTeam": "アル・ヒラル（サウジアラビア）"
+      },
+      {
+        "name": "ダヨ・ウパメカノ",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "マクサンス・ラクロワ",
+        "position": "DF",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "マロ・ギュスト",
+        "position": "DF",
+        "clubTeam": "チェルシー（イングランド）"
+      },
+      {
+        "name": "リュカ・ディニュ",
+        "position": "DF",
+        "clubTeam": "アストン・ビラ（イングランド）"
+      },
+      {
+        "name": "イブラヒマ・コナテ",
+        "position": "DF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "ウィリアン・サリバ",
+        "position": "DF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ジュール・クンデ",
+        "position": "DF",
+        "clubTeam": "バルセロナ（スペイン）"
+      },
+      {
+        "name": "ワレン・ザイール・エメリ",
+        "position": "MF",
+        "clubTeam": "パリ・サンジェルマン"
+      },
+      {
+        "name": "エンゴロ・カンテ",
+        "position": "MF",
+        "clubTeam": "フェネルバフチェ（トルコ）"
+      },
+      {
+        "name": "アドリアン・ラビオ",
+        "position": "MF",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "マヌ・コネ",
+        "position": "MF",
+        "clubTeam": "ASローマ（イタリア）"
+      },
+      {
+        "name": "オーレリアン・チュアメニ",
+        "position": "MF",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "キリアン・エンバペ",
+        "position": "FW",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "ラヤン・シェルキ",
+        "position": "FW",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ジャン・フィリップ・マテタ",
+        "position": "FW",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "マイケル・オリーセ",
+        "position": "FW",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "マルクス・テュラム",
+        "position": "FW",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "ウスマン・デンベレ",
+        "position": "FW",
+        "clubTeam": "パリ・サンジェルマン"
+      },
+      {
+        "name": "ブラッドリー・バルコラ",
+        "position": "FW",
+        "clubTeam": "パリ・サンジェルマン"
+      },
+      {
+        "name": "デジレ・ドゥエ",
+        "position": "FW",
+        "clubTeam": "パリ・サンジェルマン"
+      },
+      {
+        "name": "マグネス・アクリウシュ",
+        "position": "FW",
+        "clubTeam": "ASモナコ"
+      }
+    ]
+  },
+  {
+    "countryCode": "GER",
+    "players": [
+      {
+        "name": "マヌエル・ノイアー",
+        "position": "GK",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "オリヴァー・バウマン",
+        "position": "GK",
+        "clubTeam": "ホッフェンハイム"
+      },
+      {
+        "name": "アレクサンダー・ニューベル",
+        "position": "GK",
+        "clubTeam": "シュツットガルト"
+      },
+      {
+        "name": "ダヴィド・ラウム",
+        "position": "DF",
+        "clubTeam": "ライプツィヒ"
+      },
+      {
+        "name": "ナサニエル・ブラウン",
+        "position": "DF",
+        "clubTeam": "アイントラハト・フランクフルト"
+      },
+      {
+        "name": "ニコ・シュロッターベック",
+        "position": "DF",
+        "clubTeam": "ボルシア・ドルトムント"
+      },
+      {
+        "name": "フェリックス・ヌメチャ",
+        "position": "DF",
+        "clubTeam": "ボルシア・ドルトムント"
+      },
+      {
+        "name": "ヴァルデマール・アントン",
+        "position": "DF",
+        "clubTeam": "ボルシア・ドルトムント"
+      },
+      {
+        "name": "アンジェロ・シュティラー",
+        "position": "DF",
+        "clubTeam": "シュツットガルト"
+      },
+      {
+        "name": "ヨナタン・ター",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "ヨズア・キミッヒ",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "アレクサンダル・パヴロビッチ",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "マリック・チャウ",
+        "position": "DF",
+        "clubTeam": "ニューカッスル・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "パスカル・グロス",
+        "position": "DF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "アントニオ・リュディガー",
+        "position": "DF",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "ナディエム・アミリ",
+        "position": "MF",
+        "clubTeam": "マインツ05"
+      },
+      {
+        "name": "ジェイミー・レヴェリング",
+        "position": "MF",
+        "clubTeam": "シュツットガルト"
+      },
+      {
+        "name": "レナート・カール",
+        "position": "MF",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "レオン・ゴレツカ",
+        "position": "MF",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "ジャマル・ムシアラ",
+        "position": "MF",
+        "clubTeam": "バイエルン・ミュンヘン"
+      },
+      {
+        "name": "レロイ・サネ",
+        "position": "MF",
+        "clubTeam": "ガラタサライ（トルコ）"
+      },
+      {
+        "name": "フロリアン・ヴィルツ",
+        "position": "MF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "カイ・ハヴァーツ",
+        "position": "FW",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "ニック・ヴォルテマーデ",
+        "position": "FW",
+        "clubTeam": "ニューカッスル・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "デニズ・ウンダフ",
+        "position": "FW",
+        "clubTeam": "シュツットガルト"
+      },
+      {
+        "name": "マクシミリアン・バイアー",
+        "position": "FW",
+        "clubTeam": "ボルシア・ドルトムント"
+      }
+    ]
+  },
+  {
+    "countryCode": "GHA",
+    "players": [
+      {
+        "name": "ローレンス・アティ・ジギ",
+        "position": "GK",
+        "clubTeam": "ザンクト・ガレン（スイス）"
+      },
+      {
+        "name": "ジョセフ・アナン",
+        "position": "GK",
+        "clubTeam": "セント・パトリックス・アスレティック（アイルランド）"
+      },
+      {
+        "name": "ベンジャミン・アサレ",
+        "position": "GK",
+        "clubTeam": "ハーツ・オブ・オーク"
+      },
+      {
+        "name": "デリック・ルカッセン",
+        "position": "DF",
+        "clubTeam": "パフォスFC（キプロス）"
+      },
+      {
+        "name": "アブドゥル・ラハマン・ババ",
+        "position": "DF",
+        "clubTeam": "PAOK（ギリシャ）"
+      },
+      {
+        "name": "ジェローム・オポク",
+        "position": "DF",
+        "clubTeam": "イスタンブール・バシャクシェヒル（トルコ）"
+      },
+      {
+        "name": "アリドゥ・セイドゥ",
+        "position": "DF",
+        "clubTeam": "レンヌ（フランス）"
+      },
+      {
+        "name": "コジョ・ぺプラ・オポン",
+        "position": "DF",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "マーヴィン・セナヤ",
+        "position": "DF",
+        "clubTeam": "オセール（フランス）"
+      },
+      {
+        "name": "ギデオン・メンサー",
+        "position": "DF",
+        "clubTeam": "オセール（フランス）"
+      },
+      {
+        "name": "アブドゥル・ムミン",
+        "position": "DF",
+        "clubTeam": "ラーヨ・バジェカーノ（スペイン）"
+      },
+      {
+        "name": "ジョナス・アジェティ",
+        "position": "DF",
+        "clubTeam": "ボルフスブルク（ドイツ）"
+      },
+      {
+        "name": "ケイレブ・イレンキ",
+        "position": "MF",
+        "clubTeam": "ノアシャラン（デンマーク）"
+      },
+      {
+        "name": "オーガスティン・ボアキエ",
+        "position": "MF",
+        "clubTeam": "サンテチエンヌ（フランス）"
+      },
+      {
+        "name": "エリシャ・オウス",
+        "position": "MF",
+        "clubTeam": "オセール（フランス）"
+      },
+      {
+        "name": "クワシ・シボ",
+        "position": "MF",
+        "clubTeam": "オビエド（スペイン）"
+      },
+      {
+        "name": "トーマス・パーテイ",
+        "position": "MF",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "アントワーヌ・セメンヨ",
+        "position": "FW",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ジョーダン・アイェウ",
+        "position": "FW",
+        "clubTeam": "レスター・シティ（イングランド）"
+      },
+      {
+        "name": "アブドゥル・ファタウ・イサハク",
+        "position": "FW",
+        "clubTeam": "レスター・シティ（イングランド）"
+      },
+      {
+        "name": "ブランドン・トーマス・アサンテ",
+        "position": "FW",
+        "clubTeam": "コヴェントリー・シティ（イングランド）"
+      },
+      {
+        "name": "カマルディーン・スレマナ",
+        "position": "FW",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "イニャキ・ウィリアムズ",
+        "position": "FW",
+        "clubTeam": "アスレチック・ビルバオ（スペイン）"
+      },
+      {
+        "name": "アーネスト・ヌアマー",
+        "position": "FW",
+        "clubTeam": "オリンピック・リヨン（フランス）"
+      },
+      {
+        "name": "プリンス・クワベナ・アドゥ",
+        "position": "FW",
+        "clubTeam": "ヴィクトリア・プルゼニ（チェコ）"
+      },
+      {
+        "name": "クリストファー・ボンス・バー",
+        "position": "FW",
+        "clubTeam": "アルカーディシーヤ（サウジアラビア）"
+      }
+    ]
+  },
+  {
+    "countryCode": "HAI",
+    "players": [
+      {
+        "name": "ジョニー・プラシード",
+        "position": "GK",
+        "clubTeam": "バスティア（フランス）"
+      },
+      {
+        "name": "アレクサンドル・ピエール",
+        "position": "GK",
+        "clubTeam": "ソショー（フランス）"
+      },
+      {
+        "name": "ジョズエ・デュヴェルジェ",
+        "position": "GK",
+        "clubTeam": "コスモス・コブレンツ（ドイツ）"
+      },
+      {
+        "name": "リカルド・アデ",
+        "position": "DF",
+        "clubTeam": "LDUキト（エクアドル）"
+      },
+      {
+        "name": "デューク・ラクロワ",
+        "position": "DF",
+        "clubTeam": "コロラド・スプリングス・スウィッチバックス（アメリカ）"
+      },
+      {
+        "name": "キート・サーモンシー",
+        "position": "DF",
+        "clubTeam": "ヤング・ボーイズII（スイス）"
+      },
+      {
+        "name": "ハンネス・デルクロワ",
+        "position": "DF",
+        "clubTeam": "ルガーノ（スイス）"
+      },
+      {
+        "name": "ウィルゲンス・ポーガン",
+        "position": "DF",
+        "clubTeam": "ズルテ・ワレヘム（ベルギー）"
+      },
+      {
+        "name": "ジャン・ケヴィン・デュヴェルン",
+        "position": "DF",
+        "clubTeam": "ヘント（ベルギー）"
+      },
+      {
+        "name": "マルタン・エクスペリエンス",
+        "position": "DF",
+        "clubTeam": "ナンシー（フランス）"
+      },
+      {
+        "name": "カルラン・アルキュス",
+        "position": "DF",
+        "clubTeam": "アンジェ（フランス）"
+      },
+      {
+        "name": "ウーデンスキ・ピエール",
+        "position": "MF",
+        "clubTeam": "ヴァイオレット"
+      },
+      {
+        "name": "カール・サント",
+        "position": "MF",
+        "clubTeam": "エルパソ・ロコモティヴ（アメリカ）"
+      },
+      {
+        "name": "ダンリー・ジャン・ジャック",
+        "position": "MF",
+        "clubTeam": "フィラデルフィア・ユニオン（アメリカ）"
+      },
+      {
+        "name": "ドミニク・シモン",
+        "position": "MF",
+        "clubTeam": "タトラン・プレショフ（スロバキア）"
+      },
+      {
+        "name": "レヴァートン・ピエール",
+        "position": "MF",
+        "clubTeam": "ヴィゼラ（ポルトガル）"
+      },
+      {
+        "name": "ジャン・リクネル・ベルガルド",
+        "position": "MF",
+        "clubTeam": "ウォルヴァーハンプトン・ワンダラーズ（イングランド）"
+      },
+      {
+        "name": "デュカン・ナゾン",
+        "position": "FW",
+        "clubTeam": "エステグラル（イラン）"
+      },
+      {
+        "name": "ウィルソン・イシドール",
+        "position": "FW",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "ジョズエ・カジミール",
+        "position": "FW",
+        "clubTeam": "オセール（フランス）"
+      },
+      {
+        "name": "ヤシン・フォルテュネ",
+        "position": "FW",
+        "clubTeam": "ヴィゼラ（ポルトガル）"
+      },
+      {
+        "name": "フランツディ・ピエロ",
+        "position": "FW",
+        "clubTeam": "チャイクル・リゼスポル（トルコ）"
+      },
+      {
+        "name": "ルベン・プロヴィデンス",
+        "position": "FW",
+        "clubTeam": "アルメレ・シティ（オランダ）"
+      },
+      {
+        "name": "レニー・ジョセフ",
+        "position": "FW",
+        "clubTeam": "フェレンツヴァーロシュ（ハンガリー）"
+      },
+      {
+        "name": "ドン・ルイシウス・ディードソン",
+        "position": "FW",
+        "clubTeam": "FCダラス（アメリカ）"
+      },
+      {
+        "name": "デリック・エティエンヌ",
+        "position": "FW",
+        "clubTeam": "トロントFC（カナダ）"
+      }
+    ]
+  },
+  {
+    "countryCode": "IRN",
+    "players": [
+      {
+        "name": "アリレザ・ベイランヴァンド",
+        "position": "GK",
+        "clubTeam": "トラクトル"
+      },
+      {
+        "name": "パヤム・ニアズマンド",
+        "position": "GK",
+        "clubTeam": "ペルセポリス"
+      },
+      {
+        "name": "ホセイン・ホセイニ",
+        "position": "GK",
+        "clubTeam": "セパハン"
+      },
+      {
+        "name": "ダニエル・エイリ",
+        "position": "DF",
+        "clubTeam": "マラヴァン"
+      },
+      {
+        "name": "アリ・ネマティ",
+        "position": "DF",
+        "clubTeam": "フーラード"
+      },
+      {
+        "name": "ラミン・レザイアン",
+        "position": "DF",
+        "clubTeam": "フーラード"
+      },
+      {
+        "name": "エフサン・ハジサフィ",
+        "position": "DF",
+        "clubTeam": "セパハン"
+      },
+      {
+        "name": "ホセイン・カナアニ",
+        "position": "DF",
+        "clubTeam": "ペルセポリス"
+      },
+      {
+        "name": "ミラド・モハマディ",
+        "position": "DF",
+        "clubTeam": "ペルセポリス"
+      },
+      {
+        "name": "サレフ・ハーダニ",
+        "position": "DF",
+        "clubTeam": "エステグラル"
+      },
+      {
+        "name": "ショジャー・ハリルザデー",
+        "position": "DF",
+        "clubTeam": "トラクトル"
+      },
+      {
+        "name": "アリア・ユセフィ",
+        "position": "MF",
+        "clubTeam": "セパハン"
+      },
+      {
+        "name": "アミルモハンマド・ラザギニア",
+        "position": "MF",
+        "clubTeam": "エステグラル"
+      },
+      {
+        "name": "ルズベー・チェシミ",
+        "position": "MF",
+        "clubTeam": "エステグラル"
+      },
+      {
+        "name": "メフディ・トラビ",
+        "position": "MF",
+        "clubTeam": "トラクトル"
+      },
+      {
+        "name": "サマン・ゴッドス",
+        "position": "MF",
+        "clubTeam": "イテハド・カルバ（UAE）"
+      },
+      {
+        "name": "サイード・エザトラヒ",
+        "position": "MF",
+        "clubTeam": "シャバブ・アル・アハリ（UAE）"
+      },
+      {
+        "name": "モハンマド・ゴルバニ",
+        "position": "MF",
+        "clubTeam": "アル・ワフダ（UAE）"
+      },
+      {
+        "name": "モハンマド・モヘビ",
+        "position": "MF",
+        "clubTeam": "FCロストフ（ロシア）"
+      },
+      {
+        "name": "アリレザ・ジャハンバフシュ",
+        "position": "MF",
+        "clubTeam": "デンデル（ベルギー）"
+      },
+      {
+        "name": "メフディ・タレミ",
+        "position": "FW",
+        "clubTeam": "オリンピアコス（ギリシャ）"
+      },
+      {
+        "name": "デニス・\"エッカート\"・ダルガヒ",
+        "position": "FW",
+        "clubTeam": "スタンダール・リエージュ（ベルギー）"
+      },
+      {
+        "name": "シャフリヤル・モガンロウ",
+        "position": "FW",
+        "clubTeam": "イテハド・カルバ（UAE）"
+      },
+      {
+        "name": "メフディ・ガエディ",
+        "position": "FW",
+        "clubTeam": "アル・ナスル（UAE）"
+      },
+      {
+        "name": "アミルホセイン・ホセインザデー",
+        "position": "FW",
+        "clubTeam": "トラクトル"
+      },
+      {
+        "name": "アリ・アリプール",
+        "position": "FW",
+        "clubTeam": "ペルセポリス"
+      }
+    ]
+  },
+  {
+    "countryCode": "IRQ",
+    "players": [
+      {
+        "name": "ジャラル・ハッサン",
+        "position": "GK",
+        "clubTeam": "アル・ザウラー"
+      },
+      {
+        "name": "ファハド・タリブ",
+        "position": "GK",
+        "clubTeam": "アル・タラバ"
+      },
+      {
+        "name": "アフメド・バシル",
+        "position": "GK",
+        "clubTeam": "アル・ショルタ"
+      },
+      {
+        "name": "アカム・ハシム",
+        "position": "DF",
+        "clubTeam": "アル・ザウラー"
+      },
+      {
+        "name": "アフメド・ヤヒヤ",
+        "position": "DF",
+        "clubTeam": "アル・ショルタ"
+      },
+      {
+        "name": "マナフ・ユニス",
+        "position": "DF",
+        "clubTeam": "アル・ショルタ"
+      },
+      {
+        "name": "ムスタファ・サードーン",
+        "position": "DF",
+        "clubTeam": "アル・ショルタ"
+      },
+      {
+        "name": "フランス・プトロス",
+        "position": "DF",
+        "clubTeam": "ペルシブ（インドネシア）"
+      },
+      {
+        "name": "レビン・スラカ",
+        "position": "DF",
+        "clubTeam": "ポート（タイ）"
+      },
+      {
+        "name": "ザイド・タフシーン",
+        "position": "DF",
+        "clubTeam": "パフタコール（ウズベキスタン）"
+      },
+      {
+        "name": "フセイン・アリ",
+        "position": "DF",
+        "clubTeam": "ポゴニ・シュチェチン（ポーランド）"
+      },
+      {
+        "name": "メルカス・ドスキ",
+        "position": "DF",
+        "clubTeam": "ヴィクトリア・プルゼニ（チェコ）"
+      },
+      {
+        "name": "ザイド・イスマイル",
+        "position": "MF",
+        "clubTeam": "アル・タラバ"
+      },
+      {
+        "name": "イブラヒム・バイェシュ",
+        "position": "MF",
+        "clubTeam": "アル・ダフラ（UAE）"
+      },
+      {
+        "name": "アリ・ジャシム",
+        "position": "MF",
+        "clubTeam": "アル・ナジマ（サウジアラビア）"
+      },
+      {
+        "name": "アフメド・カセム",
+        "position": "MF",
+        "clubTeam": "ナッシュビルSC（アメリカ）"
+      },
+      {
+        "name": "ユセフ・アミン",
+        "position": "MF",
+        "clubTeam": "AEKラルナカ（キプロス）"
+      },
+      {
+        "name": "アイマール・シェール",
+        "position": "MF",
+        "clubTeam": "サルプスボルグ（ノルウェー）"
+      },
+      {
+        "name": "ケヴィン・ヤコブ",
+        "position": "MF",
+        "clubTeam": "オーフス（デンマーク）"
+      },
+      {
+        "name": "アミル・アル・アンマリ",
+        "position": "MF",
+        "clubTeam": "クラコヴィア（ポーランド）"
+      },
+      {
+        "name": "ジダン・イクバル",
+        "position": "MF",
+        "clubTeam": "ユトレヒト（オランダ）"
+      },
+      {
+        "name": "マルコ・ファルジ",
+        "position": "MF",
+        "clubTeam": "ヴェネツィア（イタリア）"
+      },
+      {
+        "name": "アイメン・フセイン",
+        "position": "FW",
+        "clubTeam": "アル・カルマ"
+      },
+      {
+        "name": "アリ・ユシフ",
+        "position": "FW",
+        "clubTeam": "アル・タラバ"
+      },
+      {
+        "name": "アリ・アル・ハマディ",
+        "position": "FW",
+        "clubTeam": "ルートン・タウン（イングランド）"
+      },
+      {
+        "name": "モハナド・アリ",
+        "position": "FW",
+        "clubTeam": "ディバー（UAE）"
+      }
+    ]
+  },
+  {
+    "countryCode": "JOR",
+    "players": [
+      {
+        "name": "ヤジード・アブ・レイラ",
+        "position": "GK",
+        "clubTeam": "アル・フセイン"
+      },
+      {
+        "name": "アブダラー・アル・ファフリ",
+        "position": "GK",
+        "clubTeam": "アル・ワフダート"
+      },
+      {
+        "name": "ヌール・バニ・アッティアー",
+        "position": "GK",
+        "clubTeam": "アル・ファイサリー"
+      },
+      {
+        "name": "サリム・オバイド",
+        "position": "DF",
+        "clubTeam": "アル・フセイン"
+      },
+      {
+        "name": "サイード・アル・ロサン",
+        "position": "DF",
+        "clubTeam": "アル・フセイン"
+      },
+      {
+        "name": "イフサン・ハダド",
+        "position": "DF",
+        "clubTeam": "アル・フセイン"
+      },
+      {
+        "name": "アナス・バダウィ",
+        "position": "DF",
+        "clubTeam": "アル・ファイサリー"
+      },
+      {
+        "name": "フサム・アブ・ダハブ",
+        "position": "DF",
+        "clubTeam": "アル・ファイサリー"
+      },
+      {
+        "name": "アブダラー・ナシブ",
+        "position": "DF",
+        "clubTeam": "アル・ザウラー（イラク）"
+      },
+      {
+        "name": "モハマド・アブ・アル・ナディ",
+        "position": "DF",
+        "clubTeam": "セランゴール（マレーシア）"
+      },
+      {
+        "name": "ヤザン・アル・アラブ",
+        "position": "DF",
+        "clubTeam": "FCソウル（韓国）"
+      },
+      {
+        "name": "ラジャイー・アーイド",
+        "position": "MF",
+        "clubTeam": "アル・フセイン"
+      },
+      {
+        "name": "モハンマド・アル・ダウド",
+        "position": "MF",
+        "clubTeam": "アル・ワフダート"
+      },
+      {
+        "name": "アメル・ジャムス",
+        "position": "MF",
+        "clubTeam": "アル・ザウラー（イラク）"
+      },
+      {
+        "name": "モハンマド・アブ・ハシシュ",
+        "position": "MF",
+        "clubTeam": "アル・カルマ（イラク）"
+      },
+      {
+        "name": "イブラヒム・サデー",
+        "position": "MF",
+        "clubTeam": "アル・カルマ（イラク）"
+      },
+      {
+        "name": "モハンナド・アブ・タハ",
+        "position": "MF",
+        "clubTeam": "アル・クウワ・アル・ジャウウィーヤ（イラク）"
+      },
+      {
+        "name": "ヌール・アル・ラワブデー",
+        "position": "MF",
+        "clubTeam": "セランゴール（マレーシア）"
+      },
+      {
+        "name": "ニザール・アル・ラシュダン",
+        "position": "MF",
+        "clubTeam": "カタールSC（カタール）"
+      },
+      {
+        "name": "ムサ・アル・ターマリ",
+        "position": "FW",
+        "clubTeam": "レンヌ（フランス）"
+      },
+      {
+        "name": "イブラヒム・サブラ",
+        "position": "FW",
+        "clubTeam": "ロコモティヴァ・ザグレブ（クロアチア）"
+      },
+      {
+        "name": "モハンマド・アブ・ズライク",
+        "position": "FW",
+        "clubTeam": "ラジャCA（モロッコ）"
+      },
+      {
+        "name": "オデー・アル・ファフリ",
+        "position": "FW",
+        "clubTeam": "ピラミッズ（エジプト）"
+      },
+      {
+        "name": "アリ・アザイゼー",
+        "position": "FW",
+        "clubTeam": "アル・シャバブ（サウジアラビア）"
+      },
+      {
+        "name": "アリ・オルワン",
+        "position": "FW",
+        "clubTeam": "アル・スィーリーヤ（カタール）"
+      },
+      {
+        "name": "マフムード・アル・マルディ",
+        "position": "FW",
+        "clubTeam": "アル・フセイン"
+      }
+    ]
+  },
+  {
+    "countryCode": "JPN",
+    "players": [
+      {
+        "name": "鈴木 彩艶",
+        "position": "GK",
+        "clubTeam": "パルマ（イタリア）"
+      },
+      {
+        "name": "大迫 敬介",
+        "position": "GK",
+        "clubTeam": "サンフレッチェ広島"
+      },
+      {
+        "name": "早川 友基",
+        "position": "GK",
+        "clubTeam": "鹿島アントラーズ"
+      },
+      {
+        "name": "長友 佑都",
+        "position": "DF",
+        "clubTeam": "FC東京"
+      },
+      {
+        "name": "鈴木 淳之介",
+        "position": "DF",
+        "clubTeam": "FCコペンハーゲン（デンマーク）"
+      },
+      {
+        "name": "谷口 彰悟",
+        "position": "DF",
+        "clubTeam": "シント・トロイデン（ベルギー）"
+      },
+      {
+        "name": "渡辺 剛",
+        "position": "DF",
+        "clubTeam": "フェイエノールト（オランダ）"
+      },
+      {
+        "name": "板倉 滉",
+        "position": "DF",
+        "clubTeam": "アヤックス（オランダ）"
+      },
+      {
+        "name": "冨安 健洋",
+        "position": "DF",
+        "clubTeam": "アヤックス（オランダ）"
+      },
+      {
+        "name": "瀬古 歩夢",
+        "position": "DF",
+        "clubTeam": "ル・アーヴル（フランス）"
+      },
+      {
+        "name": "菅原 由勢",
+        "position": "DF",
+        "clubTeam": "ベルダー・ブレーメン（ドイツ）"
+      },
+      {
+        "name": "伊藤 洋輝",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "伊東 純也",
+        "position": "MF",
+        "clubTeam": "ヘンク（ベルギー）"
+      },
+      {
+        "name": "中村 敬斗",
+        "position": "MF",
+        "clubTeam": "スタッド・ランス（フランス）"
+      },
+      {
+        "name": "鈴木 唯人",
+        "position": "MF",
+        "clubTeam": "フライブルク（ドイツ）"
+      },
+      {
+        "name": "佐野 海舟",
+        "position": "MF",
+        "clubTeam": "マインツ05（ドイツ）"
+      },
+      {
+        "name": "堂安 律",
+        "position": "MF",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "田中 碧",
+        "position": "MF",
+        "clubTeam": "リーズ・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "鎌田 大地",
+        "position": "MF",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "遠藤 航",
+        "position": "MF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "久保 建英",
+        "position": "MF",
+        "clubTeam": "レアル・ソシエダ（スペイン）"
+      },
+      {
+        "name": "塩貝 健斗",
+        "position": "FW",
+        "clubTeam": "ボルフスブルク（ドイツ）"
+      },
+      {
+        "name": "前田 大然",
+        "position": "FW",
+        "clubTeam": "セルティック（スコットランド）"
+      },
+      {
+        "name": "上田 綺世",
+        "position": "FW",
+        "clubTeam": "フェイエノールト（オランダ）"
+      },
+      {
+        "name": "小川 航基",
+        "position": "FW",
+        "clubTeam": "NECナイメヘン（オランダ）"
+      },
+      {
+        "name": "後藤 啓介",
+        "position": "FW",
+        "clubTeam": "シント・トロイデン（ベルギー）"
+      }
+    ]
+  },
+  {
+    "countryCode": "KOR",
+    "players": [
+      {
+        "name": "金承奎",
+        "position": "GK",
+        "clubTeam": "FC東京（日本）"
+      },
+      {
+        "name": "趙賢祐",
+        "position": "GK",
+        "clubTeam": "蔚山HD"
+      },
+      {
+        "name": "宋范根",
+        "position": "GK",
+        "clubTeam": "全北現代モータース"
+      },
+      {
+        "name": "趙偉濟",
+        "position": "DF",
+        "clubTeam": "全北現代モータース"
+      },
+      {
+        "name": "李期奕",
+        "position": "DF",
+        "clubTeam": "江原FC"
+      },
+      {
+        "name": "金紋奐",
+        "position": "DF",
+        "clubTeam": "大田ハナシチズン"
+      },
+      {
+        "name": "金太鉉",
+        "position": "DF",
+        "clubTeam": "鹿島アントラーズ（日本）"
+      },
+      {
+        "name": "朴鎭燮",
+        "position": "DF",
+        "clubTeam": "浙江FC（中国）"
+      },
+      {
+        "name": "薛永佑",
+        "position": "DF",
+        "clubTeam": "レッドスター・ベオグラード（セルビア）"
+      },
+      {
+        "name": "李太錫",
+        "position": "DF",
+        "clubTeam": "オーストリア・ウィーン（オーストリア）"
+      },
+      {
+        "name": "李漢範",
+        "position": "DF",
+        "clubTeam": "ミッティラン（デンマーク）"
+      },
+      {
+        "name": "イェンス・カストロプ",
+        "position": "DF",
+        "clubTeam": "ボルシア・メンヒェングラートバッハ（ドイツ）"
+      },
+      {
+        "name": "金敏在",
+        "position": "DF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "李東炅",
+        "position": "MF",
+        "clubTeam": "蔚山HD"
+      },
+      {
+        "name": "金鎮圭",
+        "position": "MF",
+        "clubTeam": "全北現代モータース"
+      },
+      {
+        "name": "黄仁範",
+        "position": "MF",
+        "clubTeam": "フェイエノールト（オランダ）"
+      },
+      {
+        "name": "嚴智星",
+        "position": "MF",
+        "clubTeam": "スウォンジー・シティ（ウェールズ）"
+      },
+      {
+        "name": "梁鉉俊",
+        "position": "MF",
+        "clubTeam": "セルティック（スコットランド）"
+      },
+      {
+        "name": "李在成",
+        "position": "MF",
+        "clubTeam": "マインツ05（ドイツ）"
+      },
+      {
+        "name": "裵峻浩",
+        "position": "MF",
+        "clubTeam": "ストーク・シティ（イングランド）"
+      },
+      {
+        "name": "白昇浩",
+        "position": "MF",
+        "clubTeam": "バーミンガム・シティ（イングランド）"
+      },
+      {
+        "name": "黄喜燦",
+        "position": "MF",
+        "clubTeam": "ウォルヴァーハンプトン・ワンダラーズ（イングランド）"
+      },
+      {
+        "name": "李康仁",
+        "position": "MF",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "孫興慜",
+        "position": "FW",
+        "clubTeam": "ロサンゼルスFC（アメリカ）"
+      },
+      {
+        "name": "呉賢揆",
+        "position": "FW",
+        "clubTeam": "ベジクタシュ（トルコ）"
+      },
+      {
+        "name": "趙圭誠",
+        "position": "FW",
+        "clubTeam": "ミッティラン（デンマーク）"
+      }
+    ]
+  },
+  {
+    "countryCode": "KSA",
+    "players": [
+      {
+        "name": "モハメド・アル・オワイス",
+        "position": "GK",
+        "clubTeam": "アル・ウラー"
+      },
+      {
+        "name": "ナワフ・アル・アキディ",
+        "position": "GK",
+        "clubTeam": "アル・ナスル"
+      },
+      {
+        "name": "アーメド・アル・カサル",
+        "position": "GK",
+        "clubTeam": "アル・カーディシーヤ"
+      },
+      {
+        "name": "ジェハド・タクリ",
+        "position": "DF",
+        "clubTeam": "アル・カーディシーヤ"
+      },
+      {
+        "name": "モハメド・アブ・アル・シャマト",
+        "position": "DF",
+        "clubTeam": "アル・カーディシーヤ"
+      },
+      {
+        "name": "ハッサン・カデシュ",
+        "position": "DF",
+        "clubTeam": "アル・イテハド"
+      },
+      {
+        "name": "ハッサン・タムバクティ",
+        "position": "DF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "アリ・ラジャミ",
+        "position": "DF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "モテブ・アル・ハルビ",
+        "position": "DF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "アリ・マジュラシ",
+        "position": "DF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "アブドゥレラー・アル・アムリ",
+        "position": "DF",
+        "clubTeam": "アル・ナスル"
+      },
+      {
+        "name": "ナワフ・ブシャル",
+        "position": "DF",
+        "clubTeam": "アル・ナスル"
+      },
+      {
+        "name": "サウド・アブドゥルハミド",
+        "position": "DF",
+        "clubTeam": "RCランス（フランス）"
+      },
+      {
+        "name": "アラー・アル・ヘッジ",
+        "position": "MF",
+        "clubTeam": "ネオム"
+      },
+      {
+        "name": "ジヤド・アル・ジョハニ",
+        "position": "MF",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "ハリド・アル・ガナム",
+        "position": "MF",
+        "clubTeam": "アル・イテファク"
+      },
+      {
+        "name": "アイマン・ヤヒヤ",
+        "position": "MF",
+        "clubTeam": "アル・ナスル"
+      },
+      {
+        "name": "アブドゥラー・アル・ハイバリ",
+        "position": "MF",
+        "clubTeam": "アル・ナスル"
+      },
+      {
+        "name": "ムサブ・アル・ジュワイル",
+        "position": "MF",
+        "clubTeam": "アル・カーディシーヤ"
+      },
+      {
+        "name": "スルタン・マンダシュ",
+        "position": "MF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "モハメド・カンノ",
+        "position": "MF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "ナセル・アル・ドサリ",
+        "position": "MF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "サレム・アル・ドサリ",
+        "position": "MF",
+        "clubTeam": "アル・ヒラル"
+      },
+      {
+        "name": "フィラス・アル・ブライカン",
+        "position": "FW",
+        "clubTeam": "アル・アハリ"
+      },
+      {
+        "name": "サレー・アル・シェフリ",
+        "position": "FW",
+        "clubTeam": "アル・イテハド"
+      },
+      {
+        "name": "アブドゥラー・アル・ハムダン",
+        "position": "FW",
+        "clubTeam": "アル・ナスル"
+      }
+    ]
+  },
+  {
+    "countryCode": "MAR",
+    "players": [
+      {
+        "name": "ヤシン・ブヌ",
+        "position": "GK",
+        "clubTeam": "アル・ヒラル（サウジアラビア）"
+      },
+      {
+        "name": "ムニル",
+        "position": "GK",
+        "clubTeam": "ベルカンヌ"
+      },
+      {
+        "name": "アーメド・レダ・タグナウティ",
+        "position": "GK",
+        "clubTeam": "AS FAR"
+      },
+      {
+        "name": "ユセフ・ベランマリ",
+        "position": "DF",
+        "clubTeam": "アル・アハリ（エジプト）"
+      },
+      {
+        "name": "レドゥアン・ハルハル",
+        "position": "DF",
+        "clubTeam": "メヘレン（ベルギー）"
+      },
+      {
+        "name": "ザカリア・エル・ワディ",
+        "position": "DF",
+        "clubTeam": "ヘンク（ベルギー）"
+      },
+      {
+        "name": "アナス・サラー・エディン",
+        "position": "DF",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "イッサ・ディオプ",
+        "position": "DF",
+        "clubTeam": "フラム（イングランド）"
+      },
+      {
+        "name": "シャディ・リアド",
+        "position": "DF",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "ヌサイル・マズラウィ",
+        "position": "DF",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ナイフ・アゲルド",
+        "position": "DF",
+        "clubTeam": "マルセイユ（フランス）"
+      },
+      {
+        "name": "アクラフ・ハキミ",
+        "position": "DF",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "イスマエル・サイバリ",
+        "position": "MF",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "アイユーブ・ブアディ",
+        "position": "MF",
+        "clubTeam": "リール（フランス）"
+      },
+      {
+        "name": "サミル・エル・ムラベ",
+        "position": "MF",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "ビラル・エル・ハヌス",
+        "position": "MF",
+        "clubTeam": "シュツットガルト（ドイツ）"
+      },
+      {
+        "name": "ニール・エル・アイナウィ",
+        "position": "MF",
+        "clubTeam": "ASローマ（イタリア）"
+      },
+      {
+        "name": "アゼディン・ウナヒ",
+        "position": "MF",
+        "clubTeam": "ジローナ（スペイン）"
+      },
+      {
+        "name": "ソフィアン・アムラバト",
+        "position": "MF",
+        "clubTeam": "ベティス（スペイン）"
+      },
+      {
+        "name": "ブライム・ディアス",
+        "position": "FW",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "アブデ・エザルズリ",
+        "position": "FW",
+        "clubTeam": "ベティス（スペイン）"
+      },
+      {
+        "name": "ケムスディン・タルビ",
+        "position": "FW",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "アユベ・アマイムニ",
+        "position": "FW",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "ジェシム・ヤシン",
+        "position": "FW",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "アユブ・エル・カービ",
+        "position": "FW",
+        "clubTeam": "オリンピアコス（ギリシャ）"
+      },
+      {
+        "name": "スフィアン・ラヒミ",
+        "position": "FW",
+        "clubTeam": "アル・アイン（UAE）"
+      }
+    ]
+  },
+  {
+    "countryCode": "MEX",
+    "players": [
+      {
+        "name": "ギジェルモ・オチョア",
+        "position": "GK",
+        "clubTeam": "AELリマソル（キプロス）"
+      },
+      {
+        "name": "ラウール・ランヘル",
+        "position": "GK",
+        "clubTeam": "グアダラハラ・チバス"
+      },
+      {
+        "name": "カルロス・アセベド",
+        "position": "GK",
+        "clubTeam": "サントス・ラグナ"
+      },
+      {
+        "name": "ヘスス・ガジャルド",
+        "position": "DF",
+        "clubTeam": "トルーカ"
+      },
+      {
+        "name": "イスラエル・レジェス",
+        "position": "DF",
+        "clubTeam": "アメリカ"
+      },
+      {
+        "name": "セサル・モンテス",
+        "position": "DF",
+        "clubTeam": "ロコモティフ・モスクワ（ロシア）"
+      },
+      {
+        "name": "ホルヘ・サンチェス",
+        "position": "DF",
+        "clubTeam": "PAOK（ギリシャ）"
+      },
+      {
+        "name": "マテオ・チャベス",
+        "position": "DF",
+        "clubTeam": "AZアルクマール（オランダ）"
+      },
+      {
+        "name": "ヨハン・バスケス",
+        "position": "DF",
+        "clubTeam": "ジェノア（イタリア）"
+      },
+      {
+        "name": "ブライアン・グティエレス",
+        "position": "MF",
+        "clubTeam": "グアダラハラ・チバス"
+      },
+      {
+        "name": "ルイス・ロモ",
+        "position": "MF",
+        "clubTeam": "グアダラハラ・チバス"
+      },
+      {
+        "name": "ヒルベルト・モラ",
+        "position": "MF",
+        "clubTeam": "ティフアナ"
+      },
+      {
+        "name": "エリック・リラ",
+        "position": "MF",
+        "clubTeam": "クルス・アスル"
+      },
+      {
+        "name": "ルイス・チャベス",
+        "position": "MF",
+        "clubTeam": "ディナモ・モスクワ（ロシア）"
+      },
+      {
+        "name": "オルベリン・ピネダ",
+        "position": "MF",
+        "clubTeam": "AEKアテネ（ギリシャ）"
+      },
+      {
+        "name": "セサル・ウエルタ",
+        "position": "MF",
+        "clubTeam": "アンデルレヒト（ベルギー）"
+      },
+      {
+        "name": "エドソン・アルバレス",
+        "position": "MF",
+        "clubTeam": "フェネルバフチェ（トルコ）"
+      },
+      {
+        "name": "アルバロ・フィダルゴ",
+        "position": "MF",
+        "clubTeam": "ベティス（スペイン）"
+      },
+      {
+        "name": "オベド・バルガス",
+        "position": "MF",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ラウール・ヒメネス",
+        "position": "FW",
+        "clubTeam": "フラム（イングランド）"
+      },
+      {
+        "name": "サンティアゴ・ヒメネス",
+        "position": "FW",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "フリアン・キニョネス",
+        "position": "FW",
+        "clubTeam": "アル・カーディシーヤ（サウジアラビア）"
+      },
+      {
+        "name": "アレクシス・ベガ",
+        "position": "FW",
+        "clubTeam": "トルーカ"
+      },
+      {
+        "name": "アルマンド・ゴンサレス",
+        "position": "FW",
+        "clubTeam": "グアダラハラ・チバス"
+      },
+      {
+        "name": "ギジェルモ・マルティネス",
+        "position": "FW",
+        "clubTeam": "UNAMプマス"
+      },
+      {
+        "name": "ロベルト・アルバラド",
+        "position": "FW",
+        "clubTeam": "グアダラハラ・チバス"
+      }
+    ]
+  },
+  {
+    "countryCode": "NED",
+    "players": [
+      {
+        "name": "バート・フェルブルッヘン",
+        "position": "GK",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "ロビン・ルーフス",
+        "position": "GK",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "マルク・フレッケン",
+        "position": "GK",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "デンゼル・ダンフリース",
+        "position": "DF",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "ミッキー・ファン・デ・フェン",
+        "position": "DF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "ヤン・ポール・ファン・ヘッケ",
+        "position": "DF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "ヨレル・ハト",
+        "position": "DF",
+        "clubTeam": "チェルシー（イングランド）"
+      },
+      {
+        "name": "ナタン・アケ",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ユリエン・ティンバー",
+        "position": "DF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "フィルジル・ファン・ダイク",
+        "position": "DF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "フース・ティル",
+        "position": "MF",
+        "clubTeam": "PSVアイントホーフェン"
+      },
+      {
+        "name": "クインテン・ティンバー",
+        "position": "MF",
+        "clubTeam": "オリンピック・マルセイユ（フランス）"
+      },
+      {
+        "name": "マルテン・デ・ローン",
+        "position": "MF",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "トゥーン・コープマイネルス",
+        "position": "MF",
+        "clubTeam": "ユベントス（イタリア）"
+      },
+      {
+        "name": "マッツ・ウィーファー",
+        "position": "MF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "タイアニ・ラインデルス",
+        "position": "MF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ライアン・フラーフェンベルフ",
+        "position": "MF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "フレンキー・デ・ヨング",
+        "position": "MF",
+        "clubTeam": "バルセロナ（スペイン）"
+      },
+      {
+        "name": "コーディ・ガクポ",
+        "position": "FW",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "ブライアン・ブロビー",
+        "position": "FW",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "ジャスティン・クライファート",
+        "position": "FW",
+        "clubTeam": "ボーンマス（イングランド）"
+      },
+      {
+        "name": "クリセンシオ・サマーフィル",
+        "position": "FW",
+        "clubTeam": "ウェストハム・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ドニエル・マレン",
+        "position": "FW",
+        "clubTeam": "ASローマ（イタリア）"
+      },
+      {
+        "name": "ノア・ラング",
+        "position": "FW",
+        "clubTeam": "ガラタサライ（トルコ）"
+      },
+      {
+        "name": "メンフィス・デパイ",
+        "position": "FW",
+        "clubTeam": "コリンチャンス（ブラジル）"
+      },
+      {
+        "name": "ワウト・ウェクホルスト",
+        "position": "FW",
+        "clubTeam": "アヤックス"
+      }
+    ]
+  },
+  {
+    "countryCode": "NOR",
+    "players": [
+      {
+        "name": "エリアン・ニュラン",
+        "position": "GK",
+        "clubTeam": "セビージャ（スペイン）"
+      },
+      {
+        "name": "エギル・セルヴィク",
+        "position": "GK",
+        "clubTeam": "ワトフォード（イングランド）"
+      },
+      {
+        "name": "サンデル・タンヴィク",
+        "position": "GK",
+        "clubTeam": "ハンブルガーSV（ドイツ）"
+      },
+      {
+        "name": "ヘンリク・ファルヘナー",
+        "position": "DF",
+        "clubTeam": "ヴァイキングFK"
+      },
+      {
+        "name": "フレドリク・ビェルカン",
+        "position": "DF",
+        "clubTeam": "ボデ/グリムト"
+      },
+      {
+        "name": "トールビェルン・ヘッゲム",
+        "position": "DF",
+        "clubTeam": "ボローニャ（イタリア）"
+      },
+      {
+        "name": "マルクス・ヘルムグレン・ペデルセン",
+        "position": "DF",
+        "clubTeam": "トリノ（イタリア）"
+      },
+      {
+        "name": "レオ・エスティゴール",
+        "position": "DF",
+        "clubTeam": "ジェノア（イタリア）"
+      },
+      {
+        "name": "ソンドレ・ランガス",
+        "position": "DF",
+        "clubTeam": "ダービー・カウンティ（イングランド）"
+      },
+      {
+        "name": "クリストフェル・アイエル",
+        "position": "DF",
+        "clubTeam": "ブレントフォード（イングランド）"
+      },
+      {
+        "name": "ダヴィド・ウォルフ",
+        "position": "DF",
+        "clubTeam": "ウォルヴァーハンプトン・ワンダラーズ（イングランド）"
+      },
+      {
+        "name": "ユリアン・リエルソン",
+        "position": "DF",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "パトリック・ベルグ",
+        "position": "MF",
+        "clubTeam": "ボデ/グリムト"
+      },
+      {
+        "name": "イェンス・ペッター・ハウゲ",
+        "position": "MF",
+        "clubTeam": "ボデ/グリムト"
+      },
+      {
+        "name": "フレドリク・アウルスネス",
+        "position": "MF",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "アンドレアス・シェルデルップ",
+        "position": "MF",
+        "clubTeam": "ベンフィカ（ポルトガル）"
+      },
+      {
+        "name": "セロニアス・アースゴール",
+        "position": "MF",
+        "clubTeam": "レンジャーズ（スコットランド）"
+      },
+      {
+        "name": "モルテン・トルスビー",
+        "position": "MF",
+        "clubTeam": "クレモネーゼ（イタリア）"
+      },
+      {
+        "name": "クリスティアン・トルストヴェット",
+        "position": "MF",
+        "clubTeam": "サッスオーロ（イタリア）"
+      },
+      {
+        "name": "アントニオ・ヌサ",
+        "position": "MF",
+        "clubTeam": "ライプツィヒ（ドイツ）"
+      },
+      {
+        "name": "サンデル・ベルゲ",
+        "position": "MF",
+        "clubTeam": "フラム（イングランド）"
+      },
+      {
+        "name": "オスカー・ボブ",
+        "position": "MF",
+        "clubTeam": "フラム（イングランド）"
+      },
+      {
+        "name": "マルティン・ウーデゴール",
+        "position": "MF",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "アーリング・ホーラン",
+        "position": "FW",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "ヨルゲン・ストラン・ラーセン",
+        "position": "FW",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "アレクサンデル・セルロート",
+        "position": "FW",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      }
+    ]
+  },
+  {
+    "countryCode": "NZL",
+    "players": [
+      {
+        "name": "マックス・クロコム",
+        "position": "GK",
+        "clubTeam": "ミルウォール（イングランド）"
+      },
+      {
+        "name": "アレックス・ポールセン",
+        "position": "GK",
+        "clubTeam": "レヒア・グダニスク（ポーランド）"
+      },
+      {
+        "name": "マイケル・ウッド",
+        "position": "GK",
+        "clubTeam": "オークランドFC"
+      },
+      {
+        "name": "フランシス・デ・ヴリーズ",
+        "position": "DF",
+        "clubTeam": "オークランドFC"
+      },
+      {
+        "name": "カラン・エリオット",
+        "position": "DF",
+        "clubTeam": "オークランドFC"
+      },
+      {
+        "name": "ナンド・パイナケル",
+        "position": "DF",
+        "clubTeam": "オークランドFC"
+      },
+      {
+        "name": "ティム・ペイン",
+        "position": "DF",
+        "clubTeam": "ウェリントン・フェニックス"
+      },
+      {
+        "name": "マイケル・ボクソール",
+        "position": "DF",
+        "clubTeam": "ミネソタ・ユナイテッド（アメリカ）"
+      },
+      {
+        "name": "フィン・サーマン",
+        "position": "DF",
+        "clubTeam": "ポートランド・ティンバーズ（アメリカ）"
+      },
+      {
+        "name": "リベラト・カカーチェ",
+        "position": "DF",
+        "clubTeam": "レクサム（ウェールズ）"
+      },
+      {
+        "name": "トミー・スミス",
+        "position": "DF",
+        "clubTeam": "ブレントリー・タウン（イングランド）"
+      },
+      {
+        "name": "タイラー・ビンドン",
+        "position": "DF",
+        "clubTeam": "シェフィールド・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "アレックス・ルーファー",
+        "position": "MF",
+        "clubTeam": "ウェリントン・フェニックス"
+      },
+      {
+        "name": "ラチラン・ベイリス",
+        "position": "MF",
+        "clubTeam": "ニューカッスル・ジェッツ（オーストラリア）"
+      },
+      {
+        "name": "ジョー・ベル",
+        "position": "MF",
+        "clubTeam": "ヴァイキング（ノルウェー）"
+      },
+      {
+        "name": "ライアン・トーマス",
+        "position": "MF",
+        "clubTeam": "PECズウォレ（オランダ）"
+      },
+      {
+        "name": "マルコ・スタメニッチ",
+        "position": "MF",
+        "clubTeam": "スウォンジー・シティ（ウェールズ）"
+      },
+      {
+        "name": "クリス・ウッド",
+        "position": "FW",
+        "clubTeam": "ノッティンガム・フォレスト（イングランド）"
+      },
+      {
+        "name": "ベン・ウェイン",
+        "position": "FW",
+        "clubTeam": "ポート・ヴェイル（イングランド）"
+      },
+      {
+        "name": "マシュー・ガーベット",
+        "position": "FW",
+        "clubTeam": "ピーターバラ・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ベン・オールド",
+        "position": "FW",
+        "clubTeam": "サンテチエンヌ（フランス）"
+      },
+      {
+        "name": "イライジャ・ジャスト",
+        "position": "FW",
+        "clubTeam": "マザーウェル（スコットランド）"
+      },
+      {
+        "name": "カラム・マッコワット",
+        "position": "FW",
+        "clubTeam": "シルケボー（デンマーク）"
+      },
+      {
+        "name": "コスタ・バルバルセス",
+        "position": "FW",
+        "clubTeam": "ウェスタン・シドニー・ワンダラーズ（オーストラリア）"
+      },
+      {
+        "name": "サープリート・シン",
+        "position": "FW",
+        "clubTeam": "ウェリントン・フェニックス"
+      },
+      {
+        "name": "ジェシー・ランドール",
+        "position": "FW",
+        "clubTeam": "オークランドFC"
+      }
+    ]
+  },
+  {
+    "countryCode": "PAN",
+    "players": [
+      {
+        "name": "ルイス・メヒア",
+        "position": "GK",
+        "clubTeam": "ナシオナル（ウルグアイ）"
+      },
+      {
+        "name": "オーランド・モスケラ",
+        "position": "GK",
+        "clubTeam": "アル・フェイハ（サウジアラビア）"
+      },
+      {
+        "name": "セサール・サムディオ",
+        "position": "GK",
+        "clubTeam": "マラトン（ホンジュラス）"
+      },
+      {
+        "name": "エリック・ダビス",
+        "position": "DF",
+        "clubTeam": "プラサ・アマドル"
+      },
+      {
+        "name": "ロデリック・ミジェール",
+        "position": "DF",
+        "clubTeam": "トゥラン・トヴス（アゼルバイジャン）"
+      },
+      {
+        "name": "フィデル・エスコバル",
+        "position": "DF",
+        "clubTeam": "サプリサ（コスタリカ）"
+      },
+      {
+        "name": "ホルヘ・グティエレス",
+        "position": "DF",
+        "clubTeam": "デポルティボ・ラ・グアイラ（ベネズエラ）"
+      },
+      {
+        "name": "ジオバニー・ラモス",
+        "position": "DF",
+        "clubTeam": "プエルト・カベージョ（ベネズエラ）"
+      },
+      {
+        "name": "エドガルド・ファリーニャ",
+        "position": "DF",
+        "clubTeam": "パリ・ニジニ・ノヴゴロド（ロシア）"
+      },
+      {
+        "name": "セサール・ブラックマン",
+        "position": "DF",
+        "clubTeam": "スロヴァン・ブラティスラヴァ（スロバキア）"
+      },
+      {
+        "name": "アンドレス・アンドラデ",
+        "position": "DF",
+        "clubTeam": "LASK（オーストリア）"
+      },
+      {
+        "name": "アミル・ムリージョ",
+        "position": "DF",
+        "clubTeam": "ベジクタシュ（トルコ）"
+      },
+      {
+        "name": "ホセ・コルドバ",
+        "position": "DF",
+        "clubTeam": "ノリッジ・シティ（イングランド）"
+      },
+      {
+        "name": "アルベルト・キンテロ",
+        "position": "MF",
+        "clubTeam": "プラサ・アマドル"
+      },
+      {
+        "name": "ホセ・ルイス・ロドリゲス",
+        "position": "MF",
+        "clubTeam": "フアレス（メキシコ）"
+      },
+      {
+        "name": "アダルベルト・カラスキージャ",
+        "position": "MF",
+        "clubTeam": "UNAMプマス（メキシコ）"
+      },
+      {
+        "name": "ヨエル・バルセナス",
+        "position": "MF",
+        "clubTeam": "マサトラン（メキシコ）"
+      },
+      {
+        "name": "カルロス・ハーヴェイ",
+        "position": "MF",
+        "clubTeam": "ミネソタ・ユナイテッド（アメリカ）"
+      },
+      {
+        "name": "アニバル・ゴドイ",
+        "position": "MF",
+        "clubTeam": "サンディエゴFC（アメリカ）"
+      },
+      {
+        "name": "アサリアス・ロンドーニョ",
+        "position": "MF",
+        "clubTeam": "ウニベルシダ・カトリカ（エクアドル）"
+      },
+      {
+        "name": "セーサル・ヤニス",
+        "position": "MF",
+        "clubTeam": "コブレサル（チリ）"
+      },
+      {
+        "name": "クリスティアン・マルティネス",
+        "position": "MF",
+        "clubTeam": "イロニ・キリヤット・シュモナ（イスラエル）"
+      },
+      {
+        "name": "イスマエル・ディアス",
+        "position": "FW",
+        "clubTeam": "レオン（メキシコ）"
+      },
+      {
+        "name": "ホセ・ファハルド",
+        "position": "FW",
+        "clubTeam": "ウニベルシダ・カトリカ（エクアドル）"
+      },
+      {
+        "name": "セシリオ・ワーテルマン",
+        "position": "FW",
+        "clubTeam": "ウニベルシダ・デ・コンセプシオン（チリ）"
+      },
+      {
+        "name": "トマス・ロドリゲス",
+        "position": "FW",
+        "clubTeam": "サプリサ（コスタリカ）"
+      }
+    ]
+  },
+  {
+    "countryCode": "PAR",
+    "players": [
+      {
+        "name": "ロベルト・ジュニオール・フェルナンデス",
+        "position": "GK",
+        "clubTeam": "セロ・ポルテーニョ"
+      },
+      {
+        "name": "ガストン・オルベイラ",
+        "position": "GK",
+        "clubTeam": "オリンピア"
+      },
+      {
+        "name": "オルランド・ヒル",
+        "position": "GK",
+        "clubTeam": "サン・ロレンソ（アルゼンチン）"
+      },
+      {
+        "name": "ビクトル・グスタボ・ベラスケス",
+        "position": "DF",
+        "clubTeam": "セロ・ポルテーニョ"
+      },
+      {
+        "name": "アレクサンドロ・マイダナ",
+        "position": "DF",
+        "clubTeam": "タジェレス（アルゼンチン）"
+      },
+      {
+        "name": "ホセ・カナレ",
+        "position": "DF",
+        "clubTeam": "ラヌース（アルゼンチン）"
+      },
+      {
+        "name": "グスタボ・ゴメス",
+        "position": "DF",
+        "clubTeam": "パルメイラス（ブラジル）"
+      },
+      {
+        "name": "ジュニオール・アロンソ",
+        "position": "DF",
+        "clubTeam": "アトレチコ・ミネイロ（ブラジル）"
+      },
+      {
+        "name": "ファビアン・バルブエナ",
+        "position": "DF",
+        "clubTeam": "グレミオ（ブラジル）"
+      },
+      {
+        "name": "ファン・カセレス",
+        "position": "DF",
+        "clubTeam": "ディナモ・モスクワ（ロシア）"
+      },
+      {
+        "name": "オマール・アルデレテ",
+        "position": "DF",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "アレハンドロ・ロメロ",
+        "position": "MF",
+        "clubTeam": "アル・アイン（UAE）"
+      },
+      {
+        "name": "アンドレス・クバス",
+        "position": "MF",
+        "clubTeam": "バンクーバー・ホワイトキャップス（カナダ）"
+      },
+      {
+        "name": "ブライアン・オヘダ",
+        "position": "MF",
+        "clubTeam": "オーランド・シティ（アメリカ）"
+      },
+      {
+        "name": "マティアス・ガラルサ",
+        "position": "MF",
+        "clubTeam": "アトランタ・ユナイテッド（アメリカ）"
+      },
+      {
+        "name": "マウリシオ・マガリャンイス",
+        "position": "MF",
+        "clubTeam": "パルメイラス（ブラジル）"
+      },
+      {
+        "name": "ダミアン・ボバディージャ",
+        "position": "MF",
+        "clubTeam": "サンパウロ（ブラジル）"
+      },
+      {
+        "name": "ディエゴ・ゴメス",
+        "position": "MF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "アントニオ・”トニー”・サナブリア",
+        "position": "FW",
+        "clubTeam": "クレモネーゼ（イタリア）"
+      },
+      {
+        "name": "フリオ・エンシソ",
+        "position": "FW",
+        "clubTeam": "ストラスブール（フランス）"
+      },
+      {
+        "name": "グスタボ・カバジェロ",
+        "position": "FW",
+        "clubTeam": "ポーツマス（イングランド）"
+      },
+      {
+        "name": "ミゲル・アルミロン",
+        "position": "FW",
+        "clubTeam": "アトランタ・ユナイテッド（アメリカ）"
+      },
+      {
+        "name": "ラモン・ソサ",
+        "position": "FW",
+        "clubTeam": "パルメイラス（ブラジル）"
+      },
+      {
+        "name": "イシドロ・ピッタ",
+        "position": "FW",
+        "clubTeam": "レッドブル・ブラガンチーノ（ブラジル）"
+      },
+      {
+        "name": "ガブリエル・アバロス",
+        "position": "FW",
+        "clubTeam": "インディペンディエンテ（アルゼンチン）"
+      },
+      {
+        "name": "アレックス・アルセ",
+        "position": "FW",
+        "clubTeam": "インディペンディエンテ・リバダビア（アルゼンチン）"
+      }
+    ]
+  },
+  {
+    "countryCode": "QAT",
+    "players": [
+      {
+        "name": "メシャール・バルシャム",
+        "position": "GK",
+        "clubTeam": "アル・サッド"
+      },
+      {
+        "name": "サラー・ザカリア",
+        "position": "GK",
+        "clubTeam": "アル・ドゥハイル"
+      },
+      {
+        "name": "マフムド・アブナダ",
+        "position": "GK",
+        "clubTeam": "アル・ラーヤン"
+      },
+      {
+        "name": "アユブ・アル・ウイ",
+        "position": "DF",
+        "clubTeam": "アル・ガラファ"
+      },
+      {
+        "name": "ルーカス・メンデス",
+        "position": "DF",
+        "clubTeam": "アル・ワクラ"
+      },
+      {
+        "name": "ロー・ロー",
+        "position": "DF",
+        "clubTeam": "アル・サッド"
+      },
+      {
+        "name": "ブアレム・フヒ",
+        "position": "DF",
+        "clubTeam": "アル・サッド"
+      },
+      {
+        "name": "スルタン・アル・ブリキ",
+        "position": "DF",
+        "clubTeam": "アル・ドゥハイル"
+      },
+      {
+        "name": "イッサ・ライェ",
+        "position": "DF",
+        "clubTeam": "アル・アラビ"
+      },
+      {
+        "name": "ハシェミ・アル・フサイン",
+        "position": "DF",
+        "clubTeam": "アル・アラビ"
+      },
+      {
+        "name": "ホマム・アルアミン・アフメド",
+        "position": "DF",
+        "clubTeam": "クルトゥラル・レオネサ（スペイン）"
+      },
+      {
+        "name": "モハメド・アル・マンナイ",
+        "position": "MF",
+        "clubTeam": "アル・シャマル"
+      },
+      {
+        "name": "アフメド・ファティー",
+        "position": "MF",
+        "clubTeam": "アル・アラビ"
+      },
+      {
+        "name": "カリム・ブディアフ",
+        "position": "MF",
+        "clubTeam": "アル・ドゥハイル"
+      },
+      {
+        "name": "アブドゥルアジズ・ハテム",
+        "position": "MF",
+        "clubTeam": "アル・ラーヤン"
+      },
+      {
+        "name": "ジャッセム・ガベル",
+        "position": "MF",
+        "clubTeam": "アル・ラーヤン"
+      },
+      {
+        "name": "アッシム・マディボ",
+        "position": "MF",
+        "clubTeam": "アル・ワクラ"
+      },
+      {
+        "name": "アクラム・アフィフ",
+        "position": "FW",
+        "clubTeam": "アル・サッド"
+      },
+      {
+        "name": "ハッサン・アル・ハイドス",
+        "position": "FW",
+        "clubTeam": "アル・サッド"
+      },
+      {
+        "name": "アルモエズ・アリ",
+        "position": "FW",
+        "clubTeam": "アル・ドゥハイル"
+      },
+      {
+        "name": "エジミウソン・ジュニオール",
+        "position": "FW",
+        "clubTeam": "アル・ドゥハイル"
+      },
+      {
+        "name": "タフシン・ジャムシード",
+        "position": "FW",
+        "clubTeam": "アル・ドゥハイル"
+      },
+      {
+        "name": "モハンメド・ムンタリ",
+        "position": "FW",
+        "clubTeam": "アル・ガラファ"
+      },
+      {
+        "name": "アフメド・アル・ガネヒ",
+        "position": "FW",
+        "clubTeam": "アル・ガラファ"
+      },
+      {
+        "name": "アフメド・アラーエルディン",
+        "position": "FW",
+        "clubTeam": "アル・ラーヤン"
+      },
+      {
+        "name": "ユスフ・アブドゥリサグ",
+        "position": "FW",
+        "clubTeam": "アル・ワクラ"
+      }
+    ]
+  },
+  {
+    "countryCode": "RSA",
+    "players": [
+      {
+        "name": "ロンウェン・ウィリアムズ",
+        "position": "GK",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "リカルド・ゴス",
+        "position": "GK",
+        "clubTeam": "シウェレレ"
+      },
+      {
+        "name": "シフォ・チェイン",
+        "position": "GK",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "ブラッドリー・クロス",
+        "position": "DF",
+        "clubTeam": "カイザー・チーフス"
+      },
+      {
+        "name": "タバン・マトゥルディ",
+        "position": "DF",
+        "clubTeam": "ポロクワネ・シティ"
+      },
+      {
+        "name": "ンコシナティ・シビシ",
+        "position": "DF",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "カモゲロ・セベレベレ",
+        "position": "DF",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "クルマニ・ンダマネ",
+        "position": "DF",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "クリソ・ムダウ",
+        "position": "DF",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "オーブリー・モディバ",
+        "position": "DF",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "オルウェトゥ・マカニャ",
+        "position": "DF",
+        "clubTeam": "フィラデルフィア・ユニオン（アメリカ）"
+      },
+      {
+        "name": "ムベケゼリ・ムボカジ",
+        "position": "DF",
+        "clubTeam": "シカゴ・ファイアー（アメリカ）"
+      },
+      {
+        "name": "サムケレ・カビニ",
+        "position": "DF",
+        "clubTeam": "モルデ（ノルウェー）"
+      },
+      {
+        "name": "イメ・オコン",
+        "position": "DF",
+        "clubTeam": "ハノーヴァー96（ドイツ）"
+      },
+      {
+        "name": "タレンテ・ムバサ",
+        "position": "MF",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "ジェイデン・アダムス",
+        "position": "MF",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "テボホ・モコエナ",
+        "position": "MF",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "スフィフェロ・シトレ",
+        "position": "MF",
+        "clubTeam": "トンデラ（ポルトガル）"
+      },
+      {
+        "name": "ライル・フォスター",
+        "position": "FW",
+        "clubTeam": "バーンリー（イングランド）"
+      },
+      {
+        "name": "タペロ・マセコ",
+        "position": "FW",
+        "clubTeam": "AELリマソル（キプロス）"
+      },
+      {
+        "name": "ゼンバ・ズワネ",
+        "position": "FW",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "イクラーム・レイナーズ",
+        "position": "FW",
+        "clubTeam": "マメロディ・サンダウンズ"
+      },
+      {
+        "name": "エヴィデンス・マクゴパ",
+        "position": "FW",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "オスウィン・アポリス",
+        "position": "FW",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "レレボヒレ・モフォケン",
+        "position": "FW",
+        "clubTeam": "オーランド・パイレーツ"
+      },
+      {
+        "name": "ツェパン・モレミ",
+        "position": "FW",
+        "clubTeam": "オーランド・パイレーツ"
+      }
+    ]
+  },
+  {
+    "countryCode": "SCO",
+    "players": [
+      {
+        "name": "アンガス・ガン",
+        "position": "GK",
+        "clubTeam": "ノッティンガム・フォレスト（イングランド）"
+      },
+      {
+        "name": "クレイグ・ゴードン",
+        "position": "GK",
+        "clubTeam": "ハーツ"
+      },
+      {
+        "name": "リアム・ケリー",
+        "position": "GK",
+        "clubTeam": "レンジャーズ"
+      },
+      {
+        "name": "ジョン・サウター",
+        "position": "DF",
+        "clubTeam": "レンジャーズ"
+      },
+      {
+        "name": "グラント・ハンリー",
+        "position": "DF",
+        "clubTeam": "ハイバーニアン"
+      },
+      {
+        "name": "アンソニー・ラルストン",
+        "position": "DF",
+        "clubTeam": "セルティック"
+      },
+      {
+        "name": "キーラン・ティアニー",
+        "position": "DF",
+        "clubTeam": "セルティック"
+      },
+      {
+        "name": "ジャック・ヘンドリー",
+        "position": "DF",
+        "clubTeam": "アル・イテファク（サウジアラビア）"
+      },
+      {
+        "name": "スコット・マッケンナ",
+        "position": "DF",
+        "clubTeam": "ディナモ・ザグレブ（クロアチア）"
+      },
+      {
+        "name": "ドミニク・ハイアム",
+        "position": "DF",
+        "clubTeam": "レクサム（ウェールズ）"
+      },
+      {
+        "name": "アーロン・ヒッキー",
+        "position": "DF",
+        "clubTeam": "ブレントフォード（イングランド）"
+      },
+      {
+        "name": "ネイサン・パターソン",
+        "position": "DF",
+        "clubTeam": "エバートン（イングランド）"
+      },
+      {
+        "name": "アンドリュー・ロバートソン",
+        "position": "DF",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "フィンドレイ・カーティス",
+        "position": "MF",
+        "clubTeam": "キルマーノック"
+      },
+      {
+        "name": "タイラー・フレッチャー",
+        "position": "MF",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ケニー・マクリーン",
+        "position": "MF",
+        "clubTeam": "ノリッジ・シティ（イングランド）"
+      },
+      {
+        "name": "ジョン・マッギン",
+        "position": "MF",
+        "clubTeam": "アストン・ビラ（イングランド）"
+      },
+      {
+        "name": "ベン・ドーク",
+        "position": "MF",
+        "clubTeam": "ボーンマス（イングランド）"
+      },
+      {
+        "name": "ライアン・クリスティー",
+        "position": "MF",
+        "clubTeam": "ボーンマス（イングランド）"
+      },
+      {
+        "name": "ルイス・ファーガソン",
+        "position": "MF",
+        "clubTeam": "ボローニャ（イタリア）"
+      },
+      {
+        "name": "スコット・マクトミネイ",
+        "position": "MF",
+        "clubTeam": "ナポリ（イタリア）"
+      },
+      {
+        "name": "チェ・アダムス",
+        "position": "FW",
+        "clubTeam": "トリノ（イタリア）"
+      },
+      {
+        "name": "リンドン・ダイクス",
+        "position": "FW",
+        "clubTeam": "チャールトン・アスレティック（イングランド）"
+      },
+      {
+        "name": "ジョージ・ハースト",
+        "position": "FW",
+        "clubTeam": "イプスウィッチ・タウン（イングランド）"
+      },
+      {
+        "name": "ロス・スチュワート",
+        "position": "FW",
+        "clubTeam": "サウサンプトン（イングランド）"
+      },
+      {
+        "name": "ローレンス・シャンクランド",
+        "position": "FW",
+        "clubTeam": "ハーツ"
+      }
+    ]
+  },
+  {
+    "countryCode": "SEN",
+    "players": [
+      {
+        "name": "エドゥアール・メンディ",
+        "position": "GK",
+        "clubTeam": "アル・アハリ（サウジアラビア）"
+      },
+      {
+        "name": "モリ・ディアウ",
+        "position": "GK",
+        "clubTeam": "ル・アーヴル（フランス）"
+      },
+      {
+        "name": "イェヴァン・ディウフ",
+        "position": "GK",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "カリドゥ・クリバリ",
+        "position": "DF",
+        "clubTeam": "アル・ヒラル（サウジアラビア）"
+      },
+      {
+        "name": "アブドゥライェ・セック",
+        "position": "DF",
+        "clubTeam": "マッカビ・ハイファ（イスラエル）"
+      },
+      {
+        "name": "イスマイル・ヤコブス",
+        "position": "DF",
+        "clubTeam": "ガラタサライ（トルコ）"
+      },
+      {
+        "name": "アントワーヌ・メンディ",
+        "position": "DF",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "ムサ・ニアカテ",
+        "position": "DF",
+        "clubTeam": "リヨン（フランス）"
+      },
+      {
+        "name": "クレパン・ディアッタ",
+        "position": "DF",
+        "clubTeam": "ASモナコ（フランス）"
+      },
+      {
+        "name": "エル・ハッジ・マリック・ディウフ",
+        "position": "DF",
+        "clubTeam": "ウェストハム・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ママドゥ・サール",
+        "position": "DF",
+        "clubTeam": "チェルシー（イングランド）"
+      },
+      {
+        "name": "バラ・サポコ・エンディアイェ",
+        "position": "MF",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "ラミン・カマラ",
+        "position": "MF",
+        "clubTeam": "ASモナコ（フランス）"
+      },
+      {
+        "name": "パテ・イスマエル・シス",
+        "position": "MF",
+        "clubTeam": "ラーヨ・バジェカーノ（スペイン）"
+      },
+      {
+        "name": "パプ・ゲイェ",
+        "position": "MF",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "アビブ・ディアッラ",
+        "position": "MF",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "パプ・マタル・サール",
+        "position": "MF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "イドリサ・ガナ・ゲイェ",
+        "position": "MF",
+        "clubTeam": "エバートン（イングランド）"
+      },
+      {
+        "name": "サディオ・マネ",
+        "position": "FW",
+        "clubTeam": "アル・ナスル（サウジアラビア）"
+      },
+      {
+        "name": "イリマン・エンディアイェ",
+        "position": "FW",
+        "clubTeam": "エバートン（イングランド）"
+      },
+      {
+        "name": "イスマイラ・サール",
+        "position": "FW",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "ニコラス・ジャクソン",
+        "position": "FW",
+        "clubTeam": "バイエルン・ミュンヘン（ドイツ）"
+      },
+      {
+        "name": "アサン・ディアオ",
+        "position": "FW",
+        "clubTeam": "コモ（イタリア）"
+      },
+      {
+        "name": "イブラヒム・エンバイェ",
+        "position": "FW",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "バンバ・ディエン",
+        "position": "FW",
+        "clubTeam": "ロリアン（フランス）"
+      },
+      {
+        "name": "シェリフ・エンディアイェ",
+        "position": "FW",
+        "clubTeam": "サムスンスポル（トルコ）"
+      }
+    ]
+  },
+  {
+    "countryCode": "SUI",
+    "players": [
+      {
+        "name": "グレゴール・コベル",
+        "position": "GK",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "イヴォン・ムヴォゴ",
+        "position": "GK",
+        "clubTeam": "ロリアン（フランス）"
+      },
+      {
+        "name": "マルヴィン・ケラー",
+        "position": "GK",
+        "clubTeam": "ヤングボーイズ"
+      },
+      {
+        "name": "ルカ・ヤケス",
+        "position": "DF",
+        "clubTeam": "シュツットガルト（ドイツ）"
+      },
+      {
+        "name": "ミロ・ムハイム",
+        "position": "DF",
+        "clubTeam": "ハンブルガーSV（ドイツ）"
+      },
+      {
+        "name": "オーレル・アメンダ",
+        "position": "DF",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "シルヴァン・ヴィドマー",
+        "position": "DF",
+        "clubTeam": "マインツ05（ドイツ）"
+      },
+      {
+        "name": "ニコ・エルヴェディ",
+        "position": "DF",
+        "clubTeam": "ボルシア・メンヒェングラートバッハ（ドイツ）"
+      },
+      {
+        "name": "エライ・キュメルト",
+        "position": "DF",
+        "clubTeam": "バレンシア（スペイン）"
+      },
+      {
+        "name": "リカルド・ロドリゲス",
+        "position": "DF",
+        "clubTeam": "ベティス（スペイン）"
+      },
+      {
+        "name": "マヌエル・アカンジ",
+        "position": "DF",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "クリスティアン・ファスナハト",
+        "position": "MF",
+        "clubTeam": "ヤングボーイズ"
+      },
+      {
+        "name": "デニス・ザカリア",
+        "position": "MF",
+        "clubTeam": "ASモナコ（フランス）"
+      },
+      {
+        "name": "ミシェル・エービシェル",
+        "position": "MF",
+        "clubTeam": "ピサ（イタリア）"
+      },
+      {
+        "name": "レモ・フロイラー",
+        "position": "MF",
+        "clubTeam": "ボローニャ（イタリア）"
+      },
+      {
+        "name": "アルドン・ヤシャリ",
+        "position": "MF",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "ジブリル・ソウ",
+        "position": "MF",
+        "clubTeam": "セビージャ（スペイン）"
+      },
+      {
+        "name": "ルーベン・ヴァルガス",
+        "position": "MF",
+        "clubTeam": "セビージャ（スペイン）"
+      },
+      {
+        "name": "ヨハン・マンザンビ",
+        "position": "MF",
+        "clubTeam": "フライブルク（ドイツ）"
+      },
+      {
+        "name": "ファビアン・リーダー",
+        "position": "MF",
+        "clubTeam": "アウクスブルク（ドイツ）"
+      },
+      {
+        "name": "グラニト・ジャカ",
+        "position": "MF",
+        "clubTeam": "サンダーランド（イングランド）"
+      },
+      {
+        "name": "ダン・エンドイェ",
+        "position": "FW",
+        "clubTeam": "ノッティンガム・フォレスト（イングランド）"
+      },
+      {
+        "name": "ゼキ・アムドゥニ",
+        "position": "FW",
+        "clubTeam": "バーンリー（イングランド）"
+      },
+      {
+        "name": "ノア・オカフォー",
+        "position": "FW",
+        "clubTeam": "リーズ・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "セドリク・イッテン",
+        "position": "FW",
+        "clubTeam": "フォルトゥナ・デュッセルドルフ（ドイツ）"
+      },
+      {
+        "name": "ブレール・エンボロ",
+        "position": "FW",
+        "clubTeam": "レンヌ（フランス）"
+      }
+    ]
+  },
+  {
+    "countryCode": "SWE",
+    "players": [
+      {
+        "name": "クリストフェル・ノードフェルト",
+        "position": "GK",
+        "clubTeam": "AIK"
+      },
+      {
+        "name": "ヴィクトル・ヨハンソン",
+        "position": "GK",
+        "clubTeam": "ストーク・シティ（イングランド）"
+      },
+      {
+        "name": "ヤコブ・ヴィデル・ゼッテルストレーム",
+        "position": "GK",
+        "clubTeam": "ダービー・カウンティ（イングランド）"
+      },
+      {
+        "name": "エリオット・ストラウド",
+        "position": "DF",
+        "clubTeam": "ミャルビーAIF"
+      },
+      {
+        "name": "ヘルマン・ヨハンソン",
+        "position": "DF",
+        "clubTeam": "FCダラス（アメリカ）"
+      },
+      {
+        "name": "グスタフ・ラゲルビエルケ",
+        "position": "DF",
+        "clubTeam": "ブラガ（ポルトガル）"
+      },
+      {
+        "name": "ダニエル・スヴェンソン",
+        "position": "DF",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "エリック・スミス",
+        "position": "DF",
+        "clubTeam": "ザンクト・パウリ（ドイツ）"
+      },
+      {
+        "name": "カール・スターフェルト",
+        "position": "DF",
+        "clubTeam": "セルタ・デ・ビゴ（スペイン）"
+      },
+      {
+        "name": "イサク・ヒエン",
+        "position": "DF",
+        "clubTeam": "アタランタ（イタリア）"
+      },
+      {
+        "name": "ガブリエル・グズムンドソン",
+        "position": "DF",
+        "clubTeam": "リーズ・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ヒャルマル・エクダル",
+        "position": "DF",
+        "clubTeam": "バーンリー（イングランド）"
+      },
+      {
+        "name": "ヴィクトル・リンデレフ",
+        "position": "DF",
+        "clubTeam": "アストン・ビラ（イングランド）"
+      },
+      {
+        "name": "タハ・アリ",
+        "position": "MF",
+        "clubTeam": "マルメ"
+      },
+      {
+        "name": "ケン・セマ",
+        "position": "MF",
+        "clubTeam": "パフォス（キプロス）"
+      },
+      {
+        "name": "ベスフォルト・ゼネリ",
+        "position": "MF",
+        "clubTeam": "ユニオン・サン・ジロワーズ（ベルギー）"
+      },
+      {
+        "name": "マティアス・スヴァンベリ",
+        "position": "MF",
+        "clubTeam": "ボルフスブルク（ドイツ）"
+      },
+      {
+        "name": "イェスパー・カールストレーム",
+        "position": "MF",
+        "clubTeam": "ウディネーゼ（イタリア）"
+      },
+      {
+        "name": "ヤシン・アヤリ",
+        "position": "MF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "ルーカス・ベリヴァル",
+        "position": "MF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "アレクサンデル・イサク",
+        "position": "FW",
+        "clubTeam": "リバプール（イングランド）"
+      },
+      {
+        "name": "ヴィクトル・ギェケレシュ",
+        "position": "FW",
+        "clubTeam": "アーセナル（イングランド）"
+      },
+      {
+        "name": "アントニー・エランガ",
+        "position": "FW",
+        "clubTeam": "ニューカッスル・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "アレクサンデル・ベルンハルトソン",
+        "position": "FW",
+        "clubTeam": "ホルシュタイン・キール（ドイツ）"
+      },
+      {
+        "name": "ベンジャミン・ニグレン",
+        "position": "FW",
+        "clubTeam": "セルティック（スコットランド）"
+      },
+      {
+        "name": "グスタフ・ニルソン",
+        "position": "FW",
+        "clubTeam": "クラブ・ブルージュ（ベルギー）"
+      }
+    ]
+  },
+  {
+    "countryCode": "TUN",
+    "players": [
+      {
+        "name": "アイメン・ダーメン",
+        "position": "GK",
+        "clubTeam": "CSスファクシャン"
+      },
+      {
+        "name": "サブリ・ベン・ハッセン",
+        "position": "GK",
+        "clubTeam": "エトワール・サヘル"
+      },
+      {
+        "name": "アブデル・ムヒブ・シャマフ",
+        "position": "GK",
+        "clubTeam": "クラブ・アフリカン"
+      },
+      {
+        "name": "レアド・シハウィ",
+        "position": "DF",
+        "clubTeam": "モナスティル"
+      },
+      {
+        "name": "モハメド・アミン・ベン・ハミダ",
+        "position": "DF",
+        "clubTeam": "エスペランス"
+      },
+      {
+        "name": "ムタズ・ネファティ",
+        "position": "DF",
+        "clubTeam": "ノルシェーピン（スウェーデン）"
+      },
+      {
+        "name": "オマル・レキク",
+        "position": "DF",
+        "clubTeam": "NKマリボル（スロベニア）"
+      },
+      {
+        "name": "ディラン・ブロン",
+        "position": "DF",
+        "clubTeam": "セルヴェット（スイス）"
+      },
+      {
+        "name": "ヤン・ヴァレリー",
+        "position": "DF",
+        "clubTeam": "ヤング・ボーイズ（スイス）"
+      },
+      {
+        "name": "アデム・アルス",
+        "position": "DF",
+        "clubTeam": "カスムパシャ（トルコ）"
+      },
+      {
+        "name": "アリ・アブディ",
+        "position": "DF",
+        "clubTeam": "ニース（フランス）"
+      },
+      {
+        "name": "モンタサル・タルビ",
+        "position": "DF",
+        "clubTeam": "ロリアン（フランス）"
+      },
+      {
+        "name": "モルタダ・ベン・アネス",
+        "position": "MF",
+        "clubTeam": "カスムパシャ（トルコ）"
+      },
+      {
+        "name": "ハッジ・マハムード",
+        "position": "MF",
+        "clubTeam": "FCルガーノ（スイス）"
+      },
+      {
+        "name": "イスマエル・ガルビ",
+        "position": "MF",
+        "clubTeam": "アウクスブルク（ドイツ）"
+      },
+      {
+        "name": "エリス・スキリ",
+        "position": "MF",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "ラニ・ケディラ",
+        "position": "MF",
+        "clubTeam": "ウニオン・ベルリン（ドイツ）"
+      },
+      {
+        "name": "アニス・ベン・スリマン",
+        "position": "MF",
+        "clubTeam": "ノリッジ・シティ（イングランド）"
+      },
+      {
+        "name": "アニバル・メイブリ",
+        "position": "MF",
+        "clubTeam": "バーンリー（イングランド）"
+      },
+      {
+        "name": "エリアス・サード",
+        "position": "FW",
+        "clubTeam": "ハノーヴァー96（ドイツ）"
+      },
+      {
+        "name": "ハリル・アヤリ",
+        "position": "FW",
+        "clubTeam": "パリ・サンジェルマン（フランス）"
+      },
+      {
+        "name": "セバスティアン・トネクティ",
+        "position": "FW",
+        "clubTeam": "セルティック（スコットランド）"
+      },
+      {
+        "name": "エリアス・アシュリ",
+        "position": "FW",
+        "clubTeam": "FCコペンハーゲン（デンマーク）"
+      },
+      {
+        "name": "ハゼム・マストゥリ",
+        "position": "FW",
+        "clubTeam": "ディナモ・マハチカラ（ロシア）"
+      },
+      {
+        "name": "ライアン・エルミ",
+        "position": "FW",
+        "clubTeam": "バンクーバー・ホワイトキャップス（カナダ）"
+      },
+      {
+        "name": "フィラス・シャウア",
+        "position": "FW",
+        "clubTeam": "クラブ・アフリカン"
+      }
+    ]
+  },
+  {
+    "countryCode": "TUR",
+    "players": [
+      {
+        "name": "アルタイ・バユンドゥル",
+        "position": "GK",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ウールジャン・チャクル",
+        "position": "GK",
+        "clubTeam": "ガラタサライ"
+      },
+      {
+        "name": "メルト・ギュノク",
+        "position": "GK",
+        "clubTeam": "フェネルバフチェ"
+      },
+      {
+        "name": "メルト・ミュルドゥル",
+        "position": "DF",
+        "clubTeam": "フェネルバフチェ"
+      },
+      {
+        "name": "チャーラル・ソユンジュ",
+        "position": "DF",
+        "clubTeam": "フェネルバフチェ"
+      },
+      {
+        "name": "サメト・アカイドゥン",
+        "position": "DF",
+        "clubTeam": "チャイクル・リゼスポル"
+      },
+      {
+        "name": "アブドゥルケリム・バルダクチ",
+        "position": "DF",
+        "clubTeam": "ガラタサライ"
+      },
+      {
+        "name": "エレン・エルマル",
+        "position": "DF",
+        "clubTeam": "ガラタサライ"
+      },
+      {
+        "name": "メリフ・デミラル",
+        "position": "DF",
+        "clubTeam": "アル・アハリ（サウジアラビア）"
+      },
+      {
+        "name": "オザン・カバク",
+        "position": "DF",
+        "clubTeam": "ホッフェンハイム（ドイツ）"
+      },
+      {
+        "name": "フェルディ・カドゥオール",
+        "position": "DF",
+        "clubTeam": "ブライトン＆ホーヴ・アルビオン（イングランド）"
+      },
+      {
+        "name": "ゼキ・チェリク",
+        "position": "DF",
+        "clubTeam": "ASローマ（イタリア）"
+      },
+      {
+        "name": "イスマイル・ユクセク",
+        "position": "MF",
+        "clubTeam": "フェネルバフチェ"
+      },
+      {
+        "name": "オルクン・コクチュ",
+        "position": "MF",
+        "clubTeam": "ベジクタシュ"
+      },
+      {
+        "name": "カーン・アイハン",
+        "position": "MF",
+        "clubTeam": "ガラタサライ"
+      },
+      {
+        "name": "サリフ・エズジャン",
+        "position": "MF",
+        "clubTeam": "ボルシア・ドルトムント（ドイツ）"
+      },
+      {
+        "name": "ハカン・チャルハノール",
+        "position": "MF",
+        "clubTeam": "インテル（イタリア）"
+      },
+      {
+        "name": "アルダ・ギュレル",
+        "position": "FW",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "ケナン・ユルドゥズ",
+        "position": "FW",
+        "clubTeam": "ユベントス（イタリア）"
+      },
+      {
+        "name": "ジャン・ウズン",
+        "position": "FW",
+        "clubTeam": "アイントラハト・フランクフルト（ドイツ）"
+      },
+      {
+        "name": "デニズ・ギュル",
+        "position": "FW",
+        "clubTeam": "FCポルト（ポルトガル）"
+      },
+      {
+        "name": "バルシュ・ユルマズ",
+        "position": "FW",
+        "clubTeam": "ガラタサライ"
+      },
+      {
+        "name": "ユヌス・アクギュン",
+        "position": "FW",
+        "clubTeam": "ガラタサライ"
+      },
+      {
+        "name": "ケレム・アクトゥルコール",
+        "position": "FW",
+        "clubTeam": "フェネルバフチェ"
+      },
+      {
+        "name": "オウズ・アイドゥン",
+        "position": "FW",
+        "clubTeam": "フェネルバフチェ"
+      },
+      {
+        "name": "イルファン・ジャン・カフヴェジ",
+        "position": "FW",
+        "clubTeam": "カスムパシャ"
+      }
+    ]
+  },
+  {
+    "countryCode": "URU",
+    "players": [
+      {
+        "name": "フェルナンド・ムスレラ",
+        "position": "GK",
+        "clubTeam": "エストゥディアンテス（アルゼンチン）"
+      },
+      {
+        "name": "セルジオ・ロシェ",
+        "position": "GK",
+        "clubTeam": "インテルナシオナル（ブラジル）"
+      },
+      {
+        "name": "サンティアゴ・メレ",
+        "position": "GK",
+        "clubTeam": "モンテレイ（メキシコ）"
+      },
+      {
+        "name": "マティアス・ビニャ",
+        "position": "DF",
+        "clubTeam": "リバープレート（アルゼンチン）"
+      },
+      {
+        "name": "ホアキン・ピケレス",
+        "position": "DF",
+        "clubTeam": "パルメイラス（ブラジル）"
+      },
+      {
+        "name": "ギジェルモ・バレラ",
+        "position": "DF",
+        "clubTeam": "フラメンゴ（ブラジル）"
+      },
+      {
+        "name": "セバスティアン・カセレス",
+        "position": "DF",
+        "clubTeam": "アメリカ（メキシコ）"
+      },
+      {
+        "name": "マティアス・オリベラ",
+        "position": "DF",
+        "clubTeam": "ナポリ（イタリア）"
+      },
+      {
+        "name": "サンティアゴ・ブエノ",
+        "position": "DF",
+        "clubTeam": "ウォルヴァーハンプトン・ワンダラーズ（イングランド）"
+      },
+      {
+        "name": "ホセ・マリア・ヒメネス",
+        "position": "DF",
+        "clubTeam": "アトレチコ・マドリード（スペイン）"
+      },
+      {
+        "name": "ロナルド・アラウホ",
+        "position": "DF",
+        "clubTeam": "バルセロナ（スペイン）"
+      },
+      {
+        "name": "アグスティン・カノッビオ",
+        "position": "MF",
+        "clubTeam": "フルミネンセ（ブラジル）"
+      },
+      {
+        "name": "エミリアーノ・マルティネス",
+        "position": "MF",
+        "clubTeam": "パルメイラス（ブラジル）"
+      },
+      {
+        "name": "ニコラス・デ・ラ・クルス",
+        "position": "MF",
+        "clubTeam": "フラメンゴ（ブラジル）"
+      },
+      {
+        "name": "ジョルジアン・デ・アラスカエタ",
+        "position": "MF",
+        "clubTeam": "フラメンゴ（ブラジル）"
+      },
+      {
+        "name": "ファン・サナブリア",
+        "position": "MF",
+        "clubTeam": "レアル・ソルトレーク（アメリカ）"
+      },
+      {
+        "name": "ブライアン・ロドリゲス",
+        "position": "MF",
+        "clubTeam": "アメリカ（メキシコ）"
+      },
+      {
+        "name": "ファクンド・ペリストリ",
+        "position": "MF",
+        "clubTeam": "パナシナイコス（ギリシャ）"
+      },
+      {
+        "name": "ロドリゴ・サラサール",
+        "position": "MF",
+        "clubTeam": "ブラガ（ポルトガル）"
+      },
+      {
+        "name": "マクシミリアーノ・アラウホ",
+        "position": "MF",
+        "clubTeam": "スポルティングCP（ポルトガル）"
+      },
+      {
+        "name": "ロドリゴ・ベンタンクール",
+        "position": "MF",
+        "clubTeam": "トッテナム・ホットスパー（イングランド）"
+      },
+      {
+        "name": "マヌエル・ウガルテ",
+        "position": "MF",
+        "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "フェデリコ・バルベルデ",
+        "position": "MF",
+        "clubTeam": "レアル・マドリード（スペイン）"
+      },
+      {
+        "name": "ダルウィン・ヌニェス",
+        "position": "FW",
+        "clubTeam": "アル・ヒラル（サウジアラビア）"
+      },
+      {
+        "name": "フェデリコ・ビニャス",
+        "position": "FW",
+        "clubTeam": "オビエド（スペイン）"
+      },
+      {
+        "name": "ロドリゴ・アギーレ",
+        "position": "FW",
+        "clubTeam": "UANLティグレス（メキシコ）"
+      }
+    ]
+  },
+  {
+    "countryCode": "USA",
+    "players": [
+      {
+        "name": "マット・ターナー",
+        "position": "GK",
+        "clubTeam": "ニューイングランド・レボリューション"
+      },
+      {
+        "name": "マット・フリーズ",
+        "position": "GK",
+        "clubTeam": "ニューヨーク・シティFC"
+      },
+      {
+        "name": "クリス・ブレイディ",
+        "position": "GK",
+        "clubTeam": "シカゴ・ファイアー"
+      },
+      {
+        "name": "マックス・アーフステン",
+        "position": "DF",
+        "clubTeam": "コロンバス・クルー"
+      },
+      {
+        "name": "マイルズ・ロビンソン",
+        "position": "DF",
+        "clubTeam": "FCシンシナティ"
+      },
+      {
+        "name": "ティム・リーム",
+        "position": "DF",
+        "clubTeam": "シャーロットFC"
+      },
+      {
+        "name": "オーストン・トラスティ",
+        "position": "DF",
+        "clubTeam": "セルティック（スコットランド）"
+      },
+      {
+        "name": "セルジーニョ・デスト",
+        "position": "DF",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "マーク・マッケンジー",
+        "position": "DF",
+        "clubTeam": "トゥールーズ（フランス）"
+      },
+      {
+        "name": "アレックス・フリーマン",
+        "position": "DF",
+        "clubTeam": "ビジャレアル（スペイン）"
+      },
+      {
+        "name": "ジョー・スカリー",
+        "position": "DF",
+        "clubTeam": "ボルシア・メンヒェングラートバッハ（ドイツ）"
+      },
+      {
+        "name": "アントニー・ロビンソン",
+        "position": "DF",
+        "clubTeam": "フラム（イングランド）"
+      },
+      {
+        "name": "クリス・リチャーズ",
+        "position": "DF",
+        "clubTeam": "クリスタル・パレス（イングランド）"
+      },
+      {
+        "name": "クリスチャン・ロルダン",
+        "position": "MF",
+        "clubTeam": "シアトル・サウンダーズ"
+      },
+      {
+        "name": "セバスチャン・バーハルター",
+        "position": "MF",
+        "clubTeam": "バンクーバー・ホワイトキャップス（カナダ）"
+      },
+      {
+        "name": "マリク・ティルマン",
+        "position": "MF",
+        "clubTeam": "バイヤー・レバークーゼン（ドイツ）"
+      },
+      {
+        "name": "ジョヴァンニ・レイナ",
+        "position": "MF",
+        "clubTeam": "ボルシア・メンヒェングラートバッハ（ドイツ）"
+      },
+      {
+        "name": "タイラー・アダムズ",
+        "position": "MF",
+        "clubTeam": "ボーンマス（イングランド）"
+      },
+      {
+        "name": "ブレンデン・アーロンソン",
+        "position": "MF",
+        "clubTeam": "リーズ・ユナイテッド（イングランド）"
+      },
+      {
+        "name": "ウェストン・マッケニー",
+        "position": "MF",
+        "clubTeam": "ユベントス（イタリア）"
+      },
+      {
+        "name": "クリスチャン・プリシッチ",
+        "position": "FW",
+        "clubTeam": "ACミラン（イタリア）"
+      },
+      {
+        "name": "ハジ・ライト",
+        "position": "FW",
+        "clubTeam": "コヴェントリー・シティ（イングランド）"
+      },
+      {
+        "name": "フォラリン・バログン",
+        "position": "FW",
+        "clubTeam": "ASモナコ（フランス）"
+      },
+      {
+        "name": "ティモシー・ウェア",
+        "position": "FW",
+        "clubTeam": "オリンピック・マルセイユ（フランス）"
+      },
+      {
+        "name": "リカルド・ペピ",
+        "position": "FW",
+        "clubTeam": "PSVアイントホーフェン（オランダ）"
+      },
+      {
+        "name": "アレハンドロ・センデハス",
+        "position": "FW",
+        "clubTeam": "クラブ・アメリカ（メキシコ）"
+      }
+    ]
+  },
+  {
+    "countryCode": "UZB",
+    "players": [
+      {
+        "name": "ウトキル・ユスポフ",
+        "position": "GK",
+        "clubTeam": "ナフバホール"
+      },
+      {
+        "name": "アブドゥヴォヒド・ネマトフ",
+        "position": "GK",
+        "clubTeam": "ナサフ"
+      },
+      {
+        "name": "ボティラリ・エルガシェフ",
+        "position": "GK",
+        "clubTeam": "ネフチ"
+      },
+      {
+        "name": "アヴァズベク・ウルマサリエフ",
+        "position": "DF",
+        "clubTeam": "AGMK"
+      },
+      {
+        "name": "ベフルズ・カリモフ",
+        "position": "DF",
+        "clubTeam": "スルホン"
+      },
+      {
+        "name": "ジャホンギル・ウロゾフ",
+        "position": "DF",
+        "clubTeam": "ディナモ・サマルカンド"
+      },
+      {
+        "name": "ウマル・エシュムロドフ",
+        "position": "DF",
+        "clubTeam": "ナサフ"
+      },
+      {
+        "name": "シェルゾド・ナスルラエフ",
+        "position": "DF",
+        "clubTeam": "ナサフ"
+      },
+      {
+        "name": "ファルーフ・サイフィエフ",
+        "position": "DF",
+        "clubTeam": "ネフチ"
+      },
+      {
+        "name": "ホジャクバル・アリヨノフ",
+        "position": "DF",
+        "clubTeam": "パフタコール"
+      },
+      {
+        "name": "アブドゥラー・アブドゥラエフ",
+        "position": "DF",
+        "clubTeam": "ディバ（UAE）"
+      },
+      {
+        "name": "ルスタム・アシュルマトフ",
+        "position": "DF",
+        "clubTeam": "エステグラル（イラン）"
+      },
+      {
+        "name": "アブドゥコディル・フサノフ",
+        "position": "DF",
+        "clubTeam": "マンチェスター・シティ（イングランド）"
+      },
+      {
+        "name": "シェルゾド・エサノフ",
+        "position": "MF",
+        "clubTeam": "ブハラ"
+      },
+      {
+        "name": "ジャムシド・イスカンデロフ",
+        "position": "MF",
+        "clubTeam": "ネフチ"
+      },
+      {
+        "name": "アクマル・モズゴヴォイ",
+        "position": "MF",
+        "clubTeam": "パフタコール"
+      },
+      {
+        "name": "オディルジョン・ハムロベコフ",
+        "position": "MF",
+        "clubTeam": "トラクトル（イラン）"
+      },
+      {
+        "name": "ジャロリディン・マシャリポフ",
+        "position": "MF",
+        "clubTeam": "エステグラル（イラン）"
+      },
+      {
+        "name": "アジズジョン・ガニエフ",
+        "position": "MF",
+        "clubTeam": "アル・バタエ（UAE）"
+      },
+      {
+        "name": "オタベク・シュクロフ",
+        "position": "MF",
+        "clubTeam": "バニーヤース（UAE）"
+      },
+      {
+        "name": "アボスベク・ファイズラエフ",
+        "position": "MF",
+        "clubTeam": "イスタンブール・バシャクシェヒル（トルコ）"
+      },
+      {
+        "name": "エルドル・ショムロドフ",
+        "position": "FW",
+        "clubTeam": "イスタンブール・バシャクシェヒル（トルコ）"
+      },
+      {
+        "name": "イゴール・セルゲエフ",
+        "position": "FW",
+        "clubTeam": "ペルセポリス（イラン）"
+      },
+      {
+        "name": "オストン・ウルノフ",
+        "position": "FW",
+        "clubTeam": "ペルセポリス（イラン）"
+      },
+      {
+        "name": "ドストンベク・ハムダモフ",
+        "position": "FW",
+        "clubTeam": "パフタコール"
+      },
+      {
+        "name": "アジズベク・アモノフ",
+        "position": "FW",
+        "clubTeam": "ブハラ"
+      }
+    ]
+  }
+]

@@ -1,0 +1,166 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String               @id @default(cuid())
+  appleUserId        String?              @unique
+  devUserId          String?              @unique
+  pushToken          String?
+  notifyEnabled      Boolean              @default(true)
+  sex                String?
+  ageGroup           String?
+  region             String?
+  createdAt          DateTime             @default(now())
+  favorites          UserFavorite[]
+  matchNotifications MatchNotification[]
+}
+
+model UserFavorite {
+  id        String   @id @default(cuid())
+  userId    String
+  countryId String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  country   Country  @relation(fields: [countryId], references: [id])
+
+  @@unique([userId, countryId])
+}
+
+// stage: "A"〜"P" (WC2026は16グループ)
+model Country {
+  id           String         @id @default(cuid())
+  name         String
+  nameEn       String
+  code         String         @unique
+  flagEmoji    String?
+  groupStage   String
+  federation   String?
+  createdAt    DateTime       @default(now())
+  players      Player[]
+  favorites    UserFavorite[]
+  matchEntries CountryMatch[]
+  newsLinks    CountryNews[]
+}
+
+// position: "GK" | "DF" | "MF" | "FW"
+model Player {
+  id          String  @id @default(cuid())
+  name        String
+  nameJa      String?
+  countryId   String
+  position    String
+  imageUrl    String?
+  clubTeam    String?
+  height      Int?
+  weight      Int?
+  number      Int?
+  goalCount   Int     @default(0)
+  assistCount Int     @default(0)
+  country     Country @relation(fields: [countryId], references: [id])
+
+  @@index([countryId])            // 国別選手一覧クエリ用
+  @@index([goalCount])            // 得点ランキングのソート用
+  @@index([assistCount])          // アシストランキングのソート用
+}
+
+// stage: "GROUP" | "ROUND_OF_32" | "ROUND_OF_16" | "QUARTER_FINAL" | "SEMI_FINAL" | "THIRD_PLACE" | "FINAL"
+// status: "SCHEDULED" | "LIVE" | "FINISHED"
+model Match {
+  id              String         @id @default(cuid())
+  matchDate       DateTime
+  venue           String?
+  venueCity       String?
+  round           String
+  stage           String         @default("GROUP")
+  status          String         @default("SCHEDULED")
+  homePlaceholder     String?
+  awayPlaceholder     String?
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  entries             CountryMatch[]
+  matchNotifications  MatchNotification[]
+
+  @@index([matchDate])            // 日付範囲クエリ用
+  @@index([status])               // ステータスフィルタ用
+  @@index([stage, status])        // stage+statusの複合フィルタ用
+}
+
+// result: "WIN" | "DRAW" | "LOSS" (countryから見た結果)
+model CountryMatch {
+  id        String  @id @default(cuid())
+  matchId   String
+  countryId String
+  isHome    Boolean @default(true)
+  score     Int?
+  result    String?
+  match     Match   @relation(fields: [matchId], references: [id])
+  country   Country @relation(fields: [countryId], references: [id])
+
+  @@unique([matchId, countryId])
+  @@index([countryId])            // 国別試合一覧クエリ用
+  @@index([matchId])              // 試合参加国クエリ用
+}
+
+// 試合単位の通知登録（チームフォローとは別）
+model MatchNotification {
+  id        String   @id @default(cuid())
+  userId    String
+  matchId   String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  match     Match    @relation(fields: [matchId], references: [id])
+
+  @@unique([userId, matchId])
+}
+
+model YoutubeChannel {
+  id          String   @id @default(cuid())
+  channelId   String   @unique
+  name        String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  videos      Video[]
+}
+
+model Video {
+  id          String         @id @default(cuid())
+  videoId     String         @unique
+  title       String
+  thumbnail   String
+  description String?
+  publishedAt DateTime
+  channelId   String
+  isShort     Boolean        @default(false)
+  createdAt   DateTime       @default(now())
+  channel     YoutubeChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+
+  @@index([publishedAt])          // 動画フィードのソート用
+  @@index([channelId, publishedAt]) // チャンネル別フィード用
+}
+
+model News {
+  id          String        @id @default(cuid())
+  title       String
+  description String?
+  imageUrl    String?
+  sourceUrl   String?
+  publishedAt DateTime
+  createdAt   DateTime      @default(now())
+  countryNews CountryNews[]
+}
+
+model CountryNews {
+  id        String  @id @default(cuid())
+  newsId    String
+  countryId String
+  news      News    @relation(fields: [newsId], references: [id])
+  country   Country @relation(fields: [countryId], references: [id])
+
+  @@unique([newsId, countryId])
+}

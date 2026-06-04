@@ -1,0 +1,135 @@
+{
+  "countryCode": "PDR",
+  "players": [
+    {
+      "name": "ディオゴ・コスタ",
+      "position": "GK",
+      "clubTeam": "FCポルト"
+    },
+    {
+      "name": "ルイ・シルバ",
+      "position": "GK",
+      "clubTeam": "スポルティングCP"
+    },
+    {
+      "name": "ジョゼ・サ",
+      "position": "GK",
+      "clubTeam": "ウォルヴァーハンプトン・ワンダラーズ（イングランド）"
+    },
+    {
+      "name": "トマース・アラウージョ",
+      "position": "DF",
+      "clubTeam": "ベンフィカ"
+    },
+    {
+      "name": "ゴンサロ・イナシオ",
+      "position": "DF",
+      "clubTeam": "スポルティングCP"
+    },
+    {
+      "name": "ネルソン・セメド",
+      "position": "DF",
+      "clubTeam": "フェネルバフチェ（トルコ）"
+    },
+    {
+      "name": "ヌーノ・メンデス",
+      "position": "DF",
+      "clubTeam": "パリ・サンジェルマン（フランス）"
+    },
+    {
+      "name": "レナト・ベイガ",
+      "position": "DF",
+      "clubTeam": "ビジャレアル（スペイン）"
+    },
+    {
+      "name": "ジョアン・カンセロ",
+      "position": "DF",
+      "clubTeam": "バルセロナ（スペイン）"
+    },
+    {
+      "name": "ディオゴ・ダロト",
+      "position": "DF",
+      "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+    },
+    {
+      "name": "マテウス・ヌネス",
+      "position": "DF",
+      "clubTeam": "マンチェスター・シティ（イングランド）"
+    },
+    {
+      "name": "ルベン・ディアス",
+      "position": "DF",
+      "clubTeam": "マンチェスター・シティ（イングランド）"
+    },
+    {
+      "name": "ルベン・ネベス",
+      "position": "MF",
+      "clubTeam": "アル・ヒラル（サウジアラビア）"
+    },
+    {
+      "name": "ヴィティーニャ",
+      "position": "MF",
+      "clubTeam": "パリ・サンジェルマン（フランス）"
+    },
+    {
+      "name": "ジョアン・ネベス",
+      "position": "MF",
+      "clubTeam": "パリ・サンジェルマン（フランス）"
+    },
+    {
+      "name": "サム・コスタ",
+      "position": "MF",
+      "clubTeam": "マジョルカ（スペイン）"
+    },
+    {
+      "name": "ベルナルド・シルバ",
+      "position": "MF",
+      "clubTeam": "マンチェスター・シティ（イングランド）"
+    },
+    {
+      "name": "ブルーノ・フェルナンデス",
+      "position": "MF",
+      "clubTeam": "マンチェスター・ユナイテッド（イングランド）"
+    },
+    {
+      "name": "クリスチアーノ・ロナウド",
+      "position": "FW",
+      "clubTeam": "アル・ナスル（サウジアラビア）"
+    },
+    {
+      "name": "ジョアン・フェリックス",
+      "position": "FW",
+      "clubTeam": "アル・ナスル（サウジアラビア）"
+    },
+    {
+      "name": "ペドロ・ネト",
+      "position": "FW",
+      "clubTeam": "チェルシー（イングランド）"
+    },
+    {
+      "name": "ゴンサロ・ゲデス",
+      "position": "FW",
+      "clubTeam": "レアル・ソシエダ（スペイン）"
+    },
+    {
+      "name": "ラファエル・レオン",
+      "position": "FW",
+      "clubTeam": "ACミラン（イタリア）"
+    },
+    {
+      "name": "フランシスコ・コンセイソン",
+      "position": "FW",
+      "clubTeam": "ユベントス（イタリア）"
+    },
+    {
+      "name": "ゴンサロ・ラモス",
+      "position": "FW",
+      "clubTeam": "パリ・サンジェルマン（フランス）"
+    },
+    {
+      "name": "トリンコン",
+      "position": "FW",
+      "clubTeam": "スポルティングCP"
+    }
+  ]
+}
