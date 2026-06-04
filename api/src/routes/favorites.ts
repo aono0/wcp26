@@ -25,7 +25,7 @@ router.get('/', async (req: AuthRequest, res) => {
   res.json(favorites.map((f) => f.country));
 });
 
-// お気に入り追加
+// お気に入り追加（チームの試合をMatchNotificationに自動登録）
 router.post('/', async (req: AuthRequest, res) => {
   const { countryId } = req.body;
   if (!countryId) {
@@ -38,6 +38,19 @@ router.post('/', async (req: AuthRequest, res) => {
     update: {},
     create: { userId: req.userId!, countryId },
   });
+
+  // 追加したチームの今後の試合をMatchNotificationに自動登録
+  const upcoming = await prisma.countryMatch.findMany({
+    where: { countryId, match: { status: 'SCHEDULED' } },
+    select: { matchId: true },
+  });
+
+  if (upcoming.length > 0) {
+    await prisma.matchNotification.createMany({
+      data: upcoming.map((m) => ({ userId: req.userId!, matchId: m.matchId })),
+      skipDuplicates: true,
+    });
+  }
 
   res.status(201).json(favorite);
 });
