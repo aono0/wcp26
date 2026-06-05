@@ -10,9 +10,13 @@ export function startMatchSyncJob() {
 
   // 5分ごとに実行（スマートポーリングで不要な時は早期リターン）
   cron.schedule('*/5 * * * *', async () => {
-    if (await shouldSync()) {
-      console.log('[Job] 試合データ同期 開始');
-      await syncAll();
+    try {
+      if (await shouldSync()) {
+        console.log('[Job] 試合データ同期 開始');
+        await syncAll();
+      }
+    } catch (e: any) {
+      console.error('[Job] 試合同期エラー:', e.message);
     }
   });
 

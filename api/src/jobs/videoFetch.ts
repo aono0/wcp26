@@ -5,7 +5,7 @@ import { fetchAllActiveChannels } from '../services/youtube';
 export function startVideoFetchJob() {
   cron.schedule('0 */3 * * *', async () => {
     console.log('[Job] 動画フェッチ 開始');
-    await fetchAllActiveChannels();
+    await fetchAllActiveChannels().catch((e) => console.error('[Job] 動画フェッチエラー:', e.message));
   });
   console.log('[Job] 動画フェッチジョブ 登録完了（3時間ごと）');
 }

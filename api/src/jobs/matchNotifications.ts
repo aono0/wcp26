@@ -6,12 +6,12 @@ export function startNotificationJob() {
   // ① 前日正午通知: 毎日 03:00 UTC = 12:00 JST
   cron.schedule('0 3 * * *', async () => {
     console.log('[Job] 前日正午通知 実行開始');
-    await sendDayBeforeNotifications();
+    await sendDayBeforeNotifications().catch((e) => console.error('[Job] 前日通知エラー:', e.message));
   });
 
   // ② 試合1時間前通知: 5分ごとに確認
   cron.schedule('*/5 * * * *', async () => {
-    await sendPreMatchNotifications();
+    await sendPreMatchNotifications().catch((e) => console.error('[Job] 1時間前通知エラー:', e.message));
   });
 
   console.log('[Job] 通知ジョブ登録完了（前日12時 / 試合1時間前）');

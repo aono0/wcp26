@@ -76,9 +76,35 @@ app.use('/stats',         statsRouter);
 app.use('/players',       playersRouter);
 app.use('/videos',        videosRouter);
 
-app.listen(PORT, () => {
+// グローバルエラーハンドラー（未捕捉エラーを500で返す）
+app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  console.error('[Error]', err.message);
+  res.status(500).json({ error: 'Internal server error' });
+});
+
+const server = app.listen(PORT, () => {
   console.log(`WCP26 API: http://localhost:${PORT}`);
   startNotificationJob();
   startVideoFetchJob();
   startMatchSyncJob();
 });
+
+// Graceful Shutdown（Railway の再デプロイ時にDB接続を安全に閉じる）
+async function shutdown(signal: string) {
+  console.log(`[Shutdown] ${signal} received, shutting down gracefully...`);
+  server.close(async () => {
+    const { prisma } = await import('./lib/prisma');
+    await prisma.$disconnect();
+    console.log('[Shutdown] DB disconnected. Bye.');
+    process.exit(0);
+  });
+
+  // 10秒でタイムアウト
+  setTimeout(() => {
+    console.error('[Shutdown] Timeout, forcing exit.');
+    process.exit(1);
+  }, 10000);
+}
+
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT',  () => shutdown('SIGINT'));
