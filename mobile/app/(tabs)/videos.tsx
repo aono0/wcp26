@@ -2,7 +2,8 @@ import {
   FlatList, StyleSheet, Text, View, Image,
   ActivityIndicator, Dimensions, TouchableOpacity, Linking,
 } from 'react-native';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
+import { useLocalSearchParams } from 'expo-router';
 import WebView from 'react-native-webview';
 import { useVideos, Video } from '@/hooks/useVideos';
 import { colors } from '@/constants/theme';
@@ -13,9 +14,18 @@ const { width: SW, height: SH } = Dimensions.get('window');
 const PLAYER_H = Math.round(SW * 16 / 9);
 
 export default function VideosScreen() {
+  const { startId } = useLocalSearchParams<{ startId?: string }>();
   const [containerHeight, setContainerHeight] = useState(0);
   const [activeIndex, setActiveIndex]         = useState(0);
-  const { data: videos, isLoading }           = useVideos(undefined, 50);
+  const { data: rawVideos, isLoading }        = useVideos(undefined, 50);
+
+  // startId が指定されていたらその動画を先頭に
+  const videos = useMemo(() => {
+    if (!rawVideos || !startId) return rawVideos;
+    const idx = rawVideos.findIndex((v) => v.videoId === startId);
+    if (idx <= 0) return rawVideos;
+    return [rawVideos[idx], ...rawVideos.slice(0, idx), ...rawVideos.slice(idx + 1)];
+  }, [rawVideos, startId]);
 
   const onViewableItemsChanged = useCallback(({ viewableItems }: any) => {
     if (viewableItems.length > 0) setActiveIndex(viewableItems[0].index ?? 0);

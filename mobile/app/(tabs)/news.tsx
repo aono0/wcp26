@@ -30,10 +30,12 @@ export default function MatchesStandingsScreen() {
 
   return (
     <View style={[styles.container, { paddingTop: top }]}>
+      {/* PLスタイルのアンダーラインタブ */}
       <View style={styles.mainTabBar}>
         {([['matches','試合'], ['standings','順位表'], ['stats','スタッツ']] as [MainTab, string][]).map(([tab, label]) => (
-          <TouchableOpacity key={tab} style={[styles.mainTabBtn, mainTab === tab && styles.mainTabBtnActive]} onPress={() => setMainTab(tab)}>
+          <TouchableOpacity key={tab} style={styles.mainTabBtn} onPress={() => setMainTab(tab)}>
             <Text style={[styles.mainTabText, mainTab === tab && styles.mainTabTextActive]}>{label}</Text>
+            {mainTab === tab && <View style={styles.mainTabUnderline} />}
           </TouchableOpacity>
         ))}
       </View>
@@ -88,10 +90,11 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
       {/* グループステージ | 決勝T */}
       <View style={styles.stageRow}>
         {(['group', 'knockout'] as MatchStage[]).map((s) => (
-          <TouchableOpacity key={s} style={[styles.stageBtn, matchStage === s && styles.stageBtnActive]} onPress={() => setMatchStage(s)}>
-            <Text style={[styles.stageBtnText, matchStage === s && styles.stageBtnTextActive]}>
+          <TouchableOpacity key={s} style={styles.stageTabItem} onPress={() => setMatchStage(s)}>
+            <Text style={[styles.stageTabText, matchStage === s && styles.stageTabTextActive]}>
               {s === 'group' ? 'グループステージ' : '決勝トーナメント'}
             </Text>
+            {matchStage === s && <View style={styles.stageTabUnderline} />}
           </TouchableOpacity>
         ))}
       </View>
@@ -119,14 +122,16 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
           <Text style={styles.emptyText}>{isGroup ? '試合データなし' : 'このラウンドはまだ確定していません'}</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={styles.matchList}>
-          {isGroup && activeDate && (
-            <Text style={styles.dateHeading}>{formatDatePill(activeDate)}</Text>
-          )}
-          {!isGroup && (
-            <Text style={styles.dateHeading}>{KNOCKOUT_ROUNDS.find((x) => x.key === selectedRound)?.label}</Text>
-          )}
-          {displayMatches.map((m) => <MatchCard key={m.id} match={m} />)}
+        <ScrollView>
+          <View style={styles.matchSurface}>
+            {isGroup && activeDate && (
+              <Text style={styles.dateHeading}>{formatDatePill(activeDate)}</Text>
+            )}
+            {!isGroup && (
+              <Text style={styles.dateHeading}>{KNOCKOUT_ROUNDS.find((x) => x.key === selectedRound)?.label}</Text>
+            )}
+            {displayMatches.map((m) => <MatchCard key={m.id} match={m} />)}
+          </View>
           <View style={{ height: 40 }} />
         </ScrollView>
       )}
@@ -197,11 +202,12 @@ function StatsView() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* 得点 / アシスト 切り替え */}
+      {/* 得点 / アシスト 切り替え（アンダーラインスタイル） */}
       <View style={styles.statsSubBar}>
         {([['scorers','得点ランキング'], ['assisters','アシストランキング']] as const).map(([key, label]) => (
-          <TouchableOpacity key={key} style={[styles.statsSubBtn, statsTab === key && styles.statsSubBtnActive]} onPress={() => setStatsTab(key)}>
-            <Text style={[styles.statsSubText, statsTab === key && styles.statsSubTextActive]}>{label}</Text>
+          <TouchableOpacity key={key} style={styles.stageTabItem} onPress={() => setStatsTab(key)}>
+            <Text style={[styles.stageTabText, statsTab === key && styles.stageTabTextActive]}>{label}</Text>
+            {statsTab === key && <View style={styles.stageTabUnderline} />}
           </TouchableOpacity>
         ))}
       </View>
@@ -248,31 +254,56 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.bg },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   emptyText: { color: colors.textMuted, fontSize: 14, textAlign: 'center', paddingHorizontal: 32 },
-  mainTabBar: { flexDirection: 'row', backgroundColor: colors.surfaceAlt, margin: 12, borderRadius: r.lg, padding: 3 },
-  mainTabBtn: { flex: 1, paddingVertical: 9, alignItems: 'center', borderRadius: r.md },
-  mainTabBtnActive: { backgroundColor: colors.gold },
-  mainTabText: { color: colors.textMuted, fontWeight: '700', fontSize: 13 },
-  mainTabTextActive: { color: colors.bg },
-  stageRow: { flexDirection: 'row', paddingHorizontal: 12, gap: 8, marginBottom: 8 },
-  stageBtn: { flex: 1, paddingVertical: 8, alignItems: 'center', borderRadius: r.md, borderWidth: 1, borderColor: colors.border },
-  stageBtnActive: { borderColor: colors.gold, backgroundColor: '#1A2030' },
-  stageBtnText: { color: colors.textMuted, fontSize: 12, fontWeight: '600' },
-  stageBtnTextActive: { color: colors.gold },
-  chip: { paddingHorizontal: 14, paddingVertical: 7, borderRadius: r.full, borderWidth: 1, borderColor: colors.border },
-  chipActive: { backgroundColor: colors.gold, borderColor: colors.gold },
-  chipText: { color: colors.textMuted, fontWeight: '600', fontSize: 12 },
-  chipTextActive: { color: colors.bg, fontWeight: '800' },
-  matchList: { paddingHorizontal: 12, paddingTop: 4 },
+  // ── PLスタイルのアンダーラインタブ ──
+  mainTabBar: {
+    flexDirection: 'row',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: 'rgba(255,255,255,0.1)',
+    paddingHorizontal: 4,
+    marginBottom: 4,
+  },
+  mainTabBtn: { flex: 1, alignItems: 'center', paddingVertical: 12, position: 'relative' },
+  mainTabText: { color: colors.textMuted, fontWeight: '500', fontSize: 13 },
+  mainTabTextActive: { color: colors.white, fontWeight: '700' },
+  mainTabUnderline: { position: 'absolute', bottom: 0, left: 16, right: 16, height: 2, backgroundColor: colors.gold, borderRadius: 1 },
+
+  // ── ステージ切替（アンダーラインスタイル） ──
+  stageRow: {
+    flexDirection: 'row',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: 'rgba(255,255,255,0.08)',
+    paddingHorizontal: 4,
+    marginBottom: 4,
+  },
+  stageTabItem: { flex: 1, alignItems: 'center', paddingVertical: 10, position: 'relative' },
+  stageTabText: { color: colors.textMuted, fontSize: 12, fontWeight: '500' },
+  stageTabTextActive: { color: colors.white, fontWeight: '700' },
+  stageTabUnderline: { position: 'absolute', bottom: 0, left: 12, right: 12, height: 2, backgroundColor: colors.gold, borderRadius: 1 },
+
+  // ── 日付チップ ──
+  chip: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: r.full, borderWidth: 1, borderColor: 'rgba(255,255,255,0.12)' },
+  chipActive: { backgroundColor: 'rgba(240,180,41,0.15)', borderColor: colors.gold },
+  chipText: { color: colors.textMuted, fontWeight: '500', fontSize: 12 },
+  chipTextActive: { color: colors.gold, fontWeight: '700' },
+
+  // ── 試合リスト ──
+  matchSurface: { backgroundColor: colors.surface, marginHorizontal: 12, borderRadius: 12, overflow: 'hidden' },
   matchGroup: { marginBottom: 16 },
   groupLabel: { color: colors.gold, fontSize: 10, fontWeight: '700', letterSpacing: 1.5, marginBottom: 8, textTransform: 'uppercase' },
-  dateHeading: { color: colors.white, fontSize: 16, fontWeight: '800', marginBottom: 12 },
+  dateHeading: { color: colors.textSec, fontSize: 11, fontWeight: '600', letterSpacing: 0.5, textTransform: 'uppercase', paddingHorizontal: 16, paddingTop: 12, paddingBottom: 4 },
+
+  // ── 日付チップスクロール ──
   chipScroll: { maxHeight: 46 },
   chipContent: { paddingHorizontal: 12, gap: 8, paddingBottom: 8, alignItems: 'center' },
-  statsSubBar: { flexDirection: 'row', paddingHorizontal: 12, gap: 8, paddingBottom: 10 },
-  statsSubBtn: { flex: 1, paddingVertical: 8, alignItems: 'center', borderRadius: r.md, borderWidth: 1, borderColor: colors.border },
-  statsSubBtnActive: { borderColor: colors.gold, backgroundColor: '#1A2030' },
-  statsSubText: { color: colors.textMuted, fontSize: 12, fontWeight: '600' },
-  statsSubTextActive: { color: colors.gold },
+
+  // ── スタッツ ──
+  statsSubBar: {
+    flexDirection: 'row',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: 'rgba(255,255,255,0.08)',
+    paddingHorizontal: 4,
+    marginBottom: 8,
+  },
   rankTable: { paddingHorizontal: 12 },
   rankRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surface, paddingHorizontal: 12, paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: colors.border },
   rankRowAlt: { backgroundColor: '#0A1020' },

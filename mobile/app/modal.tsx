@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View, TouchableOpacity, Switch, Alert, ScrollView, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useState, useEffect } from 'react';
 import { api } from '@/lib/api';
 import { useAuthStore } from '@/stores/authStore';
 import { colors, r } from '@/constants/theme';
 
+
 export default function SettingsScreen() {
   const router = useRouter();
+  const { top } = useSafeAreaInsets();
   const { logout } = useAuthStore();
   const [notifyEnabled, setNotifyEnabled] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -51,7 +54,7 @@ export default function SettingsScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
+      <View style={[styles.header, { paddingTop: top + 12 }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.closeBtn}>
           <Text style={styles.closeBtnText}>✕</Text>
         </TouchableOpacity>
@@ -82,7 +85,7 @@ export default function SettingsScreen() {
       {/* アカウント */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>アカウント</Text>
-        <TouchableOpacity style={styles.row} onPress={() => { logout(); router.dismissAll(); }}>
+        <TouchableOpacity style={styles.row} onPress={async () => { router.dismissAll(); await logout(); }}>
           <View style={styles.rowLeft}>
             <Text style={styles.rowIcon}>🚪</Text>
             <Text style={styles.rowLabel}>サインアウト</Text>

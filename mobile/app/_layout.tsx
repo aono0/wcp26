@@ -60,20 +60,30 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-  const { devLogin, isLoggedIn } = useAuthStore();
+  const { isReady, isLoggedIn, restoreSession } = useAuthStore();
   useSetupNotifications();
 
+  // 起動時に保存済みセッションを復元
   useEffect(() => {
-    if (!isLoggedIn) devLogin().catch(console.error);
+    restoreSession();
   }, []);
+
+  // セッション復元が終わるまでスプラッシュ継続
+  if (!isReady) return null;
 
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-        </Stack>
+        {isLoggedIn ? (
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+          </Stack>
+        ) : (
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="login" />
+          </Stack>
+        )}
       </ThemeProvider>
     </QueryClientProvider>
   );

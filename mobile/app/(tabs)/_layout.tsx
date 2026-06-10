@@ -75,12 +75,12 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <SymbolView name="list.bullet.clipboard.fill" tintColor={color} size={24} />,
         }}
       />
-      <Tabs.Screen
+<Tabs.Screen
         name="countries"
         options={{
           title: '出場国',
           headerShown: true,
-          headerTitle: 'WC2026 出場国',
+          headerTitle: '出場国',
           headerStyle: { backgroundColor: colors.bg },
           headerTintColor: colors.white,
           headerShadowVisible: false,

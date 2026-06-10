@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useFavorites } from '@/hooks/useFavorites';
 import { useGroupStanding } from '@/hooks/useStandings';
 import { useMatchNotifications } from '@/hooks/useMatchNotifications';
@@ -18,12 +18,12 @@ export default function FavoritesScreen() {
     <View style={[styles.container, { paddingTop: top }]}>
       {/* タブ切り替え */}
       <View style={styles.tabBar}>
-        <TouchableOpacity style={[styles.tabBtn, tab === 'teams' && styles.tabBtnActive]} onPress={() => setTab('teams')}>
-          <Text style={[styles.tabBtnText, tab === 'teams' && styles.tabBtnTextActive]}>マイチーム</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.tabBtn, tab === 'matches' && styles.tabBtnActive]} onPress={() => setTab('matches')}>
-          <Text style={[styles.tabBtnText, tab === 'matches' && styles.tabBtnTextActive]}>試合通知</Text>
-        </TouchableOpacity>
+        {([['teams', 'マイチーム'], ['matches', '試合通知']] as [Tab, string][]).map(([key, label]) => (
+          <TouchableOpacity key={key} style={styles.tabItem} onPress={() => setTab(key)}>
+            <Text style={[styles.tabText, tab === key && styles.tabTextActive]}>{label}</Text>
+            {tab === key && <View style={styles.tabUnderline} />}
+          </TouchableOpacity>
+        ))}
       </View>
 
       {tab === 'teams' ? <TeamsTab /> : <MatchesTab />}
@@ -105,65 +105,36 @@ function TeamsTab() {
 // お気に入りチームの試合 + 個別登録した試合をまとめて表示
 // ──────────────────────────────────────────────
 function MatchesTab() {
-  const { data: favorites, isLoading: favLoading } = useFavorites();
-  const { data: individualNotifs, isLoading: notifLoading } = useMatchNotifications();
-  const isLoading = favLoading || notifLoading;
-
-  const allMatches = useMemo(() => {
-    const matchMap = new Map<string, { match: any; source: 'team' | 'individual'; teamName?: string }>();
-
-    // お気に入りチームの試合を自動追加
-    for (const country of favorites ?? []) {
-      for (const entry of country.matchEntries ?? []) {
-        const m = entry.match;
-        if (!m) continue;
-        if (!matchMap.has(m.id)) {
-          matchMap.set(m.id, { match: m, source: 'team', teamName: country.name });
-        }
-      }
-    }
-
-    // 個別登録した試合を追加（重複は上書きしない）
-    for (const n of individualNotifs ?? []) {
-      if (!matchMap.has(n.matchId)) {
-        matchMap.set(n.matchId, { match: n.match, source: 'individual' });
-      }
-    }
-
-    return [...matchMap.values()].sort(
-      (a, b) => new Date(a.match.matchDate).getTime() - new Date(b.match.matchDate).getTime()
-    );
-  }, [favorites, individualNotifs]);
+  const { data: notifications, isLoading } = useMatchNotifications();
 
   if (isLoading) return <View style={styles.center}><ActivityIndicator size="large" color={colors.gold} /></View>;
 
-  if (allMatches.length === 0) {
+  if (!notifications || notifications.length === 0) {
     return (
       <View style={styles.center}>
         <Text style={styles.emptyIcon}>🔔</Text>
         <Text style={styles.emptyTitle}>通知中の試合はありません</Text>
-        <Text style={styles.emptyText}>チームをお気に入り登録するとその試合が自動で追加されます</Text>
+        <Text style={styles.emptyText}>チームをマイチームに追加すると{'\n'}その試合が自動で登録されます</Text>
       </View>
     );
   }
 
-  const upcoming = allMatches.filter((m) => m.match?.status !== 'FINISHED');
-  const past     = allMatches.filter((m) => m.match?.status === 'FINISHED');
+  const sorted  = [...notifications].sort((a, b) => new Date(a.match?.matchDate).getTime() - new Date(b.match?.matchDate).getTime());
+  const upcoming = sorted.filter((n) => n.match?.status !== 'FINISHED');
+  const past     = sorted.filter((n) => n.match?.status === 'FINISHED');
 
   return (
     <ScrollView contentContainerStyle={styles.matchesContent}>
       {upcoming.length > 0 && (
         <View style={styles.matchSection}>
-          <Text style={styles.matchSectionLabel}>通知予定の試合 ({upcoming.length})</Text>
-          {upcoming.map(({ match }) => (
-            <MatchCard key={match.id} match={match} />
-          ))}
+          <Text style={styles.matchSectionLabel}>通知予定 ({upcoming.length})</Text>
+          {upcoming.map((n) => <MatchCard key={n.matchId} match={n.match} />)}
         </View>
       )}
       {past.length > 0 && (
         <View style={styles.matchSection}>
           <Text style={styles.matchSectionLabel}>終了した試合</Text>
-          {past.map(({ match }) => <MatchCard key={match.id} match={match} />)}
+          {past.map((n) => <MatchCard key={n.matchId} match={n.match} />)}
         </View>
       )}
       <View style={{ height: 40 }} />
@@ -216,11 +187,17 @@ const styles = StyleSheet.create({
   addBtn: { backgroundColor: colors.gold, paddingHorizontal: 24, paddingVertical: 12, borderRadius: r.full },
   addBtnText: { color: colors.bg, fontWeight: '800', fontSize: 14 },
 
-  tabBar: { flexDirection: 'row', backgroundColor: colors.surfaceAlt, margin: 12, borderRadius: r.lg, padding: 3 },
-  tabBtn: { flex: 1, paddingVertical: 9, alignItems: 'center', borderRadius: r.md },
-  tabBtnActive: { backgroundColor: colors.gold },
-  tabBtnText: { color: colors.textMuted, fontWeight: '700', fontSize: 13 },
-  tabBtnTextActive: { color: colors.bg },
+  tabBar: {
+    flexDirection: 'row',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: 'rgba(255,255,255,0.1)',
+    paddingHorizontal: 4,
+    marginBottom: 4,
+  },
+  tabItem: { flex: 1, alignItems: 'center', paddingVertical: 12, position: 'relative' },
+  tabText: { color: colors.textMuted, fontWeight: '500', fontSize: 13 },
+  tabTextActive: { color: colors.white, fontWeight: '700' },
+  tabUnderline: { position: 'absolute', bottom: 0, left: 16, right: 16, height: 2, backgroundColor: colors.gold, borderRadius: 1 },
 
   teamBlock: { marginBottom: 4, borderBottomWidth: 6, borderBottomColor: colors.bg },
   teamHeader: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: colors.surfaceAlt, padding: 16, borderBottomWidth: 1, borderBottomColor: colors.border },

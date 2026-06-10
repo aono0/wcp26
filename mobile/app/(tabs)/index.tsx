@@ -4,6 +4,7 @@ import { useFavorites } from '@/hooks/useFavorites';
 import { useMatches } from '@/hooks/useMatches';
 import { useTopScorers, useTopAssisters } from '@/hooks/useStats';
 import { MatchCard } from '@/components/MatchCard';
+import { VideoStories } from '@/components/VideoStories';
 import { colors, r } from '@/constants/theme';
 
 export default function HomeScreen() {
@@ -21,9 +22,8 @@ export default function HomeScreen() {
       <View style={styles.hero}>
         <View style={styles.heroTop}>
           <View>
-            <Text style={styles.heroEyebrow}>USA · CANADA · MEXICO</Text>
-            <Text style={styles.heroTitle}>FIFA</Text>
-            <Text style={styles.heroTitleSub}>WORLD CUP 2026</Text>
+            <Text style={styles.heroTitleSub}>Your team, your moment.</Text>
+            <Text style={styles.heroTitle}>Never miss a match</Text>
           </View>
           <Link href="/modal" asChild>
             <TouchableOpacity style={styles.settingsBtn}>
@@ -35,6 +35,11 @@ export default function HomeScreen() {
           <View style={styles.heroDot} />
           <Text style={styles.heroBadgeText}>USA · Canada · Mexico</Text>
         </View>
+      </View>
+
+      {/* 動画ストーリー */}
+      <View style={styles.storiesSection}>
+        <VideoStories />
       </View>
 
       {/* マイチームセクション */}
@@ -207,20 +212,22 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     paddingHorizontal: 20,
     paddingTop: 60,
-    paddingBottom: 28,
+    paddingBottom: 7,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
-  heroTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 },
+  heroTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 5 },
   heroEyebrow: { color: colors.textMuted, fontSize: 10, fontWeight: '600', letterSpacing: 2, marginBottom: 4 },
-  heroTitle: { color: colors.gold, fontSize: 28, fontWeight: '900', letterSpacing: 2 },
+  heroTitle: { color: colors.gold, fontSize: 20, fontWeight: '800', letterSpacing: 0.5 },
   heroTitleSub: { color: colors.white, fontSize: 26, fontWeight: '900', letterSpacing: 1, marginTop: -2 },
   settingsBtn: { width: 40, height: 40, borderRadius: 20, backgroundColor: colors.surfaceAlt, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: colors.border, marginTop: 8 },
   settingsIcon: { fontSize: 18 },
-  heroBadge: { flexDirection: 'row', alignItems: 'center', marginTop: 8, gap: 6 },
+  heroBadge: { flexDirection: 'row', alignItems: 'center', marginTop: 1, gap: 6 },
   heroDot: { width: 6, height: 6, borderRadius: 3, backgroundColor: colors.green },
   heroBadgeText: { color: colors.textSec, fontSize: 12 },
-  section: { paddingHorizontal: 16, paddingTop: 24, paddingBottom: 4 },
+  section: { paddingHorizontal: 16, paddingTop: 15, paddingBottom: 4 },
+  storiesSection: { paddingTop: 15 },
+  storiesHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, marginBottom: 12 },
   sectionRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 },
   sectionLabel: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   addBtn: { backgroundColor: colors.surfaceAlt, borderRadius: r.full, paddingHorizontal: 12, paddingVertical: 5, borderWidth: 1, borderColor: colors.border },
