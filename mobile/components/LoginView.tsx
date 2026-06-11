@@ -41,7 +41,7 @@ export function LoginView() {
 
   return (
     <ImageBackground
-      source={require('../assets/images/login.png')}
+      source={require('../assets/images/login2.png')}
       style={styles.container}
       imageStyle={styles.bgImage}
     >
