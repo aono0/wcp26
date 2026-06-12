@@ -5,9 +5,11 @@ import { useMatches } from '@/hooks/useMatches';
 import { useTopScorers, useTopAssisters } from '@/hooks/useStats';
 import { MatchCard } from '@/components/MatchCard';
 import { VideoStories } from '@/components/VideoStories';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, r } from '@/constants/theme';
 
 export default function HomeScreen() {
+  const { top } = useSafeAreaInsets();
   const router = useRouter();
   const { data: favorites, isLoading: favLoading } = useFavorites();
   const { data: matches, isLoading: matchLoading, isError: matchError } = useMatches({ status: 'SCHEDULED' });
@@ -19,7 +21,7 @@ export default function HomeScreen() {
       <StatusBar barStyle="light-content" />
 
       {/* ヒーローヘッダー */}
-      <View style={styles.hero}>
+      <View style={[styles.hero, { paddingTop: top + 8 }]}>
         <View style={styles.heroTop}>
           <View>
             <Text style={styles.heroTitleSub}>Your team, your moment.</Text>
@@ -211,7 +213,7 @@ const styles = StyleSheet.create({
   hero: {
     backgroundColor: colors.surface,
     paddingHorizontal: 20,
-    paddingTop: 60,
+    paddingTop: 8,
     paddingBottom: 7,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,

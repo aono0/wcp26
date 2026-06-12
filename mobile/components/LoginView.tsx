@@ -48,7 +48,7 @@ export function LoginView() {
       {/* 暗いオーバーレイで画像をうっすら見せる */}
       <View style={styles.overlay} />
       <View style={styles.hero}>
-        <Image source={require('../assets/images/icon.png')} style={styles.appIcon} />
+        <Image source={require('../assets/images/icon2.png')} style={styles.appIcon} />
         <Text style={styles.eyebrow}>USA · CANADA · MEXICO</Text>
         <Text style={styles.titleSub}>Your team, your moment.</Text>
         <Text style={styles.title}>Never miss a match</Text>
