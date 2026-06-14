@@ -4,7 +4,7 @@
     "slug": "wcp26",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon2.png",
+    "icon": "./assets/images/icon3.png",
     "scheme": "wcp26",
     "userInterfaceStyle": "dark",
     "ios": {
@@ -37,7 +37,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon2.png",
+          "image": "./assets/images/splach-icon3.png",
           "resizeMode": "contain",
           "backgroundColor": "#080D1E"
         }
