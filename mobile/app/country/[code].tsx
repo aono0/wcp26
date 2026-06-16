@@ -1,4 +1,5 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert } from 'react-native';
+import { useState } from 'react';
 import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
 import { useCountryDetail, useCountryPlayers } from '@/hooks/useCountries';
 import { useFavorites, useAddFavorite, useRemoveFavorite } from '@/hooks/useFavorites';
@@ -13,14 +14,27 @@ export default function CountryDetailScreen() {
   const { data: country, isLoading, isError } = useCountryDetail(code);
   const { data: players, isLoading: playersLoading } = useCountryPlayers(code ?? '');
   const { data: favorites } = useFavorites();
-  const addFav = useAddFavorite({
-    onError: () => Alert.alert('エラー', 'お気に入りの登録に失敗しました。もう一度お試しください。'),
-  });
-  const removeFav = useRemoveFavorite({
-    onError: () => Alert.alert('エラー', 'お気に入りの解除に失敗しました。もう一度お試しください。'),
-  });
-  const isFav = favorites?.some((f) => f.code === code);
+  const addFav = useAddFavorite();
+  const removeFav = useRemoveFavorite();
+  const serverIsFav = favorites?.some((f) => f.code === code) ?? false;
+  const [optimisticIsFav, setOptimisticIsFav] = useState<boolean | null>(null);
+  const isFav = optimisticIsFav !== null ? optimisticIsFav : serverIsFav;
   const favPending = addFav.isPending || removeFav.isPending;
+
+  const handleFavToggle = () => {
+    if (favPending || !country) return;
+    const next = !isFav;
+    setOptimisticIsFav(next);
+    const onError = () => {
+      setOptimisticIsFav(!next);
+      Alert.alert('エラー', 'お気に入りの変更に失敗しました。もう一度お試しください。');
+    };
+    if (isFav) {
+      removeFav.mutate(country.id, { onError });
+    } else {
+      addFav.mutate(country.id, { onError });
+    }
+  };
 
   if (isLoading) return <View style={styles.center}><ActivityIndicator size="large" color={colors.gold} /></View>;
   if (isError || !country) return <View style={styles.center}><Text style={styles.error}>読み込みエラー</Text></View>;
@@ -50,7 +64,7 @@ export default function CountryDetailScreen() {
         </View>
         <TouchableOpacity
           style={[styles.favBtn, isFav && styles.favBtnActive, favPending && { opacity: 0.5 }]}
-          onPress={() => !favPending && (isFav ? removeFav.mutate(country.id) : addFav.mutate(country.id))}
+          onPress={handleFavToggle}
           disabled={favPending}
         >
           {favPending

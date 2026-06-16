@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { useState } from 'react';
 import { SymbolView } from 'expo-symbols';
 import { colors } from '@/constants/theme';
 import { formatMatchDate, formatMatchDateShort } from '@/lib/matchUtils';
@@ -31,8 +32,9 @@ export function MatchCard({ match }: { match: Match }) {
   const notificationIds = useMatchNotificationIds();
   const addNotification = useAddMatchNotification();
   const removeNotification = useRemoveMatchNotification();
-  // MatchNotificationのみで判断（チームフォローは関係なし）
-  const isNotified = notificationIds.has(match.id);
+  const serverIsNotified = notificationIds.has(match.id);
+  const [optimisticNotified, setOptimisticNotified] = useState<boolean | null>(null);
+  const isNotified = optimisticNotified !== null ? optimisticNotified : serverIsNotified;
 
   const homeFlag = home?.country?.flagEmoji;
   const awayFlag = away?.country?.flagEmoji;
@@ -48,7 +50,15 @@ export function MatchCard({ match }: { match: Match }) {
         { text: 'キャンセル', style: 'cancel' },
         {
           text: isNotified ? '解除する' : '通知する',
-          onPress: () => isNotified ? removeNotification.mutate(match.id) : addNotification.mutate(match.id),
+          onPress: () => {
+            const next = !isNotified;
+            setOptimisticNotified(next);
+            if (isNotified) {
+              removeNotification.mutate(match.id, { onError: () => setOptimisticNotified(!next) });
+            } else {
+              addNotification.mutate(match.id, { onError: () => setOptimisticNotified(!next) });
+            }
+          },
         },
       ]
     );
