@@ -79,7 +79,8 @@ router.get('/:code', async (req, res) => {
     res.status(404).json({ error: 'Country not found' });
     return;
   }
-  res.json(country);
+  // players: [] を含めて旧バージョンのアプリとの互換性を維持
+  res.json({ ...country, players: [] });
 });
 
 // 選手一覧（遅延読み込み用）
