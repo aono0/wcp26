@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
       ...(stage  ? { stage: String(stage) }   : {}),
       ...(status ? { status: String(status) } : {}),
       ...(md     ? { round: { contains: `MD${md}` } } : {}),
-      ...(from   ? { matchDate: { gte: new Date(String(from)) } } : {}),
+      ...(from ? (() => { const d = new Date(String(from)); return isNaN(d.getTime()) ? {} : { matchDate: { gte: d } }; })() : {}),
     },
     include: {
       entries: {

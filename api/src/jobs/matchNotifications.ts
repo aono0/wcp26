@@ -14,7 +14,7 @@ export function startNotificationJob() {
     await sendPreMatchNotifications().catch((e) => console.error('[Job] 試合前通知エラー:', e.message));
   });
 
-  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15');
+  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15') || 15;
   console.log(`[Job] 通知ジョブ登録完了（前日12時 / 試合${preMatchMinutes}分前）`);
 }
 
@@ -50,7 +50,7 @@ export async function sendDayBeforeNotifications() {
 // ② 試合前通知（PRE_MATCH_NOTIFY_MINUTES 分前の試合 / 未送信のみ）
 // ──────────────────────────────────────────────
 async function sendPreMatchNotifications() {
-  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15');
+  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15') || 15;
   const now   = new Date();
   const from  = new Date(now.getTime() + (preMatchMinutes - 10) * 60 * 1000);
   const to    = new Date(now.getTime() + (preMatchMinutes + 10) * 60 * 1000);
