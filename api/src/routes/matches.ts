@@ -11,15 +11,21 @@ const router = Router();
 //   ?status=SCHEDULED|FINISHED|LIVE
 //   ?md=1|2|3  (グループステージのマッチデー)
 //   ?from=ISO日付  (この日時以降の試合のみ)
+//   ?to=ISO日付    (この日時より前の試合のみ)
 router.get('/', async (req, res) => {
-  const { stage, status, md, from } = req.query;
+  const { stage, status, md, from, to } = req.query;
+
+  const parseDate = (v: unknown) => { const d = new Date(String(v)); return isNaN(d.getTime()) ? null : d; };
 
   const matches = await prisma.match.findMany({
     where: {
       ...(stage  ? { stage: String(stage) }   : {}),
       ...(status ? { status: String(status) } : {}),
       ...(md     ? { round: { contains: `MD${md}` } } : {}),
-      ...(from ? (() => { const d = new Date(String(from)); return isNaN(d.getTime()) ? {} : { matchDate: { gte: d } }; })() : {}),
+      ...(from || to ? { matchDate: {
+        ...(from ? (() => { const d = parseDate(from); return d ? { gte: d } : {}; })() : {}),
+        ...(to   ? (() => { const d = parseDate(to);   return d ? { lt:  d } : {}; })() : {}),
+      } } : {}),
     },
     include: {
       entries: {

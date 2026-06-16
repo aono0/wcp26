@@ -19,7 +19,7 @@ export type Match = {
   }[];
 };
 
-export function useMatches(params?: { stage?: string; status?: string; md?: number; from?: string }) {
+export function useMatches(params?: { stage?: string; status?: string; md?: number; from?: string; to?: string }) {
   return useQuery({
     queryKey: ['matches', params],
     queryFn: async () => {

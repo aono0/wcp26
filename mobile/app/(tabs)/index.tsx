@@ -8,6 +8,15 @@ import { VideoStories } from '@/components/VideoStories';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, r } from '@/constants/theme';
 
+function getJstDayRange(offsetDays: number) {
+  const JST = 9 * 60 * 60 * 1000;
+  const nowJst = Date.now() + JST;
+  const startOfTodayJst = Math.floor(nowJst / 86400000) * 86400000;
+  const from = new Date(startOfTodayJst + offsetDays * 86400000 - JST);
+  const to   = new Date(startOfTodayJst + (offsetDays + 1) * 86400000 - JST);
+  return { from: from.toISOString(), to: to.toISOString() };
+}
+
 export default function HomeScreen() {
   const { top } = useSafeAreaInsets();
   const router = useRouter();
@@ -15,6 +24,11 @@ export default function HomeScreen() {
   const { data: matches, isLoading: matchLoading, isError: matchError } = useMatches({
     status: 'SCHEDULED',
     from: new Date().toISOString(),
+  });
+  const yesterdayRange = getJstDayRange(-1);
+  const { data: yesterdayMatches } = useMatches({
+    status: 'FINISHED',
+    ...yesterdayRange,
   });
   const upcomingMatches = matches?.slice(0, 5) ?? [];
   const hasFavorites = favorites && favorites.length > 0;
@@ -109,6 +123,16 @@ export default function HomeScreen() {
           })
         )}
       </View>
+
+      {/* 昨日の試合セクション */}
+      {yesterdayMatches && yesterdayMatches.length > 0 && (
+        <View style={styles.section}>
+          <View style={styles.sectionRow}>
+            <SectionLabel text="昨日の試合" />
+          </View>
+          {yesterdayMatches.map((m) => <MatchCard key={m.id} match={m} />)}
+        </View>
+      )}
 
       {/* 直近の試合セクション */}
       <View style={styles.section}>
