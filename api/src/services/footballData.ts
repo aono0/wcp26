@@ -121,9 +121,25 @@ export async function syncTopScorers() {
 }
 
 // ──────────────────────────────────────────────
+// 時間ベース自動終了（APIキー不要）
+// キックオフから110分以上経過したSCHEDULED試合をFINISHEDに更新
+// ──────────────────────────────────────────────
+export async function autoFinishOldMatches() {
+  const cutoff = new Date(Date.now() - 110 * 60 * 1000);
+  const result = await prisma.match.updateMany({
+    where: { status: 'SCHEDULED', matchDate: { lte: cutoff } },
+    data: { status: 'FINISHED' },
+  });
+  if (result.count > 0) {
+    console.log(`[AutoFinish] ${result.count}件の試合をFINISHEDに更新`);
+  }
+}
+
+// ──────────────────────────────────────────────
 // まとめて同期
 // ──────────────────────────────────────────────
 export async function syncAll() {
+  await autoFinishOldMatches();
   await syncMatchResults();
   await syncTopScorers();
 }

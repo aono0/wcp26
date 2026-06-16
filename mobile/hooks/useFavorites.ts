@@ -12,22 +12,24 @@ export function useFavorites() {
   });
 }
 
-export function useAddFavorite() {
+export function useAddFavorite(options?: { onError?: () => void }) {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (countryId: string) => api.post('/favorites', { countryId }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['favorites'] });
     },
+    onError: options?.onError,
   });
 }
 
-export function useRemoveFavorite() {
+export function useRemoveFavorite(options?: { onError?: () => void }) {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (countryId: string) => api.delete(`/favorites/${countryId}`),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['favorites'] });
     },
+    onError: options?.onError,
   });
 }

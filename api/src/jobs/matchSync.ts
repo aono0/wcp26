@@ -1,10 +1,15 @@
 import cron from 'node-cron';
 import { prisma } from '../lib/prisma';
-import { syncAll } from '../services/footballData';
+import { syncAll, autoFinishOldMatches } from '../services/footballData';
 
 export function startMatchSyncJob() {
+  // APIキー不要：5分ごとに時間ベース自動終了のみ実行
+  cron.schedule('*/5 * * * *', async () => {
+    await autoFinishOldMatches().catch((e) => console.error('[Job] AutoFinishエラー:', e.message));
+  });
+
   if (!process.env.FOOTBALL_DATA_API_KEY) {
-    console.log('[Job] FOOTBALL_DATA_API_KEY 未設定のため試合同期ジョブをスキップ');
+    console.log('[Job] FOOTBALL_DATA_API_KEY 未設定のため試合スコア同期ジョブをスキップ（自動終了は動作中）');
     return;
   }
 

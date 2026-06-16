@@ -12,7 +12,10 @@ export default function HomeScreen() {
   const { top } = useSafeAreaInsets();
   const router = useRouter();
   const { data: favorites, isLoading: favLoading } = useFavorites();
-  const { data: matches, isLoading: matchLoading, isError: matchError } = useMatches({ status: 'SCHEDULED' });
+  const { data: matches, isLoading: matchLoading, isError: matchError } = useMatches({
+    status: 'SCHEDULED',
+    from: new Date().toISOString(),
+  });
   const upcomingMatches = matches?.slice(0, 5) ?? [];
   const hasFavorites = favorites && favorites.length > 0;
 

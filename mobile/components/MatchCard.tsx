@@ -70,11 +70,15 @@ export function MatchCard({ match }: { match: Match }) {
       <View style={styles.center}>
         {finished || live ? (
           <>
-            <View style={styles.scoreWrap}>
-              <Text style={[styles.scoreNum, live && styles.scoreNumLive]}>{home?.score ?? 0}</Text>
-              <Text style={styles.scoreDash}>-</Text>
-              <Text style={[styles.scoreNum, live && styles.scoreNumLive]}>{away?.score ?? 0}</Text>
-            </View>
+            {home?.score != null && away?.score != null ? (
+              <View style={styles.scoreWrap}>
+                <Text style={[styles.scoreNum, live && styles.scoreNumLive]}>{home.score}</Text>
+                <Text style={styles.scoreDash}>-</Text>
+                <Text style={[styles.scoreNum, live && styles.scoreNumLive]}>{away.score}</Text>
+              </View>
+            ) : (
+              <Text style={styles.scoreTbd}>- : -</Text>
+            )}
             <Text style={[styles.status, live && styles.statusLive]}>{live ? 'LIVE' : 'FT'}</Text>
           </>
         ) : isPH ? (
@@ -127,6 +131,7 @@ const styles = StyleSheet.create({
   center: { flex: 2, alignItems: 'center', gap: 2 },
   scoreWrap: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   scoreNum: { color: '#fff', fontSize: 24, fontWeight: '900', letterSpacing: -0.5 },
+  scoreTbd: { color: colors.textMuted, fontSize: 16, fontWeight: '600', letterSpacing: 1 },
   scoreNumLive: { color: '#ff4444' },
   scoreDash: { color: 'rgba(255,255,255,0.3)', fontSize: 18, fontWeight: '300' },
   time: { color: '#fff', fontSize: 15, fontWeight: '800', letterSpacing: -0.5 },

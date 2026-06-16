@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert } from 'react-native';
 import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
 import { useCountryDetail } from '@/hooks/useCountries';
 import { useFavorites, useAddFavorite, useRemoveFavorite } from '@/hooks/useFavorites';
@@ -12,9 +12,14 @@ export default function CountryDetailScreen() {
   const router = useRouter();
   const { data: country, isLoading, isError } = useCountryDetail(code);
   const { data: favorites } = useFavorites();
-  const addFav = useAddFavorite();
-  const removeFav = useRemoveFavorite();
+  const addFav = useAddFavorite({
+    onError: () => Alert.alert('エラー', 'お気に入りの登録に失敗しました。もう一度お試しください。'),
+  });
+  const removeFav = useRemoveFavorite({
+    onError: () => Alert.alert('エラー', 'お気に入りの解除に失敗しました。もう一度お試しください。'),
+  });
   const isFav = favorites?.some((f) => f.code === code);
+  const favPending = addFav.isPending || removeFav.isPending;
 
   if (isLoading) return <View style={styles.center}><ActivityIndicator size="large" color={colors.gold} /></View>;
   if (isError || !country) return <View style={styles.center}><Text style={styles.error}>読み込みエラー</Text></View>;
@@ -43,12 +48,16 @@ export default function CountryDetailScreen() {
           <Text style={styles.heroFed}>{country.federation}</Text>
         </View>
         <TouchableOpacity
-          style={[styles.favBtn, isFav && styles.favBtnActive]}
-          onPress={() => isFav ? removeFav.mutate(country.id) : addFav.mutate(country.id)}
+          style={[styles.favBtn, isFav && styles.favBtnActive, favPending && { opacity: 0.5 }]}
+          onPress={() => !favPending && (isFav ? removeFav.mutate(country.id) : addFav.mutate(country.id))}
+          disabled={favPending}
         >
-          <Text style={[styles.favBtnText, isFav && styles.favBtnTextActive]}>
-            {isFav ? '★ お気に入り登録済み' : '☆ お気に入りに追加'}
-          </Text>
+          {favPending
+            ? <ActivityIndicator size="small" color={isFav ? colors.bg : colors.gold} />
+            : <Text style={[styles.favBtnText, isFav && styles.favBtnTextActive]}>
+                {isFav ? '★ お気に入り登録済み' : '☆ お気に入りに追加'}
+              </Text>
+          }
         </TouchableOpacity>
       </View>
 

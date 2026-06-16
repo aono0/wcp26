@@ -10,14 +10,16 @@ const router = Router();
 //   ?stage=GROUP
 //   ?status=SCHEDULED|FINISHED|LIVE
 //   ?md=1|2|3  (グループステージのマッチデー)
+//   ?from=ISO日付  (この日時以降の試合のみ)
 router.get('/', async (req, res) => {
-  const { stage, status, md } = req.query;
+  const { stage, status, md, from } = req.query;
 
   const matches = await prisma.match.findMany({
     where: {
       ...(stage  ? { stage: String(stage) }   : {}),
       ...(status ? { status: String(status) } : {}),
       ...(md     ? { round: { contains: `MD${md}` } } : {}),
+      ...(from   ? { matchDate: { gte: new Date(String(from)) } } : {}),
     },
     include: {
       entries: {
