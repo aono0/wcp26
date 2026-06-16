@@ -78,10 +78,19 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
 
   const sortedDates = useMemo(() => Object.keys(dateMap).sort(), [dateMap]);
 
-  // 初回ロード時に最初の日付を自動選択
+  // デフォルト: 昨日(JST)があればそこ、なければ直近の過去日付、なければ最初の日付
+  const defaultDate = useMemo(() => {
+    if (!sortedDates.length) return null;
+    const yesterdayKey = toJSTDateKey(new Date(Date.now() - 86400000).toISOString());
+    const todayKey     = toJSTDateKey(new Date().toISOString());
+    if (sortedDates.includes(yesterdayKey)) return yesterdayKey;
+    const pastDates = sortedDates.filter((d) => d < todayKey);
+    return pastDates.at(-1) ?? sortedDates[0];
+  }, [sortedDates]);
+
   const activeDate = selectedDate && sortedDates.includes(selectedDate)
     ? selectedDate
-    : sortedDates[0] ?? null;
+    : defaultDate;
 
   const displayMatches = isGroup ? (dateMap[activeDate ?? ''] ?? []) : (knockoutMatches ?? []);
 

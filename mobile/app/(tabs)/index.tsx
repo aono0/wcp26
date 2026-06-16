@@ -2,7 +2,6 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator
 import { useRouter, Link } from 'expo-router';
 import { useFavorites } from '@/hooks/useFavorites';
 import { useMatches } from '@/hooks/useMatches';
-import { useTopScorers, useTopAssisters } from '@/hooks/useStats';
 import { MatchCard } from '@/components/MatchCard';
 import { VideoStories } from '@/components/VideoStories';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -147,73 +146,11 @@ export default function HomeScreen() {
         }
       </View>
 
-      {/* スタッツセクション */}
-      <StatsWidget />
-
       <View style={{ height: 32 }} />
     </ScrollView>
   );
 }
 
-function StatsWidget() {
-  const router = useRouter();
-  const { data: scorers } = useTopScorers(3);
-  const { data: assisters } = useTopAssisters(3);
-
-  const topScorers   = scorers?.filter((p) => p.goalCount > 0) ?? [];
-  const topAssisters = assisters?.filter((p) => p.assistCount > 0) ?? [];
-
-  const noData = topScorers.length === 0 && topAssisters.length === 0;
-
-  return (
-    <View style={styles.section}>
-      <View style={styles.sectionRow}>
-        <SectionLabel text="スタッツ" />
-        {!noData && (
-          <TouchableOpacity onPress={() => router.push('/(tabs)/news')}>
-            <Text style={styles.addBtnText}>もっと見る ›</Text>
-          </TouchableOpacity>
-        )}
-      </View>
-
-      {noData ? (
-        <TouchableOpacity style={styles.statsPlaceholder} onPress={() => router.push('/(tabs)/news')}>
-          <Text style={styles.statsPlaceholderIcon}>📊</Text>
-          <Text style={styles.statsPlaceholderText}>得点・アシストランキングは{'\n'}大会開幕後に表示されます</Text>
-        </TouchableOpacity>
-      ) : (
-        <View style={styles.statsRow}>
-          {topScorers.length > 0 && (
-            <View style={styles.statsCard}>
-              <Text style={styles.statsCardLabel}>⚽ 得点</Text>
-              {topScorers.map((p, i) => (
-                <View key={p.id} style={styles.statsItem}>
-                  <Text style={styles.statsRank}>{i + 1}</Text>
-                  <Text style={styles.statsFlag}>{p.country.flagEmoji ?? '🏳️'}</Text>
-                  <Text style={styles.statsName} numberOfLines={1}>{p.name}</Text>
-                  <Text style={styles.statsStat}>{p.goalCount}</Text>
-                </View>
-              ))}
-            </View>
-          )}
-          {topAssisters.length > 0 && (
-            <View style={styles.statsCard}>
-              <Text style={styles.statsCardLabel}>🎯 アシスト</Text>
-              {topAssisters.map((p, i) => (
-                <View key={p.id} style={styles.statsItem}>
-                  <Text style={styles.statsRank}>{i + 1}</Text>
-                  <Text style={styles.statsFlag}>{p.country.flagEmoji ?? '🏳️'}</Text>
-                  <Text style={styles.statsName} numberOfLines={1}>{p.name}</Text>
-                  <Text style={styles.statsStat}>{p.assistCount}</Text>
-                </View>
-              ))}
-            </View>
-          )}
-        </View>
-      )}
-    </View>
-  );
-}
 
 function SectionLabel({ text }: { text: string }) {
   return (
@@ -226,18 +163,7 @@ function SectionLabel({ text }: { text: string }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.bg },
-  statsRow: { flexDirection: 'row', gap: 8 },
-  statsCard: { flex: 1, backgroundColor: colors.surface, borderRadius: r.md, borderWidth: 1, borderColor: colors.border, padding: 12 },
-  statsCardLabel: { color: colors.gold, fontSize: 10, fontWeight: '700', letterSpacing: 1, marginBottom: 10, textTransform: 'uppercase' },
-  statsItem: { flexDirection: 'row', alignItems: 'center', marginBottom: 8, gap: 6 },
-  statsRank: { color: colors.textMuted, fontSize: 11, width: 14, textAlign: 'center' },
-  statsFlag: { fontSize: 16 },
-  statsName: { color: colors.white, fontSize: 12, fontWeight: '600', flex: 1 },
-  statsStat: { color: colors.white, fontSize: 16, fontWeight: '900', minWidth: 20, textAlign: 'right' },
-  statsPlaceholder: { backgroundColor: colors.surface, borderRadius: r.md, borderWidth: 1, borderColor: colors.border, padding: 20, alignItems: 'center', gap: 8 },
-  statsPlaceholderIcon: { fontSize: 28 },
-  statsPlaceholderText: { color: colors.textMuted, fontSize: 13, textAlign: 'center', lineHeight: 20 },
-  hero: {
+hero: {
     backgroundColor: colors.surface,
     paddingHorizontal: 20,
     paddingTop: 8,
