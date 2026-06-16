@@ -9,12 +9,13 @@ export function startNotificationJob() {
     await sendDayBeforeNotifications().catch((e) => console.error('[Job] 前日通知エラー:', e.message));
   });
 
-  // ② 試合1時間前通知: 5分ごとに確認
+  // ② 試合前通知: 5分ごとに確認（タイミングは PRE_MATCH_NOTIFY_MINUTES 環境変数で制御）
   cron.schedule('*/5 * * * *', async () => {
-    await sendPreMatchNotifications().catch((e) => console.error('[Job] 1時間前通知エラー:', e.message));
+    await sendPreMatchNotifications().catch((e) => console.error('[Job] 試合前通知エラー:', e.message));
   });
 
-  console.log('[Job] 通知ジョブ登録完了（前日12時 / 試合1時間前）');
+  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15');
+  console.log(`[Job] 通知ジョブ登録完了（前日12時 / 試合${preMatchMinutes}分前）`);
 }
 
 // ──────────────────────────────────────────────
@@ -40,18 +41,19 @@ export async function sendDayBeforeNotifications() {
   const matchIds   = matches.map((m) => m.id);
   const countryIds = [...new Set(matches.flatMap((m) => m.entries.map((e) => e.countryId)))];
 
-  const messages = await buildMessages(matches, matchIds, countryIds, 'tomorrow');
+  const messages = await buildMessages(matches, matchIds, countryIds, 'tomorrow', 0);
   await sendPushNotifications(messages);
   console.log(`[Job] 前日通知 ${messages.length}件送信`);
 }
 
 // ──────────────────────────────────────────────
-// ② 試合1時間前通知（55〜75分前の試合 / 未送信のみ）
+// ② 試合前通知（PRE_MATCH_NOTIFY_MINUTES 分前の試合 / 未送信のみ）
 // ──────────────────────────────────────────────
 async function sendPreMatchNotifications() {
+  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15');
   const now   = new Date();
-  const from  = new Date(now.getTime() + 55 * 60 * 1000);
-  const to    = new Date(now.getTime() + 75 * 60 * 1000);
+  const from  = new Date(now.getTime() + (preMatchMinutes - 10) * 60 * 1000);
+  const to    = new Date(now.getTime() + (preMatchMinutes + 10) * 60 * 1000);
 
   const matches = await prisma.match.findMany({
     where: {
@@ -67,10 +69,10 @@ async function sendPreMatchNotifications() {
   const matchIds   = matches.map((m) => m.id);
   const countryIds = [...new Set(matches.flatMap((m) => m.entries.map((e) => e.countryId)))];
 
-  const messages = await buildMessages(matches, matchIds, countryIds, 'soon');
+  const messages = await buildMessages(matches, matchIds, countryIds, 'soon', preMatchMinutes);
   if (messages.length > 0) {
     await sendPushNotifications(messages);
-    console.log(`[Job] 1時間前通知 ${messages.length}件送信`);
+    console.log(`[Job] 試合前通知 ${messages.length}件送信`);
   }
 
   // 送信済みフラグを立てる（重複送信防止）
@@ -87,9 +89,13 @@ async function buildMessages(
   matches: any[],
   matchIds: string[],
   countryIds: string[],
-  timing: 'tomorrow' | 'soon'
+  timing: 'tomorrow' | 'soon',
+  preMatchMinutes = 15,
 ) {
   const isSoon = timing === 'soon';
+  const soonLabel = preMatchMinutes >= 60
+    ? `あと${Math.round(preMatchMinutes / 60)}時間！`
+    : `あと${preMatchMinutes}分！`;
 
   // ① チームフォロー
   const teamUsers = await prisma.user.findMany({
@@ -110,7 +116,7 @@ async function buildMessages(
         to: user.pushToken!,
         sound: 'default' as const,
         title: isSoon
-          ? `⚽ あと1時間！${myTeam.flagEmoji ?? ''} ${myTeam.name}`
+          ? `⚽ ${soonLabel}${myTeam.flagEmoji ?? ''} ${myTeam.name}`
           : `⚽ 明日の試合: ${myTeam.flagEmoji ?? ''} ${myTeam.name}`,
         body: `${home.country.flagEmoji ?? ''} ${home.country.name} vs ${away.country.flagEmoji ?? ''} ${away.country.name}  ${hh}:${mm} JST`,
         data: { matchId: match.id },
@@ -137,7 +143,7 @@ async function buildMessages(
       return [{
         to: user.pushToken!,
         sound: 'default' as const,
-        title: isSoon ? '⚽ あと1時間で試合が始まります' : '⚽ 明日フォロー中の試合があります',
+        title: isSoon ? `⚽ ${soonLabel}試合が始まります` : '⚽ 明日フォロー中の試合があります',
         body: `${hl} vs ${al}  ${hh}:${mm} JST`,
         data: { matchId: match.id },
       }];
