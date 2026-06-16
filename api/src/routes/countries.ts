@@ -61,12 +61,11 @@ router.get('/standings/:group', async (req, res) => {
   res.json(result);
 });
 
-// 国詳細（試合・選手つき）
+// 国詳細（試合のみ・選手は別エンドポイント）
 router.get('/:code', async (req, res) => {
   const country = await prisma.country.findUnique({
     where: { code: req.params.code.toUpperCase() },
     include: {
-      players: { orderBy: [{ position: 'asc' }, { name: 'asc' }] },
       matchEntries: {
         include: {
           match: { include: { entries: { include: { country: true } } } },
@@ -81,6 +80,15 @@ router.get('/:code', async (req, res) => {
     return;
   }
   res.json(country);
+});
+
+// 選手一覧（遅延読み込み用）
+router.get('/:code/players', async (req, res) => {
+  const players = await prisma.player.findMany({
+    where: { country: { code: req.params.code.toUpperCase() } },
+    orderBy: [{ position: 'asc' }, { name: 'asc' }],
+  });
+  res.json(players);
 });
 
 export default router;

@@ -12,7 +12,6 @@ export type Country = {
 };
 
 export type CountryDetail = Country & {
-  players: Player[];
   matchEntries: MatchEntry[];
 };
 
@@ -56,7 +55,7 @@ export function useCountries() {
       const res = await api.get<Country[]>('/countries');
       return res.data;
     },
-    staleTime: 30 * 60 * 1000, // 国一覧は30分キャッシュ（変化しない）
+    staleTime: 30 * 60 * 1000,
   });
 }
 
@@ -68,5 +67,17 @@ export function useCountryDetail(code: string) {
       return res.data;
     },
     enabled: !!code,
+  });
+}
+
+export function useCountryPlayers(code: string) {
+  return useQuery({
+    queryKey: ['country-players', code],
+    queryFn: async () => {
+      const res = await api.get<Player[]>(`/countries/${code}/players`);
+      return res.data;
+    },
+    enabled: !!code,
+    staleTime: 10 * 60 * 1000,
   });
 }

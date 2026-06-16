@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert } from 'react-native';
 import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
-import { useCountryDetail } from '@/hooks/useCountries';
+import { useCountryDetail, useCountryPlayers } from '@/hooks/useCountries';
 import { useFavorites, useAddFavorite, useRemoveFavorite } from '@/hooks/useFavorites';
 import { MatchCard } from '@/components/MatchCard';
 import { colors, r } from '@/constants/theme';
@@ -11,6 +11,7 @@ export default function CountryDetailScreen() {
   const { code } = useLocalSearchParams<{ code: string }>();
   const router = useRouter();
   const { data: country, isLoading, isError } = useCountryDetail(code);
+  const { data: players, isLoading: playersLoading } = useCountryPlayers(code ?? '');
   const { data: favorites } = useFavorites();
   const addFav = useAddFavorite({
     onError: () => Alert.alert('エラー', 'お気に入りの登録に失敗しました。もう一度お試しください。'),
@@ -70,17 +71,21 @@ export default function CountryDetailScreen() {
         }
       </View>
 
-      {/* 選手一覧 */}
-      {country.players.length > 0 && (
-        <View style={styles.section}>
-          <SectionLabel text="選手" />
-          {POS_ORDER.map((pos) => {
-            const players = country.players.filter((p: any) => p.position === pos);
-            if (!players.length) return null;
+      {/* 選手一覧（遅延ロード） */}
+      <View style={styles.section}>
+        <SectionLabel text="選手" />
+        {playersLoading ? (
+          <ActivityIndicator color={colors.gold} style={{ marginTop: 12 }} />
+        ) : !players?.length ? (
+          <Text style={styles.empty}>選手データなし</Text>
+        ) : (
+          POS_ORDER.map((pos) => {
+            const posList = players.filter((p) => p.position === pos);
+            if (!posList.length) return null;
             return (
               <View key={pos}>
                 <Text style={styles.posLabel}>{pos}</Text>
-                {players.map((p: any) => (
+                {posList.map((p) => (
                   <TouchableOpacity
                     key={p.id}
                     style={styles.playerRow}
@@ -96,9 +101,9 @@ export default function CountryDetailScreen() {
                 ))}
               </View>
             );
-          })}
-        </View>
-      )}
+          })
+        )}
+      </View>
       <View style={{ height: 48 }} />
     </ScrollView>
     </>
