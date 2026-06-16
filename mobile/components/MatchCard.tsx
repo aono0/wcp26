@@ -16,6 +16,7 @@ type Match = {
   id: string;
   matchDate: string;
   venueCity: string | null;
+  broadcastInfo?: string | null;
   round: string;
   status: string;
   homePlaceholder?: string | null;
@@ -71,7 +72,8 @@ export function MatchCard({ match }: { match: Match }) {
   const timeStr  = formatMatchDate(match.matchDate).split(' ').pop() ?? ''; // "7:00"
 
   return (
-    <View style={[styles.row, isPH && styles.rowPH]}>
+    <View style={[styles.card, isPH && styles.rowPH]}>
+      <View style={styles.matchRow}>
       {/* ホーム */}
       <TouchableOpacity
         style={styles.team}
@@ -124,21 +126,34 @@ export function MatchCard({ match }: { match: Match }) {
           <SymbolView name={isNotified ? 'bell.fill' : 'bell'} size={13} tintColor={isNotified ? colors.bg : colors.textMuted} />
         </TouchableOpacity>
       )}
+      </View>
+      {match.broadcastInfo && (
+        <Text style={styles.broadcast}>放送：{match.broadcastInfo}</Text>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 14,
+  card: {
     paddingHorizontal: 16,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: 'rgba(255,255,255,0.07)',
     backgroundColor: 'transparent',
   },
+  matchRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 14,
+  },
   rowPH: { opacity: 0.7 },
+  broadcast: {
+    color: 'rgba(255,255,255,0.6)',
+    fontSize: 11,
+    fontWeight: '600',
+    textAlign: 'center',
+    paddingBottom: 10,
+  },
 
   team: { flex: 2.8, alignItems: 'center', gap: 5 },
   teamRight: {},
