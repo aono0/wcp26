@@ -9,15 +9,23 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { toJSTDateKey } from '@/lib/matchUtils';
 import { colors, r } from '@/constants/theme';
 
+// 5分単位で丸めてクエリキーを安定させる（毎レンダリングで変わるのを防ぐ）
+function stableTimestamp(offsetMs = 0) {
+  const FIVE_MIN = 5 * 60 * 1000;
+  return new Date(Math.floor((Date.now() + offsetMs) / FIVE_MIN) * FIVE_MIN).toISOString();
+}
+
 export default function HomeScreen() {
   const { top } = useSafeAreaInsets();
   const router = useRouter();
+  const scheduledFrom = useMemo(() => stableTimestamp(), []);
+  const recentFrom    = useMemo(() => stableTimestamp(-4 * 86400000), []);
+
   const { data: favorites, isLoading: favLoading } = useFavorites();
   const { data: matches, isLoading: matchLoading, isError: matchError } = useMatches({
     status: 'SCHEDULED',
-    from: new Date().toISOString(),
+    from: scheduledFrom,
   });
-  const recentFrom = new Date(Date.now() - 4 * 86400000).toISOString();
   const { data: recentFinished } = useMatches({ status: 'FINISHED', from: recentFrom });
 
   // 直近にFINISHEDの試合があった日のマッチを取得（今日の午前含む）
