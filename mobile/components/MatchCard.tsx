@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useState } from 'react';
+import { useRouter } from 'expo-router';
 import { SymbolView } from 'expo-symbols';
 import { colors } from '@/constants/theme';
 import { formatMatchDate, formatMatchDateShort } from '@/lib/matchUtils';
@@ -29,6 +30,7 @@ export function MatchCard({ match }: { match: Match }) {
   const live     = match.status === 'LIVE';
   const isPH     = !home?.country || !away?.country;
 
+  const router = useRouter();
   const notificationIds = useMatchNotificationIds();
   const addNotification = useAddMatchNotification();
   const removeNotification = useRemoveMatchNotification();
@@ -71,10 +73,14 @@ export function MatchCard({ match }: { match: Match }) {
   return (
     <View style={[styles.row, isPH && styles.rowPH]}>
       {/* ホーム */}
-      <View style={styles.team}>
+      <TouchableOpacity
+        style={styles.team}
+        activeOpacity={home?.country?.code ? 0.7 : 1}
+        onPress={() => home?.country?.code && router.push(`/country/${home.country!.code}`)}
+      >
         <Text style={[styles.flag, isPH && styles.flagPH]}>{homeFlag ?? (isPH ? '？' : '🏳️')}</Text>
         <Text style={[styles.name, isPH && styles.namePH]} numberOfLines={2}>{homeName}</Text>
-      </View>
+      </TouchableOpacity>
 
       {/* センター：スコア or 時刻（日付は重複しない） */}
       <View style={styles.center}>
@@ -103,10 +109,14 @@ export function MatchCard({ match }: { match: Match }) {
       </View>
 
       {/* アウェイ */}
-      <View style={[styles.team, styles.teamRight]}>
+      <TouchableOpacity
+        style={[styles.team, styles.teamRight]}
+        activeOpacity={away?.country?.code ? 0.7 : 1}
+        onPress={() => away?.country?.code && router.push(`/country/${away.country!.code}`)}
+      >
         <Text style={[styles.flag, isPH && styles.flagPH]}>{awayFlag ?? (isPH ? '？' : '🏳️')}</Text>
         <Text style={[styles.name, styles.nameRight, isPH && styles.namePH]} numberOfLines={2}>{awayName}</Text>
-      </View>
+      </TouchableOpacity>
 
       {/* ベルボタン */}
       {!finished && !live && (
