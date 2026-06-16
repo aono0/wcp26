@@ -1,20 +1,13 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, StatusBar } from 'react-native';
 import { useRouter, Link } from 'expo-router';
+import { useMemo } from 'react';
 import { useFavorites } from '@/hooks/useFavorites';
 import { useMatches } from '@/hooks/useMatches';
 import { MatchCard } from '@/components/MatchCard';
 import { VideoStories } from '@/components/VideoStories';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { toJSTDateKey } from '@/lib/matchUtils';
 import { colors, r } from '@/constants/theme';
-
-function getJstDayRange(offsetDays: number) {
-  const JST = 9 * 60 * 60 * 1000;
-  const nowJst = Date.now() + JST;
-  const startOfTodayJst = Math.floor(nowJst / 86400000) * 86400000;
-  const from = new Date(startOfTodayJst + offsetDays * 86400000 - JST);
-  const to   = new Date(startOfTodayJst + (offsetDays + 1) * 86400000 - JST);
-  return { from: from.toISOString(), to: to.toISOString() };
-}
 
 export default function HomeScreen() {
   const { top } = useSafeAreaInsets();
@@ -24,11 +17,22 @@ export default function HomeScreen() {
     status: 'SCHEDULED',
     from: new Date().toISOString(),
   });
-  const yesterdayRange = getJstDayRange(-1);
-  const { data: yesterdayMatches } = useMatches({
-    status: 'FINISHED',
-    ...yesterdayRange,
-  });
+  const recentFrom = new Date(Date.now() - 4 * 86400000).toISOString();
+  const { data: recentFinished } = useMatches({ status: 'FINISHED', from: recentFrom });
+
+  // 直近にFINISHEDの試合があった日のマッチを取得（今日の午前含む）
+  const recentDayMatches = useMemo(() => {
+    if (!recentFinished?.length) return [];
+    const byDate: Record<string, typeof recentFinished> = {};
+    for (const m of recentFinished) {
+      const key = toJSTDateKey(m.matchDate);
+      if (!byDate[key]) byDate[key] = [];
+      byDate[key].push(m);
+    }
+    const latestKey = Object.keys(byDate).sort().at(-1);
+    return latestKey ? byDate[latestKey]! : [];
+  }, [recentFinished]);
+
   const upcomingMatches = matches?.slice(0, 5) ?? [];
   const hasFavorites = favorites && favorites.length > 0;
 
@@ -123,20 +127,20 @@ export default function HomeScreen() {
         )}
       </View>
 
-      {/* 昨日の試合セクション */}
-      {yesterdayMatches && yesterdayMatches.length > 0 && (
+      {/* 直近の試合セクション（最後にFINISHEDがあった日） */}
+      {recentDayMatches.length > 0 && (
         <View style={styles.section}>
           <View style={styles.sectionRow}>
-            <SectionLabel text="昨日の試合" />
+            <SectionLabel text="直近の試合" />
           </View>
-          {yesterdayMatches.map((m) => <MatchCard key={m.id} match={m} />)}
+          {recentDayMatches.map((m) => <MatchCard key={m.id} match={m} />)}
         </View>
       )}
 
-      {/* 直近の試合セクション */}
+      {/* これからの試合セクション */}
       <View style={styles.section}>
         <View style={styles.sectionRow}>
-          <SectionLabel text="直近の試合" />
+          <SectionLabel text="これからの試合" />
         </View>
         {matchLoading
           ? <ActivityIndicator color={colors.gold} style={{ marginTop: 16 }} />

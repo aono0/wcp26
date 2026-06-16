@@ -1,5 +1,5 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from 'react-native';
-import { useState, useMemo } from 'react';
+import { FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from 'react-native';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useMatches } from '@/hooks/useMatches';
 import { useAllStandings } from '@/hooks/useStandings';
@@ -78,21 +78,30 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
 
   const sortedDates = useMemo(() => Object.keys(dateMap).sort(), [dateMap]);
 
-  // デフォルト: 昨日(JST)があればそこ、なければ直近の過去日付、なければ最初の日付
+  // デフォルト: FINISHEDの試合がある最新日 → なければ最初の日付
   const defaultDate = useMemo(() => {
     if (!sortedDates.length) return null;
-    const yesterdayKey = toJSTDateKey(new Date(Date.now() - 86400000).toISOString());
-    const todayKey     = toJSTDateKey(new Date().toISOString());
-    if (sortedDates.includes(yesterdayKey)) return yesterdayKey;
-    const pastDates = sortedDates.filter((d) => d < todayKey);
-    return pastDates.at(-1) ?? sortedDates[0];
-  }, [sortedDates]);
+    const datesWithFinished = sortedDates
+      .filter((d) => dateMap[d]?.some((m) => m.status === 'FINISHED' || m.status === 'LIVE'))
+      .sort();
+    return datesWithFinished.at(-1) ?? sortedDates[0];
+  }, [sortedDates, dateMap]);
 
   const activeDate = selectedDate && sortedDates.includes(selectedDate)
     ? selectedDate
     : defaultDate;
 
   const displayMatches = isGroup ? (dateMap[activeDate ?? ''] ?? []) : (knockoutMatches ?? []);
+
+  const chipListRef = useRef<FlatList>(null);
+  const activeDateIndex = activeDate ? sortedDates.indexOf(activeDate) : -1;
+
+  // アクティブな日付チップを左側に自動スクロール
+  useEffect(() => {
+    if (activeDateIndex >= 0 && chipListRef.current) {
+      chipListRef.current.scrollToIndex({ index: activeDateIndex, animated: true, viewPosition: 0 });
+    }
+  }, [activeDateIndex]);
 
   return (
     <View style={{ flex: 1 }}>
@@ -109,20 +118,31 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
       </View>
 
       {/* 日付 or ラウンド チップ */}
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipScroll} contentContainerStyle={styles.chipContent}>
-        {isGroup
-          ? sortedDates.map((d) => (
-              <TouchableOpacity key={d} style={[styles.chip, activeDate === d && styles.chipActive]} onPress={() => setSelectedDate(d)}>
-                <Text style={[styles.chipText, activeDate === d && styles.chipTextActive]}>{formatDatePill(d)}</Text>
-              </TouchableOpacity>
-            ))
-          : KNOCKOUT_ROUNDS.map(({ key, label }) => (
-              <TouchableOpacity key={key} style={[styles.chip, selectedRound === key && styles.chipActive]} onPress={() => setSelectedRound(key)}>
-                <Text style={[styles.chipText, selectedRound === key && styles.chipTextActive]}>{label}</Text>
-              </TouchableOpacity>
-            ))
-        }
-      </ScrollView>
+      {isGroup ? (
+        <FlatList
+          ref={chipListRef}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.chipScroll}
+          contentContainerStyle={styles.chipContent}
+          data={sortedDates}
+          keyExtractor={(d) => d}
+          onScrollToIndexFailed={() => {}}
+          renderItem={({ item: d }) => (
+            <TouchableOpacity style={[styles.chip, activeDate === d && styles.chipActive]} onPress={() => setSelectedDate(d)}>
+              <Text style={[styles.chipText, activeDate === d && styles.chipTextActive]}>{formatDatePill(d)}</Text>
+            </TouchableOpacity>
+          )}
+        />
+      ) : (
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipScroll} contentContainerStyle={styles.chipContent}>
+          {KNOCKOUT_ROUNDS.map(({ key, label }) => (
+            <TouchableOpacity key={key} style={[styles.chip, selectedRound === key && styles.chipActive]} onPress={() => setSelectedRound(key)}>
+              <Text style={[styles.chipText, selectedRound === key && styles.chipTextActive]}>{label}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      )}
 
       {isLoading ? (
         <View style={styles.center}><ActivityIndicator color={colors.gold} /></View>
