@@ -3,12 +3,11 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useMatches } from '@/hooks/useMatches';
 import { useAllStandings } from '@/hooks/useStandings';
-import { useTopScorers, useTopAssisters, PlayerStat } from '@/hooks/useStats';
 import { MatchCard } from '@/components/MatchCard';
 import { colors, r } from '@/constants/theme';
 import { toJSTDateKey, formatDatePill } from '@/lib/matchUtils';
 
-type MainTab = 'matches' | 'standings' | 'stats';
+type MainTab = 'matches' | 'standings';
 type MatchStage = 'group' | 'knockout';
 type KnockoutRound = 'ROUND_OF_32' | 'ROUND_OF_16' | 'QUARTER_FINAL' | 'SEMI_FINAL' | 'THIRD_PLACE' | 'FINAL';
 
@@ -32,7 +31,7 @@ export default function MatchesStandingsScreen() {
     <View style={[styles.container, { paddingTop: top }]}>
       {/* PLスタイルのアンダーラインタブ */}
       <View style={styles.mainTabBar}>
-        {([['matches','試合'], ['standings','順位表'], ['stats','スタッツ']] as [MainTab, string][]).map(([tab, label]) => (
+        {([['matches','試合'], ['standings','順位表']] as [MainTab, string][]).map(([tab, label]) => (
           <TouchableOpacity key={tab} style={styles.mainTabBtn} onPress={() => setMainTab(tab)}>
             <Text style={[styles.mainTabText, mainTab === tab && styles.mainTabTextActive]}>{label}</Text>
             {mainTab === tab && <View style={styles.mainTabUnderline} />}
@@ -42,10 +41,8 @@ export default function MatchesStandingsScreen() {
 
       {mainTab === 'matches' ? (
         <MatchesView {...{ matchStage, setMatchStage, selectedDate, setSelectedDate, selectedRound, setSelectedRound }} />
-      ) : mainTab === 'standings' ? (
-        <StandingsView />
       ) : (
-        <StatsView />
+        <StandingsView />
       )}
     </View>
   );
@@ -217,69 +214,6 @@ function StandingsView() {
   );
 }
 
-// ──────────────────────────────────────────────
-// スタッツビュー
-// ──────────────────────────────────────────────
-function StatsView() {
-  const [statsTab, setStatsTab] = useState<'scorers' | 'assisters'>('scorers');
-  const { data: scorers, isLoading: sLoading } = useTopScorers(20);
-  const { data: assisters, isLoading: aLoading } = useTopAssisters(20);
-  const isLoading = statsTab === 'scorers' ? sLoading : aLoading;
-  const players   = statsTab === 'scorers' ? scorers : assisters;
-  const statKey   = statsTab === 'scorers' ? 'goalCount' : 'assistCount';
-  const statLabel = statsTab === 'scorers' ? '⚽' : '🎯';
-
-  const ranked = players?.filter((p) => (p as any)[statKey] > 0) ?? [];
-
-  return (
-    <View style={{ flex: 1 }}>
-      {/* 得点 / アシスト 切り替え（アンダーラインスタイル） */}
-      <View style={styles.statsSubBar}>
-        {([['scorers','得点ランキング'], ['assisters','アシストランキング']] as const).map(([key, label]) => (
-          <TouchableOpacity key={key} style={styles.stageTabItem} onPress={() => setStatsTab(key)}>
-            <Text style={[styles.stageTabText, statsTab === key && styles.stageTabTextActive]}>{label}</Text>
-            {statsTab === key && <View style={styles.stageTabUnderline} />}
-          </TouchableOpacity>
-        ))}
-      </View>
-
-      {isLoading ? (
-        <View style={styles.center}><ActivityIndicator color={colors.gold} /></View>
-      ) : ranked.length === 0 ? (
-        <View style={styles.center}>
-          <Text style={styles.emptyText}>大会開幕後にランキングが表示されます</Text>
-        </View>
-      ) : (
-        <ScrollView>
-          <View style={styles.rankTable}>
-            {ranked.map((player, i) => (
-              <PlayerRankRow key={player.id} player={player} rank={i + 1} statKey={statKey} statLabel={statLabel} />
-            ))}
-          </View>
-          <View style={{ height: 40 }} />
-        </ScrollView>
-      )}
-    </View>
-  );
-}
-
-function PlayerRankRow({ player, rank, statKey, statLabel }: { player: PlayerStat; rank: number; statKey: string; statLabel: string }) {
-  const stat = (player as any)[statKey] as number;
-  return (
-    <View style={[styles.rankRow, rank % 2 === 0 && styles.rankRowAlt]}>
-      <Text style={[styles.rankNum, rank <= 3 && styles.rankNumTop]}>{rank}</Text>
-      <Text style={styles.rankFlag}>{player.country.flagEmoji ?? '🏳️'}</Text>
-      <View style={styles.rankInfo}>
-        <Text style={styles.rankName} numberOfLines={1}>{player.name}</Text>
-        <Text style={styles.rankClub} numberOfLines={1}>{player.clubTeam ?? player.country.name}</Text>
-      </View>
-      <View style={styles.rankStat}>
-        <Text style={styles.rankStatNum}>{stat}</Text>
-        <Text style={styles.rankStatLabel}>{statLabel}</Text>
-      </View>
-    </View>
-  );
-}
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.bg },
@@ -327,27 +261,7 @@ const styles = StyleSheet.create({
   chipScroll: { maxHeight: 46 },
   chipContent: { paddingHorizontal: 12, gap: 8, paddingBottom: 8, alignItems: 'center' },
 
-  // ── スタッツ ──
-  statsSubBar: {
-    flexDirection: 'row',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: 'rgba(255,255,255,0.08)',
-    paddingHorizontal: 4,
-    marginBottom: 8,
-  },
-  rankTable: { paddingHorizontal: 12 },
-  rankRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.surface, paddingHorizontal: 12, paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: colors.border },
-  rankRowAlt: { backgroundColor: '#0A1020' },
-  rankNum: { color: colors.textMuted, fontSize: 13, width: 28, textAlign: 'center', fontWeight: '600' },
-  rankNumTop: { color: colors.gold, fontWeight: '800' },
-  rankFlag: { fontSize: 22, marginRight: 10 },
-  rankInfo: { flex: 1 },
-  rankName: { color: colors.white, fontSize: 14, fontWeight: '700' },
-  rankClub: { color: colors.textMuted, fontSize: 11, marginTop: 2 },
-  rankStat: { alignItems: 'center', minWidth: 44 },
-  rankStatNum: { color: colors.white, fontSize: 22, fontWeight: '900' },
-  rankStatLabel: { color: colors.textMuted, fontSize: 10 },
-  standingsContent: { padding: 12 },
+standingsContent: { padding: 12 },
   standingsGroup: { marginBottom: 20 },
   standingsGroupHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 },
   standingsGroupLabel: { color: colors.gold, fontSize: 9, fontWeight: '700', letterSpacing: 1.5 },
