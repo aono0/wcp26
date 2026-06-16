@@ -96,11 +96,13 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
   const chipListRef = useRef<FlatList>(null);
   const activeDateIndex = activeDate ? sortedDates.indexOf(activeDate) : -1;
 
-  // アクティブな日付チップを左側に自動スクロール
+  // アクティブな日付チップを左側に自動スクロール（FlatList レンダリング完了後に実行）
   useEffect(() => {
-    if (activeDateIndex >= 0 && chipListRef.current) {
-      chipListRef.current.scrollToIndex({ index: activeDateIndex, animated: true, viewPosition: 0 });
-    }
+    if (activeDateIndex < 0) return;
+    const timer = setTimeout(() => {
+      chipListRef.current?.scrollToIndex({ index: activeDateIndex, animated: false, viewPosition: 0 });
+    }, 150);
+    return () => clearTimeout(timer);
   }, [activeDateIndex]);
 
   return (
