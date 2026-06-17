@@ -111,7 +111,7 @@ async function buildMessages(
       const away   = match.entries.find((e: any) => !e.isHome);
       const myTeam = match.entries.find((e: any) => e.countryId === fav.countryId)?.country;
       if (!myTeam || !home || !away) return [];
-      const { hh, mm } = jstTime(match.matchDate);
+      const { mo, dd, hh, mm } = jstTime(match.matchDate);
       const broadcastSuffix = match.broadcastInfo ? `\n放送：${match.broadcastInfo}` : '';
       return [{
         to: user.pushToken!,
@@ -119,7 +119,7 @@ async function buildMessages(
         title: isSoon
           ? `⚽ ${soonLabel}${myTeam.flagEmoji ?? ''} ${myTeam.name}`
           : `⚽ 明日の試合: ${myTeam.flagEmoji ?? ''} ${myTeam.name}`,
-        body: `${home.country.flagEmoji ?? ''} ${home.country.name} vs ${away.country.flagEmoji ?? ''} ${away.country.name}  ${hh}:${mm} JST${broadcastSuffix}`,
+        body: `${home.country.flagEmoji ?? ''} ${home.country.name} vs ${away.country.flagEmoji ?? ''} ${away.country.name}  ${mo}/${dd} ${hh}:${mm} JST${broadcastSuffix}`,
         data: { matchId: match.id },
       }];
     })
@@ -138,7 +138,7 @@ async function buildMessages(
       const home = match.entries.find((e: any) => e.isHome);
       const away = match.entries.find((e: any) => !e.isHome);
       if (!home || !away) return [];
-      const { hh, mm } = jstTime(match.matchDate);
+      const { mo, dd, hh, mm } = jstTime(match.matchDate);
       const hl = home.country ? `${home.country.flagEmoji ?? ''} ${home.country.name}` : (match.homePlaceholder ?? 'TBD');
       const al = away.country ? `${away.country.flagEmoji ?? ''} ${away.country.name}` : (match.awayPlaceholder ?? 'TBD');
       const broadcastSuffix = match.broadcastInfo ? `\n放送：${match.broadcastInfo}` : '';
@@ -146,7 +146,7 @@ async function buildMessages(
         to: user.pushToken!,
         sound: 'default' as const,
         title: isSoon ? `⚽ ${soonLabel}試合が始まります` : '⚽ 明日フォロー中の試合があります',
-        body: `${hl} vs ${al}  ${hh}:${mm} JST${broadcastSuffix}`,
+        body: `${hl} vs ${al}  ${mo}/${dd} ${hh}:${mm} JST${broadcastSuffix}`,
         data: { matchId: match.id },
       }];
     })
@@ -164,7 +164,12 @@ async function buildMessages(
 
 function jstTime(date: Date) {
   const jst = new Date(date.getTime() + 9 * 3600 * 1000);
-  return { hh: String(jst.getUTCHours()).padStart(2, '0'), mm: String(jst.getUTCMinutes()).padStart(2, '0') };
+  return {
+    mo: String(jst.getUTCMonth() + 1),
+    dd: String(jst.getUTCDate()),
+    hh: String(jst.getUTCHours()).padStart(2, '0'),
+    mm: String(jst.getUTCMinutes()).padStart(2, '0'),
+  };
 }
 
 // 手動テスト用エクスポート
