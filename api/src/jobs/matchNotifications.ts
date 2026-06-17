@@ -112,13 +112,14 @@ async function buildMessages(
       const myTeam = match.entries.find((e: any) => e.countryId === fav.countryId)?.country;
       if (!myTeam || !home || !away) return [];
       const { hh, mm } = jstTime(match.matchDate);
+      const broadcastSuffix = match.broadcastInfo ? `\n放送：${match.broadcastInfo}` : '';
       return [{
         to: user.pushToken!,
         sound: 'default' as const,
         title: isSoon
           ? `⚽ ${soonLabel}${myTeam.flagEmoji ?? ''} ${myTeam.name}`
           : `⚽ 明日の試合: ${myTeam.flagEmoji ?? ''} ${myTeam.name}`,
-        body: `${home.country.flagEmoji ?? ''} ${home.country.name} vs ${away.country.flagEmoji ?? ''} ${away.country.name}  ${hh}:${mm} JST`,
+        body: `${home.country.flagEmoji ?? ''} ${home.country.name} vs ${away.country.flagEmoji ?? ''} ${away.country.name}  ${hh}:${mm} JST${broadcastSuffix}`,
         data: { matchId: match.id },
       }];
     })
@@ -140,11 +141,12 @@ async function buildMessages(
       const { hh, mm } = jstTime(match.matchDate);
       const hl = home.country ? `${home.country.flagEmoji ?? ''} ${home.country.name}` : (match.homePlaceholder ?? 'TBD');
       const al = away.country ? `${away.country.flagEmoji ?? ''} ${away.country.name}` : (match.awayPlaceholder ?? 'TBD');
+      const broadcastSuffix = match.broadcastInfo ? `\n放送：${match.broadcastInfo}` : '';
       return [{
         to: user.pushToken!,
         sound: 'default' as const,
         title: isSoon ? `⚽ ${soonLabel}試合が始まります` : '⚽ 明日フォロー中の試合があります',
-        body: `${hl} vs ${al}  ${hh}:${mm} JST`,
+        body: `${hl} vs ${al}  ${hh}:${mm} JST${broadcastSuffix}`,
         data: { matchId: match.id },
       }];
     })
