@@ -36,7 +36,7 @@ export default function CountryDetailScreen() {
     }
   };
 
-  if (isLoading) return <View style={styles.center}><ActivityIndicator size="large" color={colors.gold} /></View>;
+  if (isLoading) return <CountrySkeleton />;
   if (isError || !country) return <View style={styles.center}><Text style={styles.error}>読み込みエラー</Text></View>;
 
   const matches = country.matchEntries.map((e: any) => e.match);
@@ -121,6 +121,43 @@ export default function CountryDetailScreen() {
       <View style={{ height: 48 }} />
     </ScrollView>
     </>
+  );
+}
+
+function CountrySkeleton() {
+  const sk = { backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: 8 } as const;
+  return (
+    <ScrollView style={styles.container}>
+      <View style={[styles.hero, { gap: 12 }]}>
+        <View style={[sk, { width: 80, height: 80, borderRadius: 40 }]} />
+        <View style={[sk, { width: 160, height: 26 }]} />
+        <View style={{ flexDirection: 'row', gap: 8 }}>
+          <View style={[sk, { width: 88, height: 26, borderRadius: 20 }]} />
+          <View style={[sk, { width: 64, height: 26, borderRadius: 20 }]} />
+        </View>
+        <View style={[sk, { width: 180, height: 40, borderRadius: 20 }]} />
+      </View>
+      <View style={styles.section}>
+        <View style={[sk, { width: 120, height: 12, marginBottom: 16 }]} />
+        {[0,1,2].map(i => (
+          <View key={i} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.07)', gap: 8 }}>
+            <View style={[sk, { flex: 1, height: 38 }]} />
+            <View style={[sk, { width: 56, height: 28 }]} />
+            <View style={[sk, { flex: 1, height: 38 }]} />
+          </View>
+        ))}
+      </View>
+      <View style={styles.section}>
+        <View style={[sk, { width: 60, height: 12, marginBottom: 16 }]} />
+        {[0,1,2,3,4].map(i => (
+          <View key={i} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.07)', gap: 8 }}>
+            <View style={[sk, { width: 22, height: 12 }]} />
+            <View style={[sk, { flex: 1, height: 12 }]} />
+            <View style={[sk, { width: 80, height: 12 }]} />
+          </View>
+        ))}
+      </View>
+    </ScrollView>
   );
 }
 
