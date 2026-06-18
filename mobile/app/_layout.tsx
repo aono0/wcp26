@@ -84,16 +84,22 @@ function RootLayoutNav() {
   useEffect(() => {
     restoreSession();
 
-    // スプラッシュ中にホーム画面データをプリフェッチ（ベストエフォート）
+    // スプラッシュ中にホーム画面・試合タブデータをプリフェッチ（ベストエフォート）
     const scheduledFrom = stableTimestamp();
     const recentFrom = stableTimestamp(-4 * 86400000);
-    queryClient.prefetchQuery({
-      queryKey: ['matches', { status: 'SCHEDULED', from: scheduledFrom }],
-      queryFn: () => api.get('/matches', { params: { status: 'SCHEDULED', from: scheduledFrom } }).then(r => r.data),
+    [
+      { queryKey: ['matches', { status: 'SCHEDULED', from: scheduledFrom }], params: { status: 'SCHEDULED', from: scheduledFrom } },
+      { queryKey: ['matches', { status: 'FINISHED', from: recentFrom }],    params: { status: 'FINISHED', from: recentFrom } },
+      { queryKey: ['matches', { stage: 'GROUP' }],                           params: { stage: 'GROUP' } },
+    ].forEach(({ queryKey, params }) => {
+      queryClient.prefetchQuery({
+        queryKey,
+        queryFn: () => api.get('/matches', { params }).then(r => r.data),
+      });
     });
     queryClient.prefetchQuery({
-      queryKey: ['matches', { status: 'FINISHED', from: recentFrom }],
-      queryFn: () => api.get('/matches', { params: { status: 'FINISHED', from: recentFrom } }).then(r => r.data),
+      queryKey: ['standings', 'all'],
+      queryFn: () => api.get('/countries/standings').then(r => r.data),
     });
 
     const timer = setTimeout(() => setMinTimeElapsed(true), SPLASH_MIN_MS);

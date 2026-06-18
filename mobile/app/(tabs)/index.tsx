@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, StatusBar } from 'react-native';
 import { useRouter, Link } from 'expo-router';
-import { useMemo } from 'react';
+import { useMemo, useEffect, useRef } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { useFavorites } from '@/hooks/useFavorites';
 import { useMatches } from '@/hooks/useMatches';
 import { MatchCard } from '@/components/MatchCard';
@@ -8,10 +9,12 @@ import { VideoStories } from '@/components/VideoStories';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { toJSTDateKey, stableTimestamp } from '@/lib/matchUtils';
 import { colors, r } from '@/constants/theme';
+import { api } from '@/lib/api';
 
 export default function HomeScreen() {
   const { top } = useSafeAreaInsets();
   const router = useRouter();
+  const queryClient = useQueryClient();
   const scheduledFrom = useMemo(() => stableTimestamp(), []);
   const recentFrom    = useMemo(() => stableTimestamp(-4 * 86400000), []);
 
@@ -21,6 +24,24 @@ export default function HomeScreen() {
     from: scheduledFrom,
   });
   const { data: recentFinished } = useMatches({ status: 'FINISHED', from: recentFrom });
+
+  // ホーム画面に表示される国の詳細をバックグラウンドでプリフェッチ
+  const prefetchedCodes = useRef(new Set<string>());
+  useEffect(() => {
+    const codes = new Set<string>();
+    favorites?.forEach(f => codes.add(f.code));
+    matches?.slice(0, 5).forEach(m => m.entries?.forEach(e => { if (e.country?.code) codes.add(e.country.code); }));
+    recentFinished?.forEach(m => m.entries?.forEach(e => { if (e.country?.code) codes.add(e.country.code); }));
+
+    codes.forEach(code => {
+      if (prefetchedCodes.current.has(code)) return;
+      prefetchedCodes.current.add(code);
+      queryClient.prefetchQuery({
+        queryKey: ['country', code],
+        queryFn: () => api.get(`/countries/${code}`).then(r => r.data),
+      });
+    });
+  }, [favorites, matches, recentFinished]);
 
   // 直近にFINISHEDの試合があった日のマッチを取得（今日の午前含む）
   const recentDayMatches = useMemo(() => {
