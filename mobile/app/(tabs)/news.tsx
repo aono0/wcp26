@@ -1,6 +1,7 @@
 import { FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from 'react-native';
-import { useState, useMemo, useRef, useEffect } from 'react';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useFocusEffect } from 'expo-router';
 import { useMatches } from '@/hooks/useMatches';
 import { useAllStandings } from '@/hooks/useStandings';
 import { MatchCard } from '@/components/MatchCard';
@@ -92,15 +93,34 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
 
   const chipListRef = useRef<FlatList>(null);
   const activeDateIndex = activeDate ? sortedDates.indexOf(activeDate) : -1;
+  const activeDateIndexRef = useRef(activeDateIndex);
+  activeDateIndexRef.current = activeDateIndex;
+  const isUserTap = useRef(false);
 
-  // アクティブな日付チップを左側に自動スクロール（FlatList レンダリング完了後に実行）
+  // 初回表示・デフォルト日付確定時のみスクロール（ユーザータップ時はスキップ）
   useEffect(() => {
     if (activeDateIndex < 0) return;
+    if (isUserTap.current) {
+      isUserTap.current = false;
+      return;
+    }
     const timer = setTimeout(() => {
       chipListRef.current?.scrollToIndex({ index: activeDateIndex, animated: false, viewPosition: 0 });
     }, 150);
     return () => clearTimeout(timer);
   }, [activeDateIndex]);
+
+  // タブ戻り時にアクティブ日付を左端へスクロール
+  useFocusEffect(
+    useCallback(() => {
+      const idx = activeDateIndexRef.current;
+      if (idx < 0) return;
+      const timer = setTimeout(() => {
+        chipListRef.current?.scrollToIndex({ index: idx, animated: false, viewPosition: 0 });
+      }, 200);
+      return () => clearTimeout(timer);
+    }, [])
+  );
 
   return (
     <View style={{ flex: 1 }}>
@@ -128,7 +148,10 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
           keyExtractor={(d) => d}
           onScrollToIndexFailed={() => {}}
           renderItem={({ item: d }) => (
-            <TouchableOpacity style={[styles.chip, activeDate === d && styles.chipActive]} onPress={() => setSelectedDate(d)}>
+            <TouchableOpacity style={[styles.chip, activeDate === d && styles.chipActive]} onPress={() => {
+                isUserTap.current = true;
+                setSelectedDate(d);
+              }}>
               <Text style={[styles.chipText, activeDate === d && styles.chipTextActive]}>{formatDatePill(d)}</Text>
             </TouchableOpacity>
           )}
