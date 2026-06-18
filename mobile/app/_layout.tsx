@@ -73,7 +73,7 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
-const SPLASH_MIN_MS = 800;
+const SPLASH_MIN_MS = 1000;
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
