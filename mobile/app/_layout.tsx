@@ -1,26 +1,41 @@
 import { useFonts } from 'expo-font';
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/react-query';
+import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
+import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persister';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useColorScheme } from '@/components/useColorScheme';
 import { useAuthStore } from '@/stores/authStore';
 import { useSetupNotifications } from '@/hooks/useNotifications';
+import { SplashView } from '@/components/SplashView';
+import { api } from '@/lib/api';
+import { stableTimestamp } from '@/lib/matchUtils';
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // デフォルト: 2分間はキャッシュを新鮮とみなし、再フェッチしない
-      staleTime: 2 * 60 * 1000,
-      // キャッシュを10分間保持（バックグラウンドで破棄しない）
-      gcTime: 10 * 60 * 1000,
-      // ネットワークエラー時のリトライを1回に制限（デフォルト3回）
+      staleTime: 5 * 60 * 1000,   // 5分間はキャッシュを新鮮とみなす
+      gcTime: 24 * 60 * 60 * 1000, // 永続化対象なので24時間保持
       retry: 1,
     },
   },
 });
+
+const persister = createAsyncStoragePersister({
+  storage: AsyncStorage,
+  key: 'wcp26-query-cache',
+  throttleTime: 1000, // 書き込みを1秒間隔に制限
+});
+
+const persistOptions = {
+  persister,
+  maxAge: 24 * 60 * 60 * 1000, // 24時間でキャッシュ失効
+  buster: 'v1',                  // アプデでキャッシュ形式が変わる場合はここを変える
+};
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -58,21 +73,37 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
+const SPLASH_MIN_MS = 800;
+
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
   const { isReady, isLoggedIn, restoreSession } = useAuthStore();
+  const [minTimeElapsed, setMinTimeElapsed] = useState(false);
   useSetupNotifications();
 
-  // 起動時に保存済みセッションを復元
   useEffect(() => {
     restoreSession();
+
+    // スプラッシュ中にホーム画面データをプリフェッチ（ベストエフォート）
+    const scheduledFrom = stableTimestamp();
+    const recentFrom = stableTimestamp(-4 * 86400000);
+    queryClient.prefetchQuery({
+      queryKey: ['matches', { status: 'SCHEDULED', from: scheduledFrom }],
+      queryFn: () => api.get('/matches', { params: { status: 'SCHEDULED', from: scheduledFrom } }).then(r => r.data),
+    });
+    queryClient.prefetchQuery({
+      queryKey: ['matches', { status: 'FINISHED', from: recentFrom }],
+      queryFn: () => api.get('/matches', { params: { status: 'FINISHED', from: recentFrom } }).then(r => r.data),
+    });
+
+    const timer = setTimeout(() => setMinTimeElapsed(true), SPLASH_MIN_MS);
+    return () => clearTimeout(timer);
   }, []);
 
-  // セッション復元が終わるまでスプラッシュ継続
-  if (!isReady) return null;
+  if (!isReady || !minTimeElapsed) return <SplashView />;
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         {isLoggedIn ? (
           <Stack>
@@ -85,6 +116,6 @@ function RootLayoutNav() {
           </Stack>
         )}
       </ThemeProvider>
-    </QueryClientProvider>
+    </PersistQueryClientProvider>
   );
 }

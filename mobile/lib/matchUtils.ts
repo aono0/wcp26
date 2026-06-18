@@ -1,4 +1,10 @@
 const JST_OFFSET = 9 * 60 * 60 * 1000;
+
+// 5分単位で丸めてクエリキーを安定させる
+export function stableTimestamp(offsetMs = 0): string {
+  const FIVE_MIN = 5 * 60 * 1000;
+  return new Date(Math.floor((Date.now() + offsetMs) / FIVE_MIN) * FIVE_MIN).toISOString();
+}
 const DAYS = ['日', '月', '火', '水', '木', '金', '土'];
 
 // UTCの文字列 → JST表示 "6/12 07:00"

@@ -6,14 +6,8 @@ import { useMatches } from '@/hooks/useMatches';
 import { MatchCard } from '@/components/MatchCard';
 import { VideoStories } from '@/components/VideoStories';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { toJSTDateKey } from '@/lib/matchUtils';
+import { toJSTDateKey, stableTimestamp } from '@/lib/matchUtils';
 import { colors, r } from '@/constants/theme';
-
-// 5分単位で丸めてクエリキーを安定させる（毎レンダリングで変わるのを防ぐ）
-function stableTimestamp(offsetMs = 0) {
-  const FIVE_MIN = 5 * 60 * 1000;
-  return new Date(Math.floor((Date.now() + offsetMs) / FIVE_MIN) * FIVE_MIN).toISOString();
-}
 
 export default function HomeScreen() {
   const { top } = useSafeAreaInsets();
