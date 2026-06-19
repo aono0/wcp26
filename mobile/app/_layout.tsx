@@ -14,6 +14,7 @@ import { useSetupNotifications } from '@/hooks/useNotifications';
 import { SplashView } from '@/components/SplashView';
 import { api } from '@/lib/api';
 import { stableTimestamp } from '@/lib/matchUtils';
+import { colors } from '@/constants/theme';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -115,6 +116,15 @@ function RootLayoutNav() {
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+            <Stack.Screen
+              name="country/[code]"
+              options={{
+                headerStyle: { backgroundColor: colors.bg },
+                headerTintColor: colors.gold,
+                headerShadowVisible: false,
+                headerBackTitle: '戻る',
+              }}
+            />
           </Stack>
         ) : (
           <Stack screenOptions={{ headerShown: false }}>

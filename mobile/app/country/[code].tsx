@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator, Alert } from 'react-native';
-import { useState } from 'react';
-import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
+import { useState, useEffect } from 'react';
+import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCountryDetail, useCountryPlayers } from '@/hooks/useCountries';
 import { useFavorites, useAddFavorite, useRemoveFavorite } from '@/hooks/useFavorites';
 import { MatchCard } from '@/components/MatchCard';
@@ -11,7 +11,14 @@ const POS_ORDER = ['GK', 'DF', 'MF', 'FW'];
 export default function CountryDetailScreen() {
   const { code } = useLocalSearchParams<{ code: string }>();
   const router = useRouter();
+  const navigation = useNavigation();
   const { data: country, isLoading, isError } = useCountryDetail(code);
+
+  useEffect(() => {
+    navigation.setOptions({
+      title: country ? `${country.flagEmoji ?? ''} ${country.name}` : '',
+    });
+  }, [country, navigation]);
   const { data: players, isLoading: playersLoading } = useCountryPlayers(code ?? '');
   const { data: favorites } = useFavorites();
   const addFav = useAddFavorite();
@@ -40,13 +47,6 @@ export default function CountryDetailScreen() {
 
   return (
     <>
-      <Stack.Screen options={{
-        title: country ? `${country.flagEmoji ?? ''} ${country.name}` : '',
-        headerStyle: { backgroundColor: colors.bg },
-        headerTintColor: colors.gold,
-        headerShadowVisible: false,
-        headerBackTitle: '戻る',
-      }} />
       {isLoading ? <CountrySkeleton /> : isError || !country ? (
         <View style={styles.center}><Text style={styles.error}>読み込みエラー</Text></View>
       ) : (
