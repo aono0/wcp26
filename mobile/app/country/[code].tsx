@@ -36,20 +36,20 @@ export default function CountryDetailScreen() {
     }
   };
 
-  if (isLoading) return <CountrySkeleton />;
-  if (isError || !country) return <View style={styles.center}><Text style={styles.error}>読み込みエラー</Text></View>;
-
-  const matches = country.matchEntries.map((e: any) => e.match);
+  const matches = country?.matchEntries.map((e: any) => e.match) ?? [];
 
   return (
     <>
       <Stack.Screen options={{
-        title: `${country.flagEmoji ?? ''} ${country.name}`,
+        title: country ? `${country.flagEmoji ?? ''} ${country.name}` : '',
         headerStyle: { backgroundColor: colors.bg },
         headerTintColor: colors.gold,
         headerShadowVisible: false,
         headerBackTitle: '戻る',
       }} />
+      {isLoading ? <CountrySkeleton /> : isError || !country ? (
+        <View style={styles.center}><Text style={styles.error}>読み込みエラー</Text></View>
+      ) : (
       <ScrollView style={styles.container} bounces>
       {/* ヒーローヘッダー */}
       <View style={styles.hero}>
@@ -117,6 +117,7 @@ export default function CountryDetailScreen() {
       </View>
       <View style={{ height: 48 }} />
     </ScrollView>
+      )}
     </>
   );
 }
