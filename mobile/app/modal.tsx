@@ -85,7 +85,7 @@ export default function SettingsScreen() {
       {/* アカウント */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>アカウント</Text>
-        <TouchableOpacity style={styles.row} onPress={async () => { router.dismissAll(); await logout(); }}>
+        <TouchableOpacity style={styles.row} onPress={async () => { await logout(); router.dismissAll(); }}>
           <View style={styles.rowLeft}>
             <Text style={styles.rowIcon}>🚪</Text>
             <Text style={styles.rowLabel}>サインアウト</Text>
@@ -115,7 +115,7 @@ export default function SettingsScreen() {
         </TouchableOpacity>
       </View>
 
-      <Text style={styles.version}>WCP26 v1.0.0</Text>
+      <Text style={styles.version}>WCP26 v1.3.0</Text>
     </ScrollView>
   );
 }
