@@ -67,12 +67,9 @@ export default function CountryDetailScreen() {
           onPress={handleFavToggle}
           disabled={favPending}
         >
-          {favPending
-            ? <ActivityIndicator size="small" color={isFav ? colors.bg : colors.gold} />
-            : <Text style={[styles.favBtnText, isFav && styles.favBtnTextActive]}>
-                {isFav ? '★ お気に入り登録済み' : '☆ お気に入りに追加'}
-              </Text>
-          }
+          <Text style={[styles.favBtnText, isFav && styles.favBtnTextActive]}>
+            {isFav ? '★ お気に入り登録済み' : '☆ お気に入りに追加'}
+          </Text>
         </TouchableOpacity>
       </View>
 
