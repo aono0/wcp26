@@ -20,6 +20,7 @@ export function useAddFavorite(options?: { onError?: () => void }) {
       queryClient.invalidateQueries({ queryKey: ['favorites'] });
     },
     onError: options?.onError,
+    retry: 2,
   });
 }
 
@@ -31,5 +32,6 @@ export function useRemoveFavorite(options?: { onError?: () => void }) {
       queryClient.invalidateQueries({ queryKey: ['favorites'] });
     },
     onError: options?.onError,
+    retry: 2,
   });
 }
