@@ -34,6 +34,9 @@ const app  = express();
 const PORT = process.env.PORT ?? 3000;
 const isProd = process.env.NODE_ENV === 'production';
 
+// Railway はリバースプロキシ経由でリクエストを送るため trust proxy が必須
+app.set('trust proxy', 1);
+
 // CORS: 本番では ALLOWED_ORIGINS で制限、開発では全許可
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') ?? [];
 app.use(compression()); // gzip圧縮（レスポンスサイズを60〜80%削減）
