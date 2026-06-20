@@ -3,14 +3,13 @@ import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useState, useEffect } from 'react';
 import { api } from '@/lib/api';
-import { useAuthStore } from '@/stores/authStore';
+import { supabase } from '@/lib/supabase';
 import { colors, r } from '@/constants/theme';
 
 
 export default function SettingsScreen() {
   const router = useRouter();
   const { top } = useSafeAreaInsets();
-  const { logout } = useAuthStore();
   const [notifyEnabled, setNotifyEnabled] = useState(true);
   const [loading, setLoading] = useState(false);
 
@@ -39,7 +38,8 @@ export default function SettingsScreen() {
             setLoading(true);
             try {
               await api.delete('/users/me');
-              logout();
+              await supabase.auth.signOut();
+              await supabase.auth.signInAnonymously();
               router.dismissAll();
             } catch {
               Alert.alert('エラー', '削除に失敗しました。もう一度お試しください。');
@@ -85,13 +85,6 @@ export default function SettingsScreen() {
       {/* アカウント */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>アカウント</Text>
-        <TouchableOpacity style={styles.row} onPress={async () => { await logout(); router.dismissAll(); }}>
-          <View style={styles.rowLeft}>
-            <Text style={styles.rowIcon}>🚪</Text>
-            <Text style={styles.rowLabel}>サインアウト</Text>
-          </View>
-          <Text style={styles.chevron}>›</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={[styles.row, styles.rowDanger]} onPress={handleDeleteAccount} disabled={loading}>
           <View style={styles.rowLeft}>
             <Text style={styles.rowIcon}>🗑️</Text>

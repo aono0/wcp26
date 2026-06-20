@@ -1,3 +1,4 @@
+import 'react-native-url-polyfill/auto';
 import { useFonts } from 'expo-font';
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -9,18 +10,18 @@ import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persi
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useColorScheme } from '@/components/useColorScheme';
-import { useAuthStore } from '@/stores/authStore';
 import { useSetupNotifications } from '@/hooks/useNotifications';
 import { SplashView } from '@/components/SplashView';
 import { api } from '@/lib/api';
+import { supabase } from '@/lib/supabase';
 import { stableTimestamp } from '@/lib/matchUtils';
 import { colors } from '@/constants/theme';
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5 * 60 * 1000,   // 5分間はキャッシュを新鮮とみなす
-      gcTime: 24 * 60 * 60 * 1000, // 永続化対象なので24時間保持
+      staleTime: 5 * 60 * 1000,
+      gcTime: 24 * 60 * 60 * 1000,
       retry: 1,
     },
   },
@@ -29,26 +30,23 @@ const queryClient = new QueryClient({
 const persister = createAsyncStoragePersister({
   storage: AsyncStorage,
   key: 'wcp26-query-cache',
-  throttleTime: 1000, // 書き込みを1秒間隔に制限
+  throttleTime: 1000,
 });
 
 const persistOptions = {
   persister,
-  maxAge: 24 * 60 * 60 * 1000, // 24時間でキャッシュ失効
-  buster: 'v1',                  // アプデでキャッシュ形式が変わる場合はここを変える
+  maxAge: 24 * 60 * 60 * 1000,
+  buster: 'v2', // 認証方式変更のためキャッシュリセット
 };
 
 export {
-  // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from 'expo-router';
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: '(tabs)',
 };
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -56,36 +54,47 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
+    if (loaded) SplashScreen.hideAsync();
   }, [loaded]);
 
-  if (!loaded) {
-    return null;
-  }
+  if (!loaded) return null;
 
   return <RootLayoutNav />;
 }
 
 const SPLASH_MIN_MS = 1000;
 
+// リクエストごとに最新トークンを使う interceptor
+api.interceptors.request.use(async (config) => {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session?.access_token) {
+    config.headers.Authorization = `Bearer ${session.access_token}`;
+  }
+  return config;
+});
+
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-  const { isReady, isLoggedIn, restoreSession } = useAuthStore();
+  const [isReady, setIsReady] = useState(false);
   const [minTimeElapsed, setMinTimeElapsed] = useState(false);
   useSetupNotifications();
 
   useEffect(() => {
-    restoreSession();
+    // Supabase セッション確立（既存セッション継続 or 匿名ログイン）
+    (async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        await supabase.auth.signInAnonymously();
+      }
+      setIsReady(true);
+    })();
 
-    // スプラッシュ中にホーム画面・試合タブデータをプリフェッチ（ベストエフォート）
+    // スプラッシュ中にホーム・試合タブデータをプリフェッチ
     const scheduledFrom = stableTimestamp();
     const recentFrom = stableTimestamp(-4 * 86400000);
     [
@@ -112,25 +121,19 @@ function RootLayoutNav() {
   return (
     <PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        {isLoggedIn ? (
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-            <Stack.Screen
-              name="country/[code]"
-              options={{
-                headerStyle: { backgroundColor: colors.bg },
-                headerTintColor: colors.gold,
-                headerShadowVisible: false,
-                headerBackTitle: '戻る',
-              }}
-            />
-          </Stack>
-        ) : (
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="login" />
-          </Stack>
-        )}
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+          <Stack.Screen
+            name="country/[code]"
+            options={{
+              headerStyle: { backgroundColor: colors.bg },
+              headerTintColor: colors.gold,
+              headerShadowVisible: false,
+              headerBackTitle: '戻る',
+            }}
+          />
+        </Stack>
       </ThemeProvider>
     </PersistQueryClientProvider>
   );
