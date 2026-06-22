@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import { api } from '@/lib/api';
-import { useAuthStore } from '@/stores/authStore';
+import { supabase } from '@/lib/supabase';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -13,13 +13,13 @@ Notifications.setNotificationHandler({
 });
 
 export function useSetupNotifications() {
-  const { isLoggedIn } = useAuthStore();
-
   useEffect(() => {
-    if (!isLoggedIn) return;
-    // エラーが他に影響しないよう完全に分離
-    registerToken().catch((e) => console.warn('[Push] setup error:', e));
-  }, [isLoggedIn]);
+    // セッションがあれば通知トークンを登録
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) return;
+      registerToken().catch((e) => console.warn('[Push] setup error:', e));
+    });
+  }, []);
 }
 
 async function registerToken() {
@@ -48,7 +48,6 @@ async function registerToken() {
     await api.put('/users/push-token', { pushToken: tokenResult.data });
     console.log('[Push] トークン登録完了');
   } catch (e) {
-    // 通知セットアップの失敗はアプリの他機能に影響させない
     console.warn('[Push] setup failed (non-fatal):', e);
   }
 }
