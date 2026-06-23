@@ -5,6 +5,12 @@ import { requireAuth, AuthRequest } from '../middleware/auth';
 const router = Router();
 router.use(requireAuth);
 
+// 通知設定（クライアント表示用）
+router.get('/settings', (_req, res) => {
+  const preMatchMinutes = parseInt(process.env.PRE_MATCH_NOTIFY_MINUTES ?? '15') || 15;
+  res.json({ preMatchMinutes });
+});
+
 // 通知登録している試合の一覧（試合詳細つき）
 router.get('/matches', async (req: AuthRequest, res) => {
   const notifications = await prisma.matchNotification.findMany({
