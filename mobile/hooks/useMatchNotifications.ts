@@ -7,6 +7,17 @@ export type MatchNotification = {
   match: any;
 };
 
+export function useNotificationSettings() {
+  return useQuery({
+    queryKey: ['notificationSettings'],
+    queryFn: async () => {
+      const res = await api.get<{ preMatchMinutes: number }>('/notifications/settings');
+      return res.data;
+    },
+    staleTime: 1000 * 60 * 60,
+  });
+}
+
 export function useMatchNotifications() {
   return useQuery({
     queryKey: ['matchNotifications'],

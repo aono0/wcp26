@@ -10,6 +10,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.wcp26.app",
+      "buildNumber": "19",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }

@@ -10,23 +10,12 @@ import { toJSTDateKey, formatDatePill } from '@/lib/matchUtils';
 
 type MainTab = 'matches' | 'standings';
 type MatchStage = 'group' | 'knockout';
-type KnockoutRound = 'ROUND_OF_32' | 'ROUND_OF_16' | 'QUARTER_FINAL' | 'SEMI_FINAL' | 'THIRD_PLACE' | 'FINAL';
-
-const KNOCKOUT_ROUNDS: { key: KnockoutRound; label: string }[] = [
-  { key: 'ROUND_OF_32', label: 'R32' },
-  { key: 'ROUND_OF_16', label: 'R16' },
-  { key: 'QUARTER_FINAL', label: 'QF' },
-  { key: 'SEMI_FINAL', label: 'SF' },
-  { key: 'THIRD_PLACE', label: '3位' },
-  { key: 'FINAL', label: '決勝' },
-];
 
 export default function MatchesStandingsScreen() {
   const { top } = useSafeAreaInsets();
   const [mainTab, setMainTab] = useState<MainTab>('matches');
   const [matchStage, setMatchStage] = useState<MatchStage>('group');
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
-  const [selectedRound, setSelectedRound] = useState<KnockoutRound>('ROUND_OF_32');
 
   return (
     <View style={[styles.container, { paddingTop: top }]}>
@@ -41,7 +30,7 @@ export default function MatchesStandingsScreen() {
       </View>
 
       {mainTab === 'matches' ? (
-        <MatchesView {...{ matchStage, setMatchStage, selectedDate, setSelectedDate, selectedRound, setSelectedRound }} />
+        <MatchesView {...{ matchStage, setMatchStage, selectedDate, setSelectedDate }} />
       ) : (
         <StandingsView />
       )}
@@ -52,27 +41,27 @@ export default function MatchesStandingsScreen() {
 type MVProps = {
   matchStage: MatchStage; setMatchStage: (v: MatchStage) => void;
   selectedDate: string | null; setSelectedDate: (v: string) => void;
-  selectedRound: KnockoutRound; setSelectedRound: (v: KnockoutRound) => void;
 };
 
-function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate, selectedRound, setSelectedRound }: MVProps) {
+function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate }: MVProps) {
   const isGroup = matchStage === 'group';
 
-  // グループステージは全件取得して日付でフィルター
+  // グループ・決勝T ともに全件取得して日付でフィルター
   const { data: allGroupMatches, isLoading: groupLoading } = useMatches(isGroup ? { stage: 'GROUP' } : undefined);
-  const { data: knockoutMatches, isLoading: knockoutLoading } = useMatches(!isGroup ? { stage: selectedRound } : undefined);
+  const { data: allKnockoutMatches, isLoading: knockoutLoading } = useMatches(!isGroup ? { stage: 'KNOCKOUT' } : undefined);
+  const allMatches = isGroup ? allGroupMatches : allKnockoutMatches;
   const isLoading = isGroup ? groupLoading : knockoutLoading;
 
   // JST日付ごとに仕分け
   const dateMap = useMemo(() => {
-    const map: Record<string, typeof allGroupMatches> = {};
-    for (const m of allGroupMatches ?? []) {
+    const map: Record<string, typeof allMatches> = {};
+    for (const m of allMatches ?? []) {
       const key = toJSTDateKey(m.matchDate);
       if (!map[key]) map[key] = [];
       map[key]!.push(m);
     }
     return map;
-  }, [allGroupMatches]);
+  }, [allMatches]);
 
   const sortedDates = useMemo(() => Object.keys(dateMap).sort(), [dateMap]);
 
@@ -89,7 +78,7 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
     ? selectedDate
     : defaultDate;
 
-  const displayMatches = isGroup ? (dateMap[activeDate ?? ''] ?? []) : (knockoutMatches ?? []);
+  const displayMatches = dateMap[activeDate ?? ''] ?? [];
 
   const chipListRef = useRef<FlatList>(null);
   const activeDateIndex = activeDate ? sortedDates.indexOf(activeDate) : -1;
@@ -136,50 +125,37 @@ function MatchesView({ matchStage, setMatchStage, selectedDate, setSelectedDate,
         ))}
       </View>
 
-      {/* 日付 or ラウンド チップ */}
-      {isGroup ? (
-        <FlatList
-          ref={chipListRef}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={styles.chipScroll}
-          contentContainerStyle={styles.chipContent}
-          data={sortedDates}
-          keyExtractor={(d) => d}
-          onScrollToIndexFailed={() => {}}
-          renderItem={({ item: d }) => (
-            <TouchableOpacity style={[styles.chip, activeDate === d && styles.chipActive]} onPress={() => {
-                isUserTap.current = true;
-                setSelectedDate(d);
-              }}>
-              <Text style={[styles.chipText, activeDate === d && styles.chipTextActive]}>{formatDatePill(d)}</Text>
-            </TouchableOpacity>
-          )}
-        />
-      ) : (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipScroll} contentContainerStyle={styles.chipContent}>
-          {KNOCKOUT_ROUNDS.map(({ key, label }) => (
-            <TouchableOpacity key={key} style={[styles.chip, selectedRound === key && styles.chipActive]} onPress={() => setSelectedRound(key)}>
-              <Text style={[styles.chipText, selectedRound === key && styles.chipTextActive]}>{label}</Text>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      )}
+      {/* 日付チップ（グループ・決勝T 共通） */}
+      <FlatList
+        ref={chipListRef}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.chipScroll}
+        contentContainerStyle={styles.chipContent}
+        data={sortedDates}
+        keyExtractor={(d) => d}
+        onScrollToIndexFailed={() => {}}
+        renderItem={({ item: d }) => (
+          <TouchableOpacity style={[styles.chip, activeDate === d && styles.chipActive]} onPress={() => {
+              isUserTap.current = true;
+              setSelectedDate(d);
+            }}>
+            <Text style={[styles.chipText, activeDate === d && styles.chipTextActive]}>{formatDatePill(d)}</Text>
+          </TouchableOpacity>
+        )}
+      />
 
       {isLoading ? (
         <View style={styles.center}><ActivityIndicator color={colors.gold} /></View>
       ) : !displayMatches.length ? (
         <View style={styles.center}>
-          <Text style={styles.emptyText}>{isGroup ? '試合データなし' : 'このラウンドはまだ確定していません'}</Text>
+          <Text style={styles.emptyText}>試合データなし</Text>
         </View>
       ) : (
         <ScrollView>
           <View style={styles.matchSurface}>
-            {isGroup && activeDate && (
+            {activeDate && (
               <Text style={styles.dateHeading}>{formatDatePill(activeDate)}</Text>
-            )}
-            {!isGroup && (
-              <Text style={styles.dateHeading}>{KNOCKOUT_ROUNDS.find((x) => x.key === selectedRound)?.label}</Text>
             )}
             {displayMatches.map((m) => <MatchCard key={m.id} match={m} />)}
           </View>

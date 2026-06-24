@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useRouter } from 'expo-router';
 import { SymbolView } from 'expo-symbols';
 import { colors } from '@/constants/theme';
-import { formatMatchDate, formatMatchDateShort } from '@/lib/matchUtils';
-import { useMatchNotificationIds, useAddMatchNotification, useRemoveMatchNotification } from '@/hooks/useMatchNotifications';
+import { formatMatchDate, formatMatchDateShort, roundLabel } from '@/lib/matchUtils';
+import { useMatchNotificationIds, useAddMatchNotification, useRemoveMatchNotification, useNotificationSettings } from '@/hooks/useMatchNotifications';
 
 type Entry = {
   isHome: boolean;
@@ -18,6 +18,7 @@ type Match = {
   venueCity: string | null;
   broadcastInfo?: string | null;
   round: string;
+  stage?: string;
   status: string;
   homePlaceholder?: string | null;
   awayPlaceholder?: string | null;
@@ -35,6 +36,8 @@ export function MatchCard({ match }: { match: Match }) {
   const notificationIds = useMatchNotificationIds();
   const addNotification = useAddMatchNotification();
   const removeNotification = useRemoveMatchNotification();
+  const { data: notifSettings } = useNotificationSettings();
+  const preMatchMinutes = notifSettings?.preMatchMinutes ?? 15;
   const serverIsNotified = notificationIds.has(match.id);
   const [optimisticNotified, setOptimisticNotified] = useState<boolean | null>(null);
   const isNotified = optimisticNotified !== null ? optimisticNotified : serverIsNotified;
@@ -48,7 +51,7 @@ export function MatchCard({ match }: { match: Match }) {
     if (finished || live) return;
     Alert.alert(
       isNotified ? '通知を解除' : 'この試合を通知',
-      isNotified ? 'この試合の前日通知を解除しますか？' : 'この試合の前日（朝9時）に通知しますか？',
+      isNotified ? 'この試合の通知を解除しますか？' : `前日の正午と試合${preMatchMinutes}分前に通知しますか？`,
       [
         { text: 'キャンセル', style: 'cancel' },
         {
@@ -127,6 +130,9 @@ export function MatchCard({ match }: { match: Match }) {
         </TouchableOpacity>
       )}
       </View>
+      {match.stage && roundLabel(match.stage) && (
+        <Text style={styles.roundLabel}>{roundLabel(match.stage)}</Text>
+      )}
       {match.broadcastInfo && (
         <Text style={styles.broadcast}>放送：{match.broadcastInfo}</Text>
       )}
@@ -147,6 +153,14 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
   },
   rowPH: { opacity: 0.7 },
+  roundLabel: {
+    color: colors.gold,
+    fontSize: 10,
+    fontWeight: '700',
+    textAlign: 'center',
+    letterSpacing: 1,
+    paddingBottom: 4,
+  },
   broadcast: {
     color: 'rgba(255,255,255,0.6)',
     fontSize: 11,

@@ -48,3 +48,16 @@ export function formatScore(homeScore: number | null, awayScore: number | null):
   if (homeScore === null || awayScore === null) return '-';
   return `${homeScore} - ${awayScore}`;
 }
+
+const ROUND_LABELS: Record<string, string> = {
+  ROUND_OF_32:  'ラウンド32',
+  ROUND_OF_16:  'ラウンド16',
+  QUARTER_FINAL: '準々決勝',
+  SEMI_FINAL:   '準決勝',
+  THIRD_PLACE:  '3位決定戦',
+  FINAL:        '決勝',
+};
+
+export function roundLabel(stage: string): string | null {
+  return ROUND_LABELS[stage] ?? null;
+}

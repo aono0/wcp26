@@ -136,11 +136,83 @@ export async function autoFinishOldMatches() {
 }
 
 // ──────────────────────────────────────────────
+// 決勝トーナメントの対戦相手を自動補完
+// グループステージ終了後、APIにチームが確定したら
+// DBの null エントリを実際のチームで埋める
+// ──────────────────────────────────────────────
+export async function syncKnockoutTeams() {
+  if (!TOKEN) return;
+
+  // football-data.org の stage 名 → 自DBの stage 名
+  const STAGE_MAP: Record<string, string> = {
+    LAST_32:        'ROUND_OF_32',
+    ROUND_OF_16:    'ROUND_OF_16',
+    LAST_16:        'ROUND_OF_16',
+    QUARTER_FINALS: 'QUARTER_FINAL',
+    SEMI_FINALS:    'SEMI_FINAL',
+    THIRD_PLACE:    'THIRD_PLACE',
+    FINAL:          'FINAL',
+  };
+
+  try {
+    const { data } = await client.get(`/competitions/${WC_ID}/matches`);
+    const matches: any[] = data.matches ?? [];
+
+    let filled = 0;
+    for (const m of matches) {
+      const dbStage = STAGE_MAP[m.stage];
+      if (!dbStage) continue; // グループステージ等はスキップ
+
+      const homeCode = m.homeTeam?.tla?.toUpperCase();
+      const awayCode = m.awayTeam?.tla?.toUpperCase();
+      if (!homeCode || !awayCode) continue; // まだ未確定
+
+      const matchDate = new Date(m.utcDate);
+      const dayStart  = new Date(matchDate); dayStart.setUTCHours(0, 0, 0, 0);
+      const dayEnd    = new Date(matchDate); dayEnd.setUTCHours(23, 59, 59, 999);
+
+      const dbMatch = await prisma.match.findFirst({
+        where: { stage: dbStage, matchDate: { gte: dayStart, lte: dayEnd } },
+        include: { entries: true },
+      });
+      if (!dbMatch) continue;
+      if (dbMatch.entries.length >= 2) continue; // 既に両チーム確定済み
+
+      const homeCountry = await prisma.country.findUnique({ where: { code: homeCode } });
+      const awayCountry = await prisma.country.findUnique({ where: { code: awayCode } });
+      if (!homeCountry || !awayCountry) continue;
+
+      await prisma.countryMatch.upsert({
+        where: { matchId_countryId: { matchId: dbMatch.id, countryId: homeCountry.id } },
+        update: {},
+        create: { matchId: dbMatch.id, countryId: homeCountry.id, isHome: true },
+      });
+      await prisma.countryMatch.upsert({
+        where: { matchId_countryId: { matchId: dbMatch.id, countryId: awayCountry.id } },
+        update: {},
+        create: { matchId: dbMatch.id, countryId: awayCountry.id, isHome: false },
+      });
+      await prisma.match.update({
+        where: { id: dbMatch.id },
+        data: { homePlaceholder: null, awayPlaceholder: null },
+      });
+
+      console.log(`[KnockoutSync] ${dbStage}: ${homeCode} vs ${awayCode}`);
+      filled++;
+    }
+    if (filled > 0) console.log(`[KnockoutSync] ${filled}試合のチームを確定しました`);
+  } catch (e: any) {
+    console.error('[FootballData] KOチーム同期エラー:', e.message);
+  }
+}
+
+// ──────────────────────────────────────────────
 // まとめて同期
 // ──────────────────────────────────────────────
 export async function syncAll() {
   await autoFinishOldMatches();
   await syncMatchResults();
+  await syncKnockoutTeams();
   await syncTopScorers();
 }
 

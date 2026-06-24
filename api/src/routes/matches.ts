@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
 
   const matches = await prisma.match.findMany({
     where: {
-      ...(stage  ? { stage: String(stage) }   : {}),
+      ...(stage && stage !== 'KNOCKOUT' ? { stage: String(stage) } : {}),
+      ...(stage === 'KNOCKOUT' ? { stage: { not: 'GROUP' } } : {}),
       ...(status ? { status: String(status) } : {}),
       ...(md     ? { round: { contains: `MD${md}` } } : {}),
       ...(from || to ? { matchDate: {
@@ -62,6 +63,43 @@ router.get('/:id', async (req, res) => {
 router.post('/sync', requireAdmin, async (_req, res) => {
   syncAll().catch(console.error);
   res.json({ message: '試合データ同期を開始しました' });
+});
+
+// 決勝T試合のチームを手動で確定する（管理者用）
+// curl -X POST .../matches/:id/fill-teams \
+//   -H "X-Admin-Secret: xxx" \
+//   -H "Content-Type: application/json" \
+//   -d '{"homeCode":"JPN","awayCode":"BRA"}'
+router.post('/:id/fill-teams', requireAdmin, async (req, res) => {
+  const { homeCode, awayCode } = req.body;
+  if (!homeCode || !awayCode) {
+    res.status(400).json({ error: 'homeCode and awayCode are required' });
+    return;
+  }
+
+  const [homeCountry, awayCountry] = await Promise.all([
+    prisma.country.findUnique({ where: { code: String(homeCode).toUpperCase() } }),
+    prisma.country.findUnique({ where: { code: String(awayCode).toUpperCase() } }),
+  ]);
+  if (!homeCountry) { res.status(404).json({ error: `Country not found: ${homeCode}` }); return; }
+  if (!awayCountry) { res.status(404).json({ error: `Country not found: ${awayCode}` }); return; }
+
+  await prisma.countryMatch.upsert({
+    where: { matchId_countryId: { matchId: req.params.id, countryId: homeCountry.id } },
+    update: { isHome: true },
+    create: { matchId: req.params.id, countryId: homeCountry.id, isHome: true },
+  });
+  await prisma.countryMatch.upsert({
+    where: { matchId_countryId: { matchId: req.params.id, countryId: awayCountry.id } },
+    update: { isHome: false },
+    create: { matchId: req.params.id, countryId: awayCountry.id, isHome: false },
+  });
+  await prisma.match.update({
+    where: { id: req.params.id },
+    data: { homePlaceholder: null, awayPlaceholder: null },
+  });
+
+  res.json({ message: `${homeCode} vs ${awayCode} を確定しました` });
 });
 
 export default router;

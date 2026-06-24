@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { api } from '@/lib/api';
 import { supabase } from '@/lib/supabase';
 import { colors, r } from '@/constants/theme';
+import { useNotificationSettings } from '@/hooks/useMatchNotifications';
 
 
 export default function SettingsScreen() {
@@ -12,6 +13,8 @@ export default function SettingsScreen() {
   const { top } = useSafeAreaInsets();
   const [notifyEnabled, setNotifyEnabled] = useState(true);
   const [loading, setLoading] = useState(false);
+  const { data: notifSettings } = useNotificationSettings();
+  const preMatchMinutes = notifSettings?.preMatchMinutes ?? 15;
 
   useEffect(() => {
     api.get('/users/me').then((res) => setNotifyEnabled(res.data.notifyEnabled)).catch(() => {});
@@ -70,7 +73,7 @@ export default function SettingsScreen() {
             <Text style={styles.rowIcon}>🔔</Text>
             <View>
               <Text style={styles.rowLabel}>試合前日通知</Text>
-              <Text style={styles.rowSub}>お気に入りチームの試合前日の朝に通知</Text>
+              <Text style={styles.rowSub}>{`前日の正午と試合${preMatchMinutes}分前に通知`}</Text>
             </View>
           </View>
           <Switch
