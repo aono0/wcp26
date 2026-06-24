@@ -75,7 +75,7 @@ export function MatchCard({ match }: { match: Match }) {
   const timeStr  = formatMatchDate(match.matchDate).split(' ').pop() ?? ''; // "7:00"
 
   return (
-    <View style={[styles.card, isPH && styles.rowPH]}>
+    <View style={styles.card}>
       <View style={styles.matchRow}>
       {/* ホーム */}
       <TouchableOpacity
@@ -83,8 +83,8 @@ export function MatchCard({ match }: { match: Match }) {
         activeOpacity={home?.country?.code ? 0.7 : 1}
         onPress={() => home?.country?.code && router.push(`/country/${home.country!.code}`)}
       >
-        <Text style={[styles.flag, isPH && styles.flagPH]}>{homeFlag ?? (isPH ? '？' : '🏳️')}</Text>
-        <Text style={[styles.name, isPH && styles.namePH]} numberOfLines={2}>{homeName}</Text>
+        <Text style={styles.flag}>{homeFlag ?? '🏳️'}</Text>
+        <Text style={styles.name} numberOfLines={2}>{homeName}</Text>
       </TouchableOpacity>
 
       {/* センター：スコア or 時刻（日付は重複しない） */}
@@ -102,8 +102,6 @@ export function MatchCard({ match }: { match: Match }) {
             )}
             <Text style={[styles.status, live && styles.statusLive]}>{live ? 'LIVE' : 'FT'}</Text>
           </>
-        ) : isPH ? (
-          <Text style={styles.timePH}>VS</Text>
         ) : (
           <View style={styles.timeRow}>
             <Text style={styles.dateStr}>{dateStr}</Text>
@@ -119,8 +117,8 @@ export function MatchCard({ match }: { match: Match }) {
         activeOpacity={away?.country?.code ? 0.7 : 1}
         onPress={() => away?.country?.code && router.push(`/country/${away.country!.code}`)}
       >
-        <Text style={[styles.flag, isPH && styles.flagPH]}>{awayFlag ?? (isPH ? '？' : '🏳️')}</Text>
-        <Text style={[styles.name, styles.nameRight, isPH && styles.namePH]} numberOfLines={2}>{awayName}</Text>
+        <Text style={styles.flag}>{awayFlag ?? '🏳️'}</Text>
+        <Text style={[styles.name, styles.nameRight]} numberOfLines={2}>{awayName}</Text>
       </TouchableOpacity>
 
       {/* ベルボタン */}
@@ -175,7 +173,7 @@ const styles = StyleSheet.create({
   flagPH: { fontSize: 20, opacity: 0.5 },
   name: { color: colors.textPrimary, fontSize: 11, fontWeight: '600', textAlign: 'center' },
   nameRight: {},
-  namePH: { color: colors.textMuted, fontStyle: 'italic', fontSize: 10 },
+  namePH: { color: colors.textSec, fontStyle: 'italic', fontSize: 10 },
 
   center: { flex: 2, alignItems: 'center', gap: 2 },
   scoreWrap: { flexDirection: 'row', alignItems: 'center', gap: 6 },
@@ -189,7 +187,7 @@ const styles = StyleSheet.create({
   dateStr: { color: colors.textSec, fontSize: 12, fontWeight: '600' },
   status: { color: colors.textMuted, fontSize: 10, letterSpacing: 0.5, textTransform: 'uppercase' },
   statusLive: { color: '#ff4444', fontWeight: '700' },
-  venue: { color: 'rgba(255,255,255,0.25)', fontSize: 9, textAlign: 'center' },
+  venue: { color: 'rgba(255,255,255,0.45)', fontSize: 9, textAlign: 'center' },
 
   bellBtn: {
     position: 'absolute', right: 6, top: '50%',
