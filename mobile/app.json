@@ -2,7 +2,7 @@
   "expo": {
     "name": "Never miss a match",
     "slug": "wcp26",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon3.png",
     "scheme": "wcp26",
@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.wcp26.app",
-      "buildNumber": "19",
+      "buildNumber": "1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
