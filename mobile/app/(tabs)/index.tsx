@@ -5,6 +5,7 @@ import { useFavorites } from '@/hooks/useFavorites';
 import { useMatches } from '@/hooks/useMatches';
 import { MatchCard } from '@/components/MatchCard';
 import { VideoStories } from '@/components/VideoStories';
+import { BracketSection } from '@/components/BracketSection';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { toJSTDateKey, stableTimestamp } from '@/lib/matchUtils';
 import { colors, r } from '@/constants/theme';
@@ -151,6 +152,9 @@ export default function HomeScreen() {
           : upcomingMatches.map((m) => <MatchCard key={m.id} match={m} />)
         }
       </View>
+
+      {/* 決勝トーナメント表 */}
+      <BracketSection />
 
       <View style={{ height: 32 }} />
     </ScrollView>
