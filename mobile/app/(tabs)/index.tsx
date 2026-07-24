@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { useFavorites } from '@/hooks/useFavorites';
 import { useMatches } from '@/hooks/useMatches';
 import { MatchCard } from '@/components/MatchCard';
-import { VideoStories } from '@/components/VideoStories';
+import { KitStories } from '@/components/KitStories';
 import { BracketSection } from '@/components/BracketSection';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { toJSTDateKey, stableTimestamp } from '@/lib/matchUtils';
@@ -64,7 +64,7 @@ export default function HomeScreen() {
 
       {/* 動画ストーリー */}
       <View style={styles.storiesSection}>
-        <VideoStories />
+        <KitStories />
       </View>
 
       {/* マイチームセクション */}

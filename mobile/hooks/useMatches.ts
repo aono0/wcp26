@@ -15,6 +15,7 @@ export type Match = {
   entries: {
     isHome: boolean;
     score: number | null;
+    result: string | null;
     country: { id: string; name: string; code: string; flagEmoji: string | null };
   }[];
 };

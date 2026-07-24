@@ -53,12 +53,12 @@ const TOTAL_W = XR_R32 + TW;
 
 // ── Bracket match-index mapping ───────────────────────────────
 // Matches are sorted by matchDate ascending (0=earliest R32, 31=Final)
-const L_R32 = [0, 2, 1, 4, 3, 5, 6, 7];  // API indices for left-half R32 (top→bottom)
-const L_R16 = [16, 17, 18, 19];
+const L_R32 = [2, 5, 0, 3, 11, 10, 9, 8];   // matchDate昇順インデックス: GER,FRA,RSA,NED,POR,ESP,USA,BEL
+const L_R16 = [17, 16, 20, 21];
 const L_QF  = [24, 25];
 const L_SF  = 28;
-const R_R32 = [10, 11, 8, 9, 13, 15, 12, 14];
-const R_R16 = [20, 21, 22, 23];
+const R_R32 = [1, 4, 6, 7, 14, 13, 12, 15]; // BRA,CIV,MEX,ENG,ARG,AUS,SUI,COL
+const R_R16 = [18, 19, 22, 23];
 const R_QF  = [26, 27];
 const R_SF  = 29;
 const I_FIN = 31;
@@ -95,6 +95,8 @@ type BM = {
   status: string;
   hs: number | null;
   as: number | null;
+  hr: string | null;  // home result: WIN / LOSS / DRAW / null
+  ar: string | null;  // away result
   hn: string;
   an: string;
   hf: string;
@@ -105,7 +107,12 @@ type BM = {
 };
 
 function winSide(m: BM | null): 'h' | 'a' | null {
-  if (!m || m.status !== 'FINISHED' || m.hs == null || m.as == null) return null;
+  if (!m || m.status !== 'FINISHED') return null;
+  // resultフィールドがあればそちらを優先（PK決着に対応）
+  if (m.hr === 'WIN')  return 'h';
+  if (m.ar === 'WIN')  return 'a';
+  // fallback: スコア比較
+  if (m.hs == null || m.as == null) return null;
   return m.hs > m.as ? 'h' : m.as > m.hs ? 'a' : null;
 }
 
@@ -268,6 +275,8 @@ export function BracketSection() {
         status: m.status,
         hs: h?.score ?? null,
         as: a?.score ?? null,
+        hr: h?.result ?? null,
+        ar: a?.result ?? null,
         hn: h?.country?.name ?? m.homePlaceholder ?? '?',
         an: a?.country?.name ?? m.awayPlaceholder ?? '?',
         hf: h?.country?.flagEmoji ?? '',
@@ -308,13 +317,13 @@ export function BracketSection() {
 
           {/* ── Match slots ── */}
           {L_R32.map((idx, i) => <Slot     key={`lr32${i}`} m={g(idx)} x={XL_R32} y={SY[i]}   />)}
-          {L_R16.map((idx, i) => <DateSlot key={`lr16${i}`} m={g(idx)} x={XL_R16} y={R16Y[i]} />)}
-          {L_QF.map((idx, i)  => <DateSlot key={`lqf${i}`}  m={g(idx)} x={XL_QF}  y={QFY[i]} />)}
-          <DateSlot m={g(L_SF)} x={XL_SF} y={SFY} />
+          {L_R16.map((idx, i) => <Slot     key={`lr16${i}`} m={g(idx)} x={XL_R16} y={R16Y[i]} />)}
+          {L_QF.map((idx, i)  => <Slot     key={`lqf${i}`}  m={g(idx)} x={XL_QF}  y={QFY[i]} />)}
+          <Slot m={g(L_SF)} x={XL_SF} y={SFY} />
           <TrophySlot x={X_FIN} y={SFY} />
-          <DateSlot m={g(R_SF)} x={XR_SF} y={SFY} />
-          {R_QF.map((idx, i)  => <DateSlot key={`rqf${i}`}  m={g(idx)} x={XR_QF}  y={QFY[i]} />)}
-          {R_R16.map((idx, i) => <DateSlot key={`rr16${i}`} m={g(idx)} x={XR_R16} y={R16Y[i]} />)}
+          <Slot m={g(R_SF)} x={XR_SF} y={SFY} />
+          {R_QF.map((idx, i)  => <Slot     key={`rqf${i}`}  m={g(idx)} x={XR_QF}  y={QFY[i]} />)}
+          {R_R16.map((idx, i) => <Slot     key={`rr16${i}`} m={g(idx)} x={XR_R16} y={R16Y[i]} />)}
           {R_R32.map((idx, i) => <Slot     key={`rr32${i}`} m={g(idx)} x={XR_R32} y={SY[i]}   />)}
 
           {/* ── Left connectors ── */}
@@ -326,11 +335,13 @@ export function BracketSection() {
           ))}
           {[0,1].map(i => (
             <Line key={`lc2-${i}`} topY={R16Y[i*2]} botY={R16Y[i*2+1]}
-              connX={XL_R16+TW} dir="right"
-              topDone={dn(L_R16[i*2])} botDone={dn(L_R16[i*2+1])} />
+              connX={XL_R16+TW} dir="right" teamSlots
+              topDone={dn(L_R16[i*2])} botDone={dn(L_R16[i*2+1])}
+              topWin={ws(L_R16[i*2])}  botWin={ws(L_R16[i*2+1])} />
           ))}
-          <Line topY={QFY[0]} botY={QFY[1]} connX={XL_QF+TW} dir="right"
-            topDone={dn(L_QF[0])} botDone={dn(L_QF[1])} />
+          <Line topY={QFY[0]} botY={QFY[1]} connX={XL_QF+TW} dir="right" teamSlots
+            topDone={dn(L_QF[0])} botDone={dn(L_QF[1])}
+            topWin={ws(L_QF[0])}  botWin={ws(L_QF[1])} />
           <HLine x={XL_SF+TW} y={SFY} len={CW} done={dn(L_SF)} />
 
           {/* ── Right connectors ── */}
@@ -342,11 +353,13 @@ export function BracketSection() {
           ))}
           {[0,1].map(i => (
             <Line key={`rc2-${i}`} topY={R16Y[i*2]} botY={R16Y[i*2+1]}
-              connX={XR_QF+TW} dir="left"
-              topDone={dn(R_R16[i*2])} botDone={dn(R_R16[i*2+1])} />
+              connX={XR_QF+TW} dir="left" teamSlots
+              topDone={dn(R_R16[i*2])} botDone={dn(R_R16[i*2+1])}
+              topWin={ws(R_R16[i*2])}  botWin={ws(R_R16[i*2+1])} />
           ))}
-          <Line topY={QFY[0]} botY={QFY[1]} connX={XR_SF+TW} dir="left"
-            topDone={dn(R_QF[0])} botDone={dn(R_QF[1])} />
+          <Line topY={QFY[0]} botY={QFY[1]} connX={XR_SF+TW} dir="left" teamSlots
+            topDone={dn(R_QF[0])} botDone={dn(R_QF[1])}
+            topWin={ws(R_QF[0])}  botWin={ws(R_QF[1])} />
           <HLine x={X_FIN+TW} y={SFY} len={CW} done={dn(R_SF)} />
         </View>
       </ScrollView>

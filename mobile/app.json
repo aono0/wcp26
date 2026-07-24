@@ -2,7 +2,15 @@
   "expo": {
     "name": "Never miss a match",
     "slug": "wcp26",
-    "version": "1.6.0",
+    "version": "1.8.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e04d8335-da64-4ccb-9ea1-d30625d382c9",
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    },
     "orientation": "portrait",
     "icon": "./assets/images/icon3.png",
     "scheme": "wcp26",

@@ -55,10 +55,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="videos"
+        name="kits"
         options={{
-          title: '動画',
-          tabBarIcon: ({ color }) => <SymbolView name="play.rectangle.fill" tintColor={color} size={24} />,
+          title: 'ユニフォーム',
+          tabBarIcon: ({ color }) => <SymbolView name="tshirt.fill" tintColor={color} size={24} />,
         }}
       />
       <Tabs.Screen
